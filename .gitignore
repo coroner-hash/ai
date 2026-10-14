@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.dev.vars
+.env
+proxy.log
+data/new_pools_*.jsonl
+data/trending_pools_*.jsonl
+node_modules/

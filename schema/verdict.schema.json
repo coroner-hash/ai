@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Coroner verdict v0",
+  "description": "Output of the Coroner model. Every number must come from the input facts; evidence ids point to input fact keys.",
+  "type": "object",
+  "required": ["mode", "risk_class", "flags", "evidence", "confidence", "disclaimer"],
+  "properties": {
+    "mode": { "enum": ["draft", "live", "autopsy"] },
+    "risk_class": { "enum": ["low", "medium", "high", "dead"] },
+    "cause_pattern": {
+      "enum": ["lp_removed", "dev_exit", "bled_out", "never_lived", "clone", "hidden_privilege", "none"],
+      "description": "Pattern consistent with the observed facts. Not an accusation."
+    },
+    "clone_of": { "type": ["string", "null"], "description": "Token address this one appears to copy, if any." },
+    "flags": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["code", "text", "evidence_ids"],
+        "properties": {
+          "code": { "type": "string" },
+          "text": { "type": "string" },
+          "evidence_ids": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "fixes": {
+      "type": "array",
+      "description": "Only for mode=draft. Concrete edits for known patterns.",
+      "items": {
+        "type": "object",
+        "required": ["flag_code", "suggestion"],
+        "properties": {
+          "flag_code": { "type": "string" },
+          "suggestion": { "type": "string" },
+          "diff": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "description": "Echo of the input facts used (key -> value), so every claim is checkable.",
+      "additionalProperties": true
+    },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "disclaimer": { "const": "Risk classification from public on-chain data. Not financial advice." }
+  }
+}
