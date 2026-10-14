@@ -1,0 +1,43 @@
+{
+  "_meta": {
+    "token": "0xc0d5912d1903d7f79ba312d86c08c9c11a037777",
+    "built_at": "2026-10-14T21:01:34+00:00",
+    "chain": "robinhood-4663",
+    "sources": [
+      "json-rpc",
+      "geckoterminal"
+    ]
+  },
+  "contract.is_contract": true,
+  "contract.code_bytes": 5274,
+  "contract.proxy_implementation": null,
+  "contract.selector_mint": false,
+  "contract.selector_owner": false,
+  "contract.selector_renounce": false,
+  "contract.selector_transfer_ownership": false,
+  "contract.selector_pause": false,
+  "contract.selector_blacklist": false,
+  "contract.owner": null,
+  "contract.owner_renounced": null,
+  "token.name": "tacocat",
+  "token.symbol": "tacocat",
+  "token.decimals": 18,
+  "token.supply_raw": "1000000000000000000000000000",
+  "token.supply": 1000000000.0,
+  "market.pool_count": 1,
+  "market.top_pool_name": "tacocat / WETH 1%",
+  "market.top_pool_created": "2026-10-13T15:58:05Z",
+  "market.top_pool_age_hours": 29.1,
+  "market.liq_usd": 0.0,
+  "market.vol_h24_usd": 0.0,
+  "market.fdv_usd": 130775.7826,
+  "market.buys_h24": 0,
+  "market.sells_h24": 0,
+  "market.price_change_h24_pct": 0.0,
+  "holders.count": 136,
+  "holders.top1_pct": 14.75,
+  "holders.top10_pct": 17.87,
+  "holders.lookback_blocks": 1075747,
+  "holders.top1_address": "0x75fe4426167659de590c3a7c25ce29df93b713dd",
+  "holders.top1_is_contract": false
+}

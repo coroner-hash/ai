@@ -1,0 +1,38 @@
+{
+  "_meta": {
+    "token": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+    "built_at": "2026-10-14T21:00:27+00:00",
+    "chain": "robinhood-4663",
+    "sources": [
+      "json-rpc",
+      "geckoterminal"
+    ]
+  },
+  "contract.is_contract": true,
+  "contract.code_bytes": 170,
+  "contract.proxy_implementation": "0x68184c449e1a8f34fa18d289737129fd27b66f8f",
+  "contract.selector_mint": true,
+  "contract.selector_owner": true,
+  "contract.selector_renounce": false,
+  "contract.selector_transfer_ownership": false,
+  "contract.selector_pause": false,
+  "contract.selector_blacklist": false,
+  "contract.owner": "0xcfa0388f5ddf905fdc08c45c716c15dc10a14c6f",
+  "contract.owner_renounced": false,
+  "token.name": "Global Dollar",
+  "token.symbol": "USDG",
+  "token.decimals": 6,
+  "token.supply_raw": "699596889027003",
+  "token.supply": 699596889.027003,
+  "market.pool_count": 20,
+  "market.top_pool_name": "WETH / USDG",
+  "market.top_pool_created": "2026-08-20T07:58:27Z",
+  "market.top_pool_age_hours": 1333.0,
+  "market.liq_usd": 23199430.6225,
+  "market.vol_h24_usd": 76089330.8841457,
+  "market.fdv_usd": 701564790.703592,
+  "market.buys_h24": 7521,
+  "market.sells_h24": 9056,
+  "market.price_change_h24_pct": 0.27,
+  "holders.count": null
+}

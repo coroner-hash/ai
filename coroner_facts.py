@@ -86,6 +86,16 @@ def implementation_of(addr, code):
     return None
 
 
+def blocks_per_second():
+    """Measure chain speed from two block timestamps (Orbit chains produce many blocks per second)."""
+    head = int(rpc("eth_blockNumber", []) or "0x0", 16)
+    if not head:
+        return None
+    ts = lambda n: int((rpc("eth_getBlockByNumber", [hex(n), False]) or {}).get("timestamp", "0x0"), 16)
+    t1, t0 = ts(head), ts(head - 100_000)
+    return 100_000 / (t1 - t0) if t1 > t0 else None
+
+
 def holders_from_logs(token, supply, lookback_blocks=600_000, chunk=150_000):
     """Rebuild balances from Transfer logs (bounded lookback). Returns None if the RPC refuses."""
     head = int(rpc("eth_blockNumber", []) or "0x0", 16)
@@ -164,7 +174,11 @@ def build_facts(token):
 
     # --- holders (rebuilt from Transfer logs; bounded lookback)
     if f["token.supply_raw"]:
-        res = holders_from_logs(token, int(f["token.supply_raw"]))
+        age_h = f.get("market.top_pool_age_hours")
+        bps = blocks_per_second()
+        # cover the pool's whole life plus a margin; cap at ~3M blocks to stay polite
+        lookback = int(min(3_000_000, ((age_h or 24) * 3600 + 3600) * bps)) if bps else 600_000
+        res = holders_from_logs(token, int(f["token.supply_raw"]), lookback_blocks=lookback)
         if res:
             bal, head = res
             tot = int(f["token.supply_raw"])
@@ -172,7 +186,7 @@ def build_facts(token):
             f["holders.count"] = len(bal)
             f["holders.top1_pct"] = round(100 * ranked[0] / tot, 2) if ranked else None
             f["holders.top10_pct"] = round(100 * sum(ranked[:10]) / tot, 2) if ranked else None
-            f["holders.lookback_blocks"] = 600_000
+            f["holders.lookback_blocks"] = lookback
             top_addr = max(bal, key=bal.get) if bal else None
             f["holders.top1_address"] = top_addr
             if top_addr:  # a contract top holder is usually the pool/PoolManager, not a person
