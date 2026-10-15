@@ -1,0 +1,13 @@
+# Local-only secrets. Copy to .dev.vars (never commit). Production values: `npx wrangler secret put <NAME>`.
+# Turnstile "always passes" test secret from Cloudflare docs.
+TURNSTILE_SECRET=1x0000000000000000000000000000000AA
+IP_SALT=local-dev-salt-change-me
+
+# Local origins (production uses wrangler.jsonc vars)
+ALLOWED_ORIGINS=http://localhost:5173,http://127.0.0.1:5173
+
+# Optional: local RPC. Where the ISP blocks the chain's RPC domain, run `node ../tools/rpc-proxy.mjs`
+# RPC_URL=http://127.0.0.1:8546
+
+# Optional: set to actually send waitlist emails from local dev
+# RESEND_API_KEY=

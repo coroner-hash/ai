@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Check a token · Coroner</title>
+    <meta name="description" content="Paste a Robinhood Chain token address and get a verdict with the evidence attached. Beta, rule-based while the Coroner model is in development." />
+    <meta name="theme-color" content="#eef2f5" />
+    <meta name="color-scheme" content="light" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://coronerai.pro/check" />
+    <script type="module" src="/src/check/check.js"></script>
+  </head>
+  <body class="check-page">
+    <header class="nav nav-solid">
+      <a class="brand" href="/" aria-label="Coroner home">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 9h18M3 15h18" stroke="currentColor" stroke-width="1.8"/><circle cx="16.5" cy="12" r="1.5" fill="#e5322d"/></svg>
+        <span>Coroner</span>
+      </a>
+      <nav class="nav-links" aria-label="Tools"><a href="/check">Check a token</a><a href="/premortem">Pre-mortem</a><a href="/autopsy">Autopsy</a></nav>
+      <span class="beta">Beta · rule-based</span>
+    </header>
+
+    <main class="check">
+      <p class="kicker">Verdict</p>
+      <h1>Check a token.</h1>
+      <p class="lead-sm">Paste a Robinhood Chain token address. We read the contract, then the market and holders from your browser, and return a verdict with the evidence attached.</p>
+
+      <form id="c-form" class="c-form" novalidate>
+        <label class="w-sr" for="c-address">Token address</label>
+        <input id="c-address" name="address" placeholder="0x…  token contract address" autocomplete="off" spellcheck="false" maxlength="42" />
+        <button type="submit" id="c-go">Get verdict</button>
+      </form>
+      <p class="c-try">No address handy? Try <button type="button" class="linklike" data-fill="0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168">USDG</button>, a known stablecoin.</p>
+      <p id="c-msg" class="c-msg" role="status" aria-live="polite" hidden></p>
+
+      <section id="c-result" class="c-result" hidden aria-live="polite"></section>
+
+      <p class="c-foot">
+        This beta uses transparent rules, not the Coroner model, which is still in development. Risk classification from public on-chain data. Not financial advice. Labels describe patterns consistent with the numbers, never accusations.
+      </p>
+    </main>
+  </body>
+</html>

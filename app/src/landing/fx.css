@@ -1,0 +1,38 @@
+/* HUD-style animated line panels for the "four ways" cards.
+   Reduced motion: the loop is slowed (see fx.js), never stopped. */
+.fx { position: relative; width: 100%; aspect-ratio: 240 / 100; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-bottom: 8px;
+  background:
+    linear-gradient(rgba(27, 167, 209, 0.08) 1px, transparent 1px) 0 0 / 100% 20px,
+    linear-gradient(90deg, rgba(27, 167, 209, 0.08) 1px, transparent 1px) 0 0 / 24px 100%,
+    linear-gradient(180deg, #fbfcfd, #f1f5f8); }
+.fx svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.fx-line { fill: none; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round;
+  stroke-dasharray: 1; stroke-dashoffset: 1; filter: drop-shadow(0 0 2.5px rgba(27, 167, 209, 0.6));
+  animation: fx-draw var(--fx-t, 1.4s) linear infinite; }
+.fx-copy { stroke-dasharray: 0.035 0.03; stroke-dashoffset: 0; opacity: 0; filter: none; animation: fx-copy var(--fx-t, 1.4s) linear infinite; }
+.fx-never .fx-line { filter: none; }
+.fx-label { position: absolute; left: 10px; top: 7px; font: 10px var(--mono); letter-spacing: 0.1em; color: var(--muted); z-index: 2; }
+.fx-live { position: absolute; right: 10px; top: 9px; width: 6px; height: 6px; border-radius: 50%; background: var(--cyan); z-index: 2; animation: fx-blink 0.6s ease-in-out infinite; }
+.fx-dot { filter: drop-shadow(0 0 4px rgba(27, 167, 209, 0.8)); }
+.fx-lp .fx-dot { filter: drop-shadow(0 0 4px rgba(229, 50, 45, 0.8)); }
+.fx::after { content: ""; position: absolute; top: 0; bottom: 0; width: 46px; left: -50px; pointer-events: none; z-index: 1;
+  background: linear-gradient(90deg, transparent, rgba(27, 167, 209, 0.16), transparent); animation: fx-scan 1.2s linear infinite; }
+
+@keyframes fx-draw {
+  0% { stroke-dashoffset: 1; opacity: 1; }
+  60% { stroke-dashoffset: 0; opacity: 1; }
+  88% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 0; }
+}
+@keyframes fx-copy {
+  0%, 12% { opacity: 0; }
+  30%, 88% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes fx-scan { from { left: -50px; } to { left: 100%; } }
+@keyframes fx-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .fx { --fx-t: 4s; }
+  .fx::after { animation-duration: 3.4s; }
+}

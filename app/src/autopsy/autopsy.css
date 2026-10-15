@@ -1,0 +1,7 @@
+.cause { font: 400 28px var(--serif); margin: 18px 0 0; }
+.cmp { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.cmp-row { display: grid; grid-template-columns: 1.1fr 1fr 1fr; gap: 12px; padding: 11px 16px; border-bottom: 1px dashed var(--line); font: 13px var(--mono); }
+.cmp-row:last-child { border-bottom: 0; }
+.cmp-head { background: #f7f9fb; color: var(--muted); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; }
+.cmp-k { color: var(--muted); }
+@media (max-width: 560px) { .cmp-row { grid-template-columns: 1fr 1fr 1fr; padding: 10px 12px; font-size: 12px; } }

@@ -114,17 +114,23 @@ def main():
     ap.add_argument("--endpoint")
     ap.add_argument("--model")
     ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--replies", help="JSONL of {\"reply\": ...}, one per eval row, in order (from eval_local.py)")
+    ap.add_argument("--eval", help="eval file (default data/sft/eval.jsonl)")
     a = ap.parse_args()
     random.seed(1)
-    rows = [json.loads(l) for l in DATA.read_text(encoding="utf8").splitlines() if l.strip()]
+    src = pathlib.Path(a.eval) if a.eval else DATA
+    rows = [json.loads(l) for l in src.read_text(encoding="utf8").splitlines() if l.strip()]
+    replies = [json.loads(l)["reply"] for l in pathlib.Path(a.replies).read_text(encoding="utf8").splitlines() if l.strip()] if a.replies else None
     if a.limit:
         random.shuffle(rows)
         rows = rows[: a.limit]
     stats = collections.defaultdict(lambda: collections.defaultdict(list))
-    for r in rows:
+    for idx, r in enumerate(rows):
         sysm, usr, tgt = r["messages"]
         want = json.loads(tgt["content"])
-        if a.oracle or a.noise:
+        if replies is not None:
+            reply = replies[idx]
+        elif a.oracle or a.noise:
             reply = corrupt(tgt["content"]) if random.random() < a.noise else tgt["content"]
         else:
             reply = ask(a.endpoint, a.model, [sysm, usr])

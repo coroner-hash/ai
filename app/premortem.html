@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Pre-mortem · Coroner</title>
+    <meta name="description" content="Paste a token launch draft and see how it could die before it ships: risks the market will see, and concrete fixes. Beta, rule-based while the Coroner model is in development." />
+    <meta name="theme-color" content="#eef2f5" />
+    <meta name="color-scheme" content="light" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://coronerai.pro/premortem" />
+    <meta property="og:image" content="https://coronerai.pro/og.png" />
+    <script type="module" src="/src/premortem/premortem.js"></script>
+  </head>
+  <body class="check-page">
+    <header class="nav nav-solid">
+      <a class="brand" href="/" aria-label="Coroner home">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 9h18M3 15h18" stroke="currentColor" stroke-width="1.8"/><circle cx="16.5" cy="12" r="1.5" fill="#e5322d"/></svg>
+        <span>Coroner</span>
+      </a>
+      <nav class="nav-links" aria-label="Tools"><a href="/check">Check a token</a><a href="/premortem">Pre-mortem</a><a href="/autopsy">Autopsy</a></nav>
+      <span class="beta">Beta · rule-based</span>
+    </header>
+
+    <main class="check pm">
+      <p class="kicker">Pre-mortem</p>
+      <h1>How could it die?</h1>
+      <p class="lead-sm">Fill in your launch draft. We show the risks the market will see, the death patterns the draft invites, and what to change. Nothing leaves this page except the draft you submit, and it is not stored.</p>
+
+      <form id="p-form" class="p-form" novalidate>
+        <fieldset>
+          <legend>Identity</legend>
+          <div class="grid2">
+            <label>Name<input name="name" maxlength="60" placeholder="e.g. Tacocat" /></label>
+            <label>Ticker<input name="symbol" maxlength="10" placeholder="e.g. TACO" /></label>
+          </div>
+          <label>Description<textarea name="description" rows="3" maxlength="600" placeholder="What it is and who runs it, in two honest sentences."></textarea></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Parameters</legend>
+          <div class="grid3">
+            <label>Buy tax %<input name="buyTaxPct" type="number" min="0" max="100" step="0.1" placeholder="0" /></label>
+            <label>Sell tax %<input name="sellTaxPct" type="number" min="0" max="100" step="0.1" placeholder="0" /></label>
+            <label>Team allocation %<input name="teamAllocationPct" type="number" min="0" max="100" step="0.1" placeholder="0" /></label>
+          </div>
+          <div class="grid2">
+            <label>Where the team allocation sits
+              <select name="allocationSplit"><option value="">Not decided</option><option value="one_wallet">One wallet</option><option value="several_wallets">Several wallets</option><option value="vesting">Public vesting contract</option></select>
+            </label>
+            <label>Initial liquidity (USD)<input name="liquidityUsd" type="number" min="0" step="1" placeholder="e.g. 5000" /></label>
+          </div>
+          <label>Liquidity lock
+            <select name="liquidityLock"><option value="">Not decided</option><option value="none">Not locked</option><option value="short">Locked, under 6 months</option><option value="long">Locked 6+ months, burned, or locked by the launchpad</option></select>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Contract powers</legend>
+          <label class="chk"><input type="checkbox" name="taxChangeable" /> The owner can change the tax or fees</label>
+          <label class="chk"><input type="checkbox" name="hasMint" /> The contract has a mint function</label>
+          <label class="chk"><input type="checkbox" name="ownerRenounce" /> The owner will renounce ownership</label>
+          <label class="chk"><input type="checkbox" name="hasBlacklist" /> It has a blacklist</label>
+          <label class="chk"><input type="checkbox" name="hasPause" /> It has pause()</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Contract source <span class="opt">(optional, Solidity, up to 24 KB)</span></legend>
+          <textarea name="source" id="p-source" rows="8" spellcheck="false" placeholder="Paste your token contract. We scan it for mint, blacklist, pause, fee setters and risky opcodes, and point to the lines."></textarea>
+        </fieldset>
+
+        <button type="submit" id="p-go">Run pre-mortem</button>
+      </form>
+      <p id="c-msg" class="c-msg" role="status" aria-live="polite" hidden></p>
+
+      <section id="p-result" class="c-result" hidden aria-live="polite"></section>
+
+      <p class="c-foot">
+        This beta uses transparent rules, not the Coroner model, which is still in development. It describes patterns a draft invites. It does not predict outcomes or prices. Risk classification from public on-chain data. Not financial advice.
+      </p>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "coroner",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-09-01",
+  "assets": {
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    // Add app routes here (e.g. "/app", "/t/*") when the Worker must serve them.
+    "run_worker_first": ["/api/*"]
+  },
+  // Creates the DNS records on deploy. The domain must already be Active in Cloudflare.
+  "routes": [
+    // Temporary domain until the team approves; swap to coronerai.pro (+ www) at go-live.
+    { "pattern": "coroner.example.com", "custom_domain": true }
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "coroner",
+      // From `npx wrangler d1 create coroner`
+      "database_id": "__D1_DATABASE_ID__",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "vars": {
+    // Origins allowed to POST to the API. Local dev overrides this in .dev.vars.
+    "ALLOWED_ORIGINS": "https://coroner.example.com"
+  },
+  "observability": { "enabled": true }
+}
