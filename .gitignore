@@ -6,3 +6,6 @@ proxy.log
 data/new_pools_*.jsonl
 data/trending_pools_*.jsonl
 node_modules/
+
+# generated dataset: rebuild with scripts/gen-sft.mjs; publish on Hugging Face, not in git
+data/sft/
