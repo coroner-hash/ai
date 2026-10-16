@@ -42,7 +42,6 @@ function compare(rec) {
   const rows = [
     ["Liquidity", rec.first.liq_usd, rec.outcome.liq_usd],
     ["24h volume", rec.first.vol_h24, rec.outcome.vol_h24],
-    ["FDV", rec.first.fdv_usd, rec.outcome.fdv_usd],
   ];
   const tbl = el("div", "cmp");
   const head = el("div", "cmp-row cmp-head");
