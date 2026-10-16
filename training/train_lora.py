@@ -26,12 +26,16 @@ model = FastLanguageModel.get_peft_model(
     use_gradient_checkpointing="unsloth",
 )
 
+# Multimodal models (Qwen3.5, Gemma 4) return a Processor. Text work needs the tokenizer inside it,
+# otherwise tok("...") is read as an image argument.
+tok_text = getattr(tok, "tokenizer", tok)
+
 rows = [json.loads(l) for l in open(TRAIN, encoding="utf8") if l.strip()]
-ds = Dataset.from_list([{"text": tok.apply_chat_template(r["messages"], tokenize=False, add_generation_prompt=False)} for r in rows])
-print(f"{len(ds)} examples; first example has {len(tok(ds[0]['text']).input_ids)} tokens")
+ds = Dataset.from_list([{"text": tok_text.apply_chat_template(r["messages"], tokenize=False, add_generation_prompt=False)} for r in rows])
+print(f"{len(ds)} examples; first example has {len(tok_text(ds[0]['text']).input_ids)} tokens")
 
 trainer = SFTTrainer(
-    model=model, tokenizer=tok, train_dataset=ds,
+    model=model, tokenizer=tok_text, train_dataset=ds,
     args=SFTConfig(
         dataset_text_field="text", max_seq_length=MAX_SEQ, per_device_train_batch_size=1, gradient_accumulation_steps=16,
         warmup_steps=10, num_train_epochs=1 if not MAX_STEPS else 1, max_steps=MAX_STEPS if MAX_STEPS else -1,
