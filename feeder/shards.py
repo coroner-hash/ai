@@ -7,7 +7,7 @@ Only shards whose content changed are rewritten, to keep commits small.
 import json, pathlib, collections
 
 DATA = pathlib.Path(__file__).resolve().parent.parent / "data"
-KEEP = ("liq_usd", "fdv_usd", "vol_h24", "buys_h24", "sells_h24", "at")
+KEEP = ("liq_usd", "fdv_usd", "vol_h24", "buys_h24", "sells_h24", "at", "age_h")
 
 
 def slim(snap):

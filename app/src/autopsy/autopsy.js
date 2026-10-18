@@ -45,7 +45,8 @@ function compare(rec) {
   ];
   const tbl = el("div", "cmp");
   const head = el("div", "cmp-row cmp-head");
-  head.append(el("span", "", ""), el("span", "", "First seen"), el("span", "", "24 hours later"));
+  const h = rec.outcome.age_h;
+  head.append(el("span", "", ""), el("span", "", "First seen"), el("span", "", h ? `Re-checked at ${Math.round(h)} h` : "24 hours later"));
   tbl.append(head);
   for (const [label, a, b] of rows) {
     const r = el("div", "cmp-row");
@@ -71,7 +72,7 @@ function render(d, rec) {
   out.append(head, el("p", "r-addr", d.address));
 
   if (dead) out.append(el("p", "cause", `Pattern: ${CAUSES[v.cause_pattern] || v.cause_pattern}`));
-  out.append(el("h2", "r-h", "First seen vs 24 hours later"), compare(rec));
+  out.append(el("h2", "r-h", "First seen vs re-check"), compare(rec));
 
   out.append(el("h2", "r-h", dead ? "What the numbers show" : "Flags"));
   const flags = el("div", "r-flags");
@@ -84,7 +85,7 @@ function render(d, rec) {
   out.append(flags);
 
   const notes = [
-    `Pool created ${rec.created.replace("T", " ").replace("Z", " UTC")}. First seen by the collector, then re-checked about 24 hours later.`,
+    `Pool created ${rec.created.replace("T", " ").replace("Z", " UTC")}. First seen by the collector, then re-checked at least 24 hours after launch (the exact hour is in the table header).`,
     `Confidence ${Math.round(v.confidence * 100)}%. Rule baseline, not the Coroner model.`,
   ];
   const ul = el("ul", "r-notes");

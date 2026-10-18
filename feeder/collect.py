@@ -57,22 +57,34 @@ def collect(pages=5):
     print(f"collect: +{added} pools, total {len(st)}")
 
 
-def resolve(min_age_h=24):
+def resolve(min_age_h=24, max_calls=60):
+    """Re-check pools that are at least min_age_h old, 30 pools per API call (GeckoTerminal multi-pool endpoint).
+    Oldest first; at most max_calls calls per run, so a run always finishes (and saves) inside the workflow timeout.
+    The outcome stores age_h: how many hours after launch it was actually taken (>= min_age_h)."""
     st, done = load(), 0
-    for addr, rec in st.items():
-        if rec["outcome"]:
-            continue
-        created = datetime.datetime.fromisoformat(rec["created"].replace("Z", "+00:00"))
-        if (NOW() - created).total_seconds() < min_age_h * 3600:
-            continue
-        d = get(f"{BASE}/pools/{addr}")
+    now = NOW()
+    age = lambda rec: (now - datetime.datetime.fromisoformat(rec["created"].replace("Z", "+00:00"))).total_seconds() / 3600
+    todo = sorted((a for a, rec in st.items() if not rec["outcome"] and age(rec) >= min_age_h), key=lambda a: st[a]["created"])
+    calls = 0
+    for i in range(0, len(todo), 30):
+        if calls >= max_calls:
+            break
+        batch = todo[i : i + 30]
+        d = get(f"{BASE}/pools/multi/{','.join(batch)}")
+        calls += 1
         time.sleep(2.2)
         if not d or "data" not in d:
             continue
-        rec["outcome"] = metrics(slim(d["data"]))
-        done += 1
+        for p in d["data"]:
+            addr = str(p["attributes"]["address"]).lower()
+            rec = st.get(addr) or next((st[a] for a in batch if a.lower() == addr), None)
+            if rec is not None and not rec["outcome"]:
+                m = metrics(slim(p))
+                m["age_h"] = round(age(rec), 1)
+                rec["outcome"] = m
+                done += 1
     save(st)
-    print(f"resolve: {done} outcomes stored; shards changed: {write_shards(st)}")
+    print(f"resolve: {done} outcomes stored from {calls} calls ({len(todo)} waiting); shards changed: {write_shards(st)}")
 
 
 if __name__ == "__main__":
