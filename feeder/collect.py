@@ -57,17 +57,18 @@ def collect(pages=5):
     print(f"collect: +{added} pools, total {len(st)}")
 
 
-def resolve(min_age_h=24, max_calls=60):
+def resolve(min_age_h=24, max_calls=60, budget_s=1020):
     """Re-check pools that are at least min_age_h old, 30 pools per API call (GeckoTerminal multi-pool endpoint).
-    Oldest first; at most max_calls calls per run, so a run always finishes (and saves) inside the workflow timeout.
+    Oldest first; at most max_calls calls AND budget_s seconds per run (GitHub runner IPs get 429s from the API, so calls can be slow),
+    which keeps a run inside the workflow timeout so it always saves and commits.
     The outcome stores age_h: how many hours after launch it was actually taken (>= min_age_h)."""
     st, done = load(), 0
     now = NOW()
     age = lambda rec: (now - datetime.datetime.fromisoformat(rec["created"].replace("Z", "+00:00"))).total_seconds() / 3600
     todo = sorted((a for a, rec in st.items() if not rec["outcome"] and age(rec) >= min_age_h), key=lambda a: st[a]["created"])
-    calls = 0
+    calls, t0 = 0, time.time()
     for i in range(0, len(todo), 30):
-        if calls >= max_calls:
+        if calls >= max_calls or time.time() - t0 > budget_s:
             break
         batch = todo[i : i + 30]
         d = get(f"{BASE}/pools/multi/{','.join(batch)}")
