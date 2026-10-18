@@ -6,7 +6,10 @@ Real run (rented 24 GB GPU):               MODEL=google/gemma-4-31B-it  (QLoRA 4
 Env vars: MODEL, TRAIN_FILE, MAX_STEPS (0 = full epoch), MAX_SEQ (default 2048), OUT_DIR, HF_REPO (optional, needs `huggingface-cli login` done by YOU).
 Never paste a Hugging Face token into chat or commit it.
 """
-import os, json
+import os, json, sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from chat_markers import detect, training_text  # noqa: E402
 
 MODEL = os.environ.get("MODEL", "unsloth/Qwen3.5-0.8B")
 TRAIN = os.environ.get("TRAIN_FILE", "data/sft/train.jsonl")
@@ -31,7 +34,11 @@ model = FastLanguageModel.get_peft_model(
 tok_text = getattr(tok, "tokenizer", tok)
 
 rows = [json.loads(l) for l in open(TRAIN, encoding="utf8") if l.strip()]
-ds = Dataset.from_list([{"text": tok_text.apply_chat_template(r["messages"], tokenize=False, add_generation_prompt=False)} for r in rows])
+# training text = the exact prompt the model sees at inference + the JSON answer + end-of-turn (see chat_markers.py)
+MARKERS = detect(tok_text)
+print("chat markers:", MARKERS)
+ds = Dataset.from_list([{"text": training_text(tok_text, r["messages"], MARKERS)} for r in rows])
+print("sample training text tail:", repr(ds[0]["text"][-160:]))
 print(f"{len(ds)} examples; first example has {len(tok_text(ds[0]['text']).input_ids)} tokens")
 
 trainer = SFTTrainer(
@@ -44,8 +51,8 @@ trainer = SFTTrainer(
     ),
 )
 # learn only from the assistant's JSON, not from the fact sheet it was given
-# (markers differ per chat template: adjust if the smoke test shows 0 trainable tokens)
-trainer = train_on_responses_only(trainer, instruction_part=os.environ.get("INSTR", "<|im_start|>user\n"), response_part=os.environ.get("RESP", "<|im_start|>assistant\n"))
+# (markers are detected from the model's own chat template; INSTR / RESP env vars override them)
+trainer = train_on_responses_only(trainer, instruction_part=os.environ.get("INSTR", MARKERS["instruction_part"]), response_part=os.environ.get("RESP", MARKERS["response_part"]))
 trainer.train()
 model.save_pretrained(OUT)
 tok.save_pretrained(OUT)
