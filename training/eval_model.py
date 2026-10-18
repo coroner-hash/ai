@@ -76,6 +76,15 @@ def evidence_ok(inp, out):
     return good / len(ev)
 
 
+def evidence_recall(want, got):
+    """Share of the target's evidence keys that the reply also cites with the same value (1.0 if nothing needs citing)."""
+    w = want.get("evidence") or {}
+    if not w:
+        return 1.0
+    g = got.get("evidence") or {}
+    return sum(1 for k, v in w.items() if k in g and (g[k] == v or str(g[k]) == str(v))) / len(w)
+
+
 def f1(a, b):
     a, b = set(a), set(b)
     if not a and not b:
@@ -139,20 +148,31 @@ def main():
         key = (r["meta"]["mode"], r["meta"]["source"])
         s = stats[key]
         s["json_valid"].append(got is not None)
+        s["_risk"].append(want["risk_class"])
+        s["_cause"].append(want.get("cause_pattern"))
+        s["_noflag_f1"].append(f1([x["code"] for x in want["flags"]], []))
         s["schema_ok"].append(schema_ok(got))
         if got:
             s["risk_class_acc"].append(got.get("risk_class") == want["risk_class"])
             s["cause_acc"].append(got.get("cause_pattern") == want.get("cause_pattern"))
             s["flag_f1"].append(f1([x["code"] for x in want["flags"]], [x.get("code") for x in got.get("flags", []) if isinstance(x, dict)]))
             s["evidence_ok"].append(evidence_ok(inp, got))
+            s["ev_recall"].append(evidence_recall(want, got))
         else:
-            for k in ("risk_class_acc", "cause_acc", "flag_f1", "evidence_ok"):
+            for k in ("risk_class_acc", "cause_acc", "flag_f1", "evidence_ok", "ev_recall"):
                 s[k].append(0.0)
-    print(f"{'mode':9s} {'source':10s} {'n':>4s}  " + "  ".join(f"{m:>14s}" for m in ["json_valid", "schema_ok", "risk_class_acc", "cause_acc", "flag_f1", "evidence_ok"]))
+    cols = ["json_valid", "schema_ok", "risk_class_acc", "cause_acc", "flag_f1", "evidence_ok", "ev_recall"]
+    print(f"{'mode':9s} {'source':10s} {'n':>4s}  " + "  ".join(f"{m:>14s}" for m in cols))
     for (mode, source), s in sorted(stats.items()):
         n = len(s["json_valid"])
-        print(f"{mode:9s} {source:10s} {n:4d}  " + "  ".join(f"{sum(s[m]) / len(s[m]):14.3f}" for m in ["json_valid", "schema_ok", "risk_class_acc", "cause_acc", "flag_f1", "evidence_ok"]))
-    print("\nHeadline numbers are the 'real' rows only. Synthetic rows test coverage of rare cases, not real-world accuracy.")
+        print(f"{mode:9s} {source:10s} {n:4d}  " + "  ".join(f"{sum(s[m]) / len(s[m]):14.3f}" for m in cols))
+    print("\nBASELINE to beat (no model: always answer the most common value, and never raise a flag)")
+    print(f"{'mode':9s} {'source':10s} {'n':>4s}  {'risk_class_acc':>14s}  {'cause_acc':>14s}  {'flag_f1':>14s}")
+    for (mode, source), s in sorted(stats.items()):
+        n = len(s["json_valid"])
+        maj = lambda xs: max(collections.Counter(xs).values()) / len(xs)
+        print(f"{mode:9s} {source:10s} {n:4d}  {maj(s['_risk']):14.3f}  {maj(s['_cause']):14.3f}  {sum(s['_noflag_f1']) / n:14.3f}")
+    print("\nHeadline numbers are the 'real' rows only. A model only shows it learned the rules where it beats the baseline table. Synthetic rows test coverage of rare cases, not real-world accuracy.")
 
 
 if __name__ == "__main__":

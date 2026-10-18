@@ -43,7 +43,16 @@ const hashSplit = (s) => {
 };
 
 const user = (obj) => JSON.stringify(obj);
-const assistant = (obj) => JSON.stringify(obj);
+// Answer key order matters for a model that writes left to right: put the reasoning (flags, evidence) BEFORE the
+// decision (risk_class, cause_pattern). Consumers read the JSON by key, so the order never changes their results.
+const ANSWER_ORDER = ["mode", "flags", "fixes", "levels", "exposure", "evidence", "status", "risk_class", "cause_pattern", "clone_of", "confidence", "disclaimer"];
+const ordered = (obj) => {
+  const out = {};
+  for (const k of ANSWER_ORDER) if (k in obj) out[k] = obj[k];
+  for (const k of Object.keys(obj)) if (!(k in out)) out[k] = obj[k];
+  return out;
+};
+const assistant = (obj) => JSON.stringify(ordered(obj));
 const row = (mode, source, split, input, output) => ({ messages: [{ role: "system", content: SYSTEM }, { role: "user", content: user(input) }, { role: "assistant", content: assistant(output) }], meta: { mode, source, split } });
 
 const rows = [];
