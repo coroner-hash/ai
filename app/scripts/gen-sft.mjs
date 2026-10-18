@@ -51,6 +51,7 @@ const rows = [];
 // ---------- A/B: real tokens ----------
 const real = fs.existsSync(FACTS) ? fs.readFileSync(FACTS, "utf8").split("\n").filter(Boolean).map((l) => JSON.parse(l)) : [];
 const snapAge = (created, at) => (at ? Math.max(0, round((Date.parse(at) - Date.parse(created)) / 3_600_000, 1)) : null);
+const realAutopsy = [];
 for (const r of real) {
   const f = r.facts;
   if (!f["contract.is_contract"]) continue;
@@ -71,7 +72,21 @@ for (const r of real) {
       outcome: { liq_usd: mn["market.liq_usd"], fdv_usd: mn["market.fdv_usd"], vol_h24: mn["market.vol_h24_usd"], buys_h24: mn["market.buys_h24"], sells_h24: mn["market.sells_h24"] },
     };
     const input = { mode: "autopsy", facts: f, record: rec };
-    rows.push(row("autopsy", "real", split, input, buildAutopsy(f, rec, r.label.clone_of ?? null)));
+    realAutopsy.push(row("autopsy", "real", split, input, buildAutopsy(f, rec, r.label.clone_of ?? null)));
+  }
+}
+
+// Real outcomes are ~95% dead (backlog was re-checked ~3 days after launch). Cap each outcome class so the model is not
+// taught that everything dies; alive rows are all kept. Capping is seeded and applied per split.
+{
+  const CAP = 350;
+  const seen = {};
+  const shuffled = realAutopsy.map((x) => [R(), x]).sort((a, b) => a[0] - b[0]).map((x) => x[1]);
+  for (const x of shuffled) {
+    const out = JSON.parse(x.messages[2].content);
+    const key = `${x.meta.split}:${out.status}:${out.cause_pattern}`;
+    seen[key] = (seen[key] ?? 0) + 1;
+    if (out.status === "alive" || seen[key] <= (x.meta.split === "eval" ? CAP / 4 : CAP)) rows.push(x);
   }
 }
 
