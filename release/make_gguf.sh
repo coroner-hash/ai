@@ -6,6 +6,7 @@
 set -e
 export HF_HOME=/workspace/hf_cache
 W=/workspace
+command -v cmake >/dev/null || { apt-get update -qq && apt-get install -y -qq cmake build-essential; }
 mkdir -p $W/gguf
 cd $W
 [ -d llama.cpp ] || git clone --depth 1 https://github.com/ggml-org/llama.cpp
