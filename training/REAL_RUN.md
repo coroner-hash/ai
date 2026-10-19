@@ -24,9 +24,12 @@ cd /workspace && pip install unsloth && git clone https://github.com/coroner-has
 ```
 Then in the JupyterLab file panel open `/workspace/ai/data/sft` and **Upload** the two files.
 
+> Two things learned on the first pod: (1) set `HF_HOME=/workspace/hf_cache` so model downloads go to the 150 GB volume, not the 40 GB container disk; (2) train from the pre-quantized `unsloth/gemma-4-31B-it-unsloth-bnb-4bit` (about 20 GB download instead of 62 GB). Regenerate `train_4k.jsonl` / `eval_80.jsonl` with `python training/make_real_run_sets.py` whenever the dataset changes.
+
 ## 3. Dry run (5 steps, about 10 to 15 minutes, costs under $0.30)
 ```bash
-MODEL=unsloth/gemma-4-31B-it MAX_STEPS=5 TRAIN_FILE=data/sft/train_4k.jsonl OUT_DIR=outputs/dry python training/train_lora.py 2>&1 | tee outputs/dry.log
+export HF_HOME=/workspace/hf_cache
+MODEL=unsloth/gemma-4-31B-it-unsloth-bnb-4bit MAX_STEPS=5 TRAIN_FILE=data/sft/train_4k.jsonl OUT_DIR=outputs/dry python training/train_lora.py 2>&1 | tee outputs/dry.log
 ```
 Check, and send me the output:
 - `chat markers:` must show `<|turn>user\n` and `<|turn>model\n`.
@@ -36,7 +39,8 @@ Check, and send me the output:
 
 ## 4. Full run
 ```bash
-MODEL=unsloth/gemma-4-31B-it MAX_STEPS=250 TRAIN_FILE=data/sft/train_4k.jsonl OUT_DIR=outputs/coroner-31b-lora python training/train_lora.py 2>&1 | tee outputs/train.log
+export HF_HOME=/workspace/hf_cache
+MODEL=unsloth/gemma-4-31B-it-unsloth-bnb-4bit MAX_STEPS=250 TRAIN_FILE=data/sft/train_4k.jsonl OUT_DIR=outputs/coroner-31b-lora python training/train_lora.py 2>&1 | tee outputs/train.log
 ```
 Right after it finishes, **back up the adapter** (small) to your computer:
 ```bash
