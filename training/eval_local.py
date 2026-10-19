@@ -4,7 +4,7 @@ Then score them:  python training/eval_model.py --replies outputs/replies.jsonl 
 Usage (Colab, after train_lora.py):
   python training/eval_local.py --adapter outputs/smoke --eval data/smoke/eval.jsonl --out outputs/replies.jsonl
 """
-import argparse, json
+import argparse, json, os
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--adapter", required=True)
@@ -15,7 +15,7 @@ a = ap.parse_args()
 
 from unsloth import FastLanguageModel  # noqa: E402
 
-model, tok = FastLanguageModel.from_pretrained(a.adapter, max_seq_length=2048, load_in_4bit=True)
+model, tok = FastLanguageModel.from_pretrained(a.adapter, max_seq_length=int(os.environ.get("MAX_SEQ", "2048")), load_in_4bit=True)
 FastLanguageModel.for_inference(model)
 tok_text = getattr(tok, "tokenizer", tok)  # Processor -> text tokenizer (see train_lora.py)
 
