@@ -1,10 +1,8 @@
-import "@fontsource/instrument-serif/400.css";
-import "@fontsource/instrument-serif/400-italic.css";
-import "@fontsource-variable/instrument-sans";
-import "@fontsource-variable/jetbrains-mono";
+import "../landing/fonts.js";
 import "../landing/landing.css";
 import "../check/check.css";
 import "./premortem.css";
+import "../landing/theme.css";
 
 const GT_SEARCH = "https://api.geckoterminal.com/api/v2/search/pools?network=robinhood&query=";
 const $ = (id) => document.getElementById(id);

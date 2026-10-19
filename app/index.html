@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>Coroner: every token dies. We write the report.</title>
     <meta name="description" content="Coroner is an open model that reads a token's on-chain facts and returns a verdict with the evidence attached. Robinhood Chain. Preliminary, in development." />
-    <meta name="theme-color" content="#eef2f5" />
+    <meta name="theme-color" content="#f8fafc" />
     <meta name="color-scheme" content="light" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="canonical" href="https://coronerai.pro/" />
@@ -30,12 +30,11 @@
         <a href="/check">Check a token</a>
         <a href="/premortem">Pre-mortem</a>
         <a href="/autopsy">Autopsy</a>
-        <a href="#jobs">What it does</a>
-        <a href="#example">Example</a>
+        <a href="#model">Model</a>
         <a href="#how">How it works</a>
-        <a href="#status">Status</a>
+        <a href="#status">Roadmap</a>
       </nav>
-      <div class="nav-social"><a class="ico" href="https://github.com/coroner-hash/ai" target="_blank" rel="noreferrer" aria-label="Coroner on GitHub" title="Coroner on GitHub"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a><a class="ico" href="https://x.com/useCoronerAI" target="_blank" rel="noreferrer" aria-label="@useCoronerAI on X" title="@useCoronerAI on X"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></div>
+      <div class="nav-social"><a class="btn-hf" href="https://huggingface.co/coronerai/coroner-31b" target="_blank" rel="noreferrer"><span class="dot" aria-hidden="true"></span>Hugging Face ↗</a><a class="ico" href="https://github.com/coroner-hash/ai" target="_blank" rel="noreferrer" aria-label="Coroner on GitHub" title="Coroner on GitHub"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a><a class="ico" href="https://x.com/useCoronerAI" target="_blank" rel="noreferrer" aria-label="@useCoronerAI on X" title="@useCoronerAI on X"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></div>
     </header>
 
     <main>
@@ -43,21 +42,23 @@
         <img class="hero-img" src="/hero.webp" alt="" width="1672" height="941" fetchpriority="high" decoding="async" aria-hidden="true" />
         <div class="hero-veil" aria-hidden="true"></div>
         <div class="hero-copy">
-          <p class="eyebrow"><span class="chip">Preliminary</span> Open model · Robinhood Chain</p>
+          <p class="eyebrow"><span class="chip">v1 · open weights</span> Robinhood Chain</p>
           <h1 id="title">Every token dies.<br /><em>We write the report.</em></h1>
           <p class="lead">
             Coroner reads a token's on-chain facts and returns a verdict with the evidence attached. Before you launch it, before you buy it, and after it dies.
           </p>
           <div class="cta">
-            <a class="btn btn-primary" href="#waitlist">Join the waitlist</a>
-            
+            <a class="btn btn-primary" href="https://huggingface.co/coronerai/coroner-31b" target="_blank" rel="noreferrer">View on Hugging Face ↗</a>
+            <a class="btn" href="/check">Check a token</a>
+            <a class="btn" href="#waitlist">Join the waitlist</a>
           </div>
           <ul class="hero-meta" aria-label="Release status">
             <li><span>Token</span> none yet</li>
-            <li><span>Weights</span> Hugging Face · soon</li>
+            <li><span>Weights</span> <b class="ok">Hugging Face · live</b></li>
+            <li><span>Base</span> Gemma 4 31B · Apache 2.0</li>
             <li><span>Chain</span> Robinhood · 4663</li>
           </ul>
-          <p class="fine">If a token ever launches, the contract goes up here and on @useCoronerAI at the same moment.</p>
+          <p class="fine">The site tools still run on a rule engine. The hosted model comes next. If a token launches, the contract goes up here and on @useCoronerAI at the same moment.</p>
         </div>
       </section>
 
@@ -92,15 +93,16 @@
         <h2 id="model-title">An open model that judges tokens. Run it yourself or call it.</h2>
         <div class="model-grid">
           <dl class="spec">
-            <div><dt>Name</dt><dd>coroner-31b <i>(planned)</i></dd></div>
+            <div><dt>Name</dt><dd><a href="https://huggingface.co/coronerai/coroner-31b" target="_blank" rel="noreferrer">coroner-31b</a> <i>(v1)</i></dd></div>
             <div><dt>Base</dt><dd>Gemma 4 31B-it · Apache 2.0</dd></div>
-            <div><dt>Method</dt><dd>LoRA fine-tune on labelled launches</dd></div>
+            <div><dt>Method</dt><dd>LoRA fine-tune on rule-labelled launches, merged to 16-bit</dd></div>
             <div><dt>Input</dt><dd>A fact sheet (JSON) built by open code</dd></div>
             <div><dt>Output</dt><dd>Verdict JSON: risk class, flags, fixes, evidence ids</dd></div>
             <div><dt>Local</dt><dd>About 20 GB at 4-bit <i>(estimate, not measured)</i></dd></div>
-            <div><dt>Weights</dt><dd>Hugging Face · <span class="pill soon">Soon</span></dd></div>
+            <div><dt>Weights</dt><dd><a href="https://huggingface.co/coronerai/coroner-31b" target="_blank" rel="noreferrer">Hugging Face</a> · <span class="pill live">Live</span></dd></div>
           </dl>
           <ul class="runs">
+            <li><b>Download</b><span>Open weights, safetensors, Apache 2.0. Model card with honest evaluation numbers. <a href="https://huggingface.co/coronerai/coroner-31b" target="_blank" rel="noreferrer">Open on Hugging Face</a>.</span><span class="pill live">Live</span></li>
             <li><b>Local</b><span>GGUF for Ollama and llama.cpp. No account, no key.</span><span class="pill soon">Planned</span></li>
             <li><b>Hosted API</b><span>OpenAI-compatible endpoint for bots, wallets and launchpads.</span><span class="pill soon">Planned</span></li>
             <li><b>MCP</b><span>A tool your AI agent can call before it trades.</span><span class="pill soon">Planned</span></li>
@@ -183,7 +185,7 @@
         <div class="sheet" role="group" aria-label="Example verdict">
           <div class="sheet-head">
             <span>CASE FILE · 0xc0d5…7777</span>
-            <span class="sheet-note">Rule baseline, not the model. Model not released yet.</span>
+            <span class="sheet-note">Rule baseline. The hosted model is not serving this site yet.</span>
           </div>
           <div class="sheet-body">
             <dl class="facts">
@@ -212,22 +214,22 @@
           <article class="card"><span class="num">02</span><h3>Judge</h3><p>The model reads the fact sheet and the context a rule can't see, like a stablecoin issuer versus a day-old meme. Its numbers must match the fact sheet, and we check that.</p></article>
           <article class="card"><span class="num">03</span><h3>Verdict</h3><p>A structured answer: risk class, flags, fixes and confidence. Each flag cites the facts behind it.</p></article>
         </div>
-        <p class="promise">When the model ships, we will publish a daily ledger: what we called, what actually happened, and where we were wrong.</p>
+        <p class="promise">Once the model is hosted, we will publish a daily ledger: what we called, what actually happened, and where we were wrong.</p>
       </section>
 
 
       <section class="section" id="status" aria-labelledby="st-title">
-        <p class="kicker">Roadmap and status</p>
+        <p class="kicker">Roadmap</p>
         <h2 id="st-title">What exists today, and what comes next.</h2>
-        <ul class="status">
-          <li><span class="pill live">Live</span><b>Facts builder</b><span>Open source on GitHub.</span></li>
-          <li><span class="pill live">Running</span><b>Data collection</b><span>New pools recorded hourly since 14 Oct 2026; outcomes added after 24 hours.</span></li>
-          <li><span class="pill dev">In development</span><b>Coroner Verdict</b><span>Model v1: pre-mortem, verdict and autopsy in one model. Not trained or released yet.</span></li>
-          <li><span class="pill soon">Planned</span><b>Coroner Coder</b><span>Writes and patches Solidity for the flags Coroner finds. Every patch must compile before we call it a fix.</span></li>
-          <li><span class="pill live">Beta</span><b>Verdict, pre-mortem, autopsy</b><span>Paste an address or a launch draft, or look up a token we watched for 24 hours. Rule-based reports with evidence. The model will replace the rules.</span></li>
-          <li><span class="pill soon">Planned</span><b>Narrator and Sentinel</b><span>Plain-language reports, and live watching of tokens you care about.</span></li>
-          <li><span class="pill none">None</span><b>Token</b><span>There is no token yet. Anything called Coroner before we say so is not ours.</span></li>
-        </ul>
+        <ol class="road">
+          <li class="mod "><div class="mod-top"><span>R-01</span><span class="led live">Live</span></div><h3>Facts builder</h3><p>Open source on GitHub. Reads the chain and writes the fact sheet the model judges.</p><div class="ladder live-l" role="img" aria-label="Stage: Live"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div><div class="ladder-labels" aria-hidden="true"><span class="">Plan</span><span class="">Build</span><span class="">Release</span><span class="cur">Live</span></div></li>
+          <li class="mod "><div class="mod-top"><span>R-02</span><span class="led live">Running</span></div><h3>Data collection</h3><p>New pools recorded hourly since 14 Oct 2026. Outcomes are added after 24 hours.</p><div class="ladder live-l" role="img" aria-label="Stage: Live"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div><div class="ladder-labels" aria-hidden="true"><span class="">Plan</span><span class="">Build</span><span class="">Release</span><span class="cur">Live</span></div></li>
+          <li class="mod "><div class="mod-top"><span>R-03</span><span class="led rel">Release</span></div><h3>Coroner model v1</h3><p>Pre-mortem, verdict and autopsy in one model. Weights are open on <a href="https://huggingface.co/coronerai/coroner-31b" target="_blank" rel="noreferrer">Hugging Face</a>. Hosted inference is the next step.</p><div class="ladder" role="img" aria-label="Stage: Release"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div><div class="ladder-labels" aria-hidden="true"><span class="">Plan</span><span class="">Build</span><span class="cur">Release</span><span class="">Live</span></div></li>
+          <li class="mod "><div class="mod-top"><span>R-04</span><span class="led rel">Beta</span></div><h3>Web tools</h3><p>Check a token, run a pre-mortem, read an autopsy. Rule-based reports with evidence today; the model replaces the rules once it is hosted.</p><div class="ladder" role="img" aria-label="Stage: Release"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div><div class="ladder-labels" aria-hidden="true"><span class="">Plan</span><span class="">Build</span><span class="cur">Release</span><span class="">Live</span></div></li>
+          <li class="mod "><div class="mod-top"><span>R-05</span><span class="led plan">Planned</span></div><h3>Coroner Coder</h3><p>Writes and patches Solidity for the flags Coroner finds. Every patch must compile before we call it a fix.</p><div class="ladder" role="img" aria-label="Stage: Plan"><i class="on"></i><i></i><i></i><i></i></div><div class="ladder-labels" aria-hidden="true"><span class="cur">Plan</span><span class="">Build</span><span class="">Release</span><span class="">Live</span></div></li>
+          <li class="mod "><div class="mod-top"><span>R-06</span><span class="led plan">Planned</span></div><h3>Narrator and Sentinel</h3><p>Plain-language reports, and live watching of tokens you care about.</p><div class="ladder" role="img" aria-label="Stage: Plan"><i class="on"></i><i></i><i></i><i></i></div><div class="ladder-labels" aria-hidden="true"><span class="cur">Plan</span><span class="">Build</span><span class="">Release</span><span class="">Live</span></div></li>
+          <li class="mod wide alert"><div class="mod-top"><span>R-07</span><span class="led none">None yet</span></div><h3>Token</h3><p>There is no token yet. Anything called Coroner before we say so is not ours.</p></li>
+        </ol>
       </section>
 
       <section class="section waitlist" id="waitlist" aria-labelledby="wl-title">

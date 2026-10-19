@@ -1,10 +1,8 @@
-import "@fontsource/instrument-serif/400.css";
-import "@fontsource/instrument-serif/400-italic.css";
-import "@fontsource-variable/instrument-sans";
-import "@fontsource-variable/jetbrains-mono";
+import "./fonts.js";
 import "./landing.css";
 import "./extra.css";
 import "./fx.css";
+import "./theme.css";
 import { wireWaitlist } from "./waitlist.js";
 import { wireHero } from "./hero.js";
 import { wireFx } from "./fx.js";

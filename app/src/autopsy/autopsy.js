@@ -1,11 +1,9 @@
-import "@fontsource/instrument-serif/400.css";
-import "@fontsource/instrument-serif/400-italic.css";
-import "@fontsource-variable/instrument-sans";
-import "@fontsource-variable/jetbrains-mono";
+import "../landing/fonts.js";
 import "../landing/landing.css";
 import "../check/check.css";
 import "../premortem/premortem.css";
 import "./autopsy.css";
+import "../landing/theme.css";
 
 const ADDRESS = /^0x[0-9a-fA-F]{40}$/;
 const RAW = "https://raw.githubusercontent.com/coroner-hash/ai/main/data/shards/";

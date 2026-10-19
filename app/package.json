@@ -15,9 +15,12 @@
     "cf-typegen": "wrangler types worker/env.d.ts --env-interface Env"
   },
   "dependencies": {
+    "@fontsource-variable/geist": "^5.3.0",
     "@fontsource-variable/instrument-sans": "^5.3.0",
     "@fontsource-variable/jetbrains-mono": "^5.3.0",
+    "@fontsource-variable/unbounded": "^5.3.0",
     "@fontsource/instrument-serif": "^5.3.0",
+    "@fontsource/martian-mono": "^5.3.0",
     "hono": "^4.13.8",
     "viem": "^2.56.8"
   },

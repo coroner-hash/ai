@@ -11,7 +11,9 @@
   },
   // Creates the DNS records on deploy. The domain must already be Active in Cloudflare.
   "routes": [
-    // Temporary domain until the team approves; swap to coronerai.pro (+ www) at go-live.
+    { "pattern": "coronerai.pro", "custom_domain": true },
+    { "pattern": "www.coronerai.pro", "custom_domain": true },
+    // Temporary domain, kept until the old links are gone.
     { "pattern": "coroner.example.com", "custom_domain": true }
   ],
   "d1_databases": [
@@ -25,7 +27,7 @@
   ],
   "vars": {
     // Origins allowed to POST to the API. Local dev overrides this in .dev.vars.
-    "ALLOWED_ORIGINS": "https://coroner.example.com"
+    "ALLOWED_ORIGINS": "https://coronerai.pro,https://www.coronerai.pro,https://coroner.example.com"
   },
   "observability": { "enabled": true }
 }

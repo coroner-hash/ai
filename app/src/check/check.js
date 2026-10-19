@@ -1,9 +1,7 @@
-import "@fontsource/instrument-serif/400.css";
-import "@fontsource/instrument-serif/400-italic.css";
-import "@fontsource-variable/instrument-sans";
-import "@fontsource-variable/jetbrains-mono";
+import "../landing/fonts.js";
 import "../landing/landing.css";
 import "./check.css";
+import "../landing/theme.css";
 import "../premortem/premortem.css";
 
 const ADDRESS = /^0x[0-9a-fA-F]{40}$/;

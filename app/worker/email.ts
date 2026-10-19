@@ -4,7 +4,7 @@
 // Restyle the HTML with the project's own colors/fonts; keep the copy honest.
 
 const BRAND = "Coroner";
-const FROM = `${BRAND} <waitlist@coroner.pawww.sbs>`;
+const FROM = `${BRAND} <waitlist@coronerai.pro>`;
 const X_URL = "https://x.com/useCoronerAI";
 
 function html(): string {
