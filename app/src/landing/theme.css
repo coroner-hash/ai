@@ -42,7 +42,8 @@ main, .footer, .nav { position: relative; z-index: 1; }
 .brand svg { color: var(--cyan); }
 .nav-links, .nav-solid .nav-links { font: 500 12px var(--mono); letter-spacing: 0.02em; gap: 22px; }
 .nav-links a { transition: color 0.15s; white-space: nowrap; }
-@media (max-width: 1120px) { .nav-links a[href^="#"] { display: none; } .btn-hf { margin-right: 0; } }
+@media (max-width: 1360px) { .nav-links a[href^="#"] { display: none; } .nav-links, .nav-solid .nav-links { gap: 18px; } .btn-hf { margin-right: 0; } }
+@media (max-width: 1040px) { .btn-hf { display: none; } .nav-links, .nav-solid .nav-links { gap: 14px; } }
 .nav-links a:hover { color: var(--cyan); }
 .nav-social { align-items: center; gap: 4px; }
 .ico { border-radius: 8px; color: var(--muted); transition: color 0.15s, background 0.15s; }
@@ -238,3 +239,7 @@ html.menu-open, html.menu-open body { overflow: hidden; overscroll-behavior: non
 
 /* `overflow-x: hidden` on body turns it into a scroll container and breaks the sticky header; clip does not. */
 html, body { overflow-x: clip; }
+
+/* keep the header on one row: the link group may shrink, the icons never leave the screen */
+.nav > .brand, .nav > .nav-social, .nav > .beta { flex: none; }
+.nav .nav-links { min-width: 0; }
