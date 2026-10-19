@@ -28,14 +28,30 @@ The model never fetches data. Open-source code builds the fact sheet from the ch
 
 ## Training
 - Base: Gemma 4 31B-it (Apache 2.0). Method: LoRA (rank 16) on 4-bit weights, then merged to 16-bit.
-- Data: __TRAIN_ROWS__ rows. Real rows come from tokens our public collector watched (from 14 Oct 2026); synthetic rows cover rare flags (mint with a live owner, large holders, unusual drafts) and are tagged as synthetic.
+- Data: 4,000 (one pass, 250 steps of 16) rows. Real rows come from tokens our public collector watched (from 14 Oct 2026); synthetic rows cover rare flags (mint with a live owner, large holders, unusual drafts) and are tagged as synthetic.
 - **Targets come from the rule engine that runs on the website, not from human labels.** The first version therefore learns to reproduce those rules. It is as good as the rules plus whatever it generalises.
 - Answers put the flags and evidence before the risk class, so the decision follows the reasoning.
 
 ## Evaluation
-__EVAL_TABLE__
+Held-out set of 80 rows (35 live real, 35 autopsy real, 10 synthetic drafts), greedy decoding, scored by code against the rule-engine targets.
 
-The baseline table is "always answer the most common value and never raise a flag". Numbers on real rows come from a small held-out set; treat them as indicative. A daily accuracy ledger against real outcomes will be published.
+| Mode | Source | n | JSON valid | Risk class | Cause | Flag F1 | Evidence cited correctly |
+|---|---|---|---|---|---|---|---|
+| live | real | 35 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 |
+| autopsy | real | 35 | 1.00 | 0.97 | 0.74 | 0.74 | 0.995 |
+| draft | synthetic | 10 | 1.00 | 1.00 | 1.00 | 0.94 | 1.00 |
+
+Baseline (no model):
+
+| Mode | Source | Risk class | Cause | Flag F1 |
+|---|---|---|---|---|
+| live | real | 0.86 | 1.00 | 0.60 |
+| autopsy | real | 0.94 | 0.31 | 0.06 |
+| draft | synthetic | 1.00 | 0.40 | 0.00 |
+
+Where it is weakest: autopsy cause and flags (about a quarter wrong). On live rows the cause was always the baseline value, so only the flags and risk class show learning there.
+
+The baseline is "always answer the most common value and never raise a flag". Numbers on real rows come from a small held-out set; treat them as indicative. A daily accuracy ledger against real outcomes will be published.
 
 ## Limits
 - Holder data is missing from most real training rows (the free RPC tiers cannot reconstruct it), so holder reasoning is learned mostly from synthetic cases.
