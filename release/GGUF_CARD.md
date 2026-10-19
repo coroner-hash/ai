@@ -16,7 +16,7 @@ language:
 
 # Coroner 31B (GGUF, Q4_K_M)
 
-A 4-bit build of [coroner-31b](https://huggingface.co/coronerai/coroner-31b) for llama.cpp. One file, 17.4 GB (4.87 bits per weight; the 16-bit weights are about 62 GB).
+A 4-bit build of [coroner-31b](https://huggingface.co/coronerai/coroner-31b) for llama.cpp. One file, 18.7 GB, 17.4 GiB (4.87 bits per weight; the 16-bit weights are about 62 GB).
 
 > Risk classification from public on-chain data. Not financial advice. Labels describe patterns consistent with the numbers. They are not accusations about anyone.
 
@@ -32,6 +32,6 @@ Use the chat template embedded in the file. The model expects the system prompt 
 
 ## What was not measured
 - **Accuracy of this 4-bit build.** The evaluation table on the main model card was measured on the 16-bit weights. We have not scored this file on the same held-out set, so treat the numbers there as an upper bound for this build.
-- Ollama and other runtimes were not tested. Whether it fits a 24 GB card is an estimate: the file is 17.4 GB, plus the context cache.
+- Ollama and other runtimes were not tested. Whether it fits a 24 GB card is an estimate: the file is 18.7 GB, plus the context cache.
 
 Source, data and the rule engine: https://github.com/coroner-hash/ai
