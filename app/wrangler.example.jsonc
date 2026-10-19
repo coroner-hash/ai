@@ -29,5 +29,6 @@
     // Origins allowed to POST to the API. Local dev overrides this in .dev.vars.
     "ALLOWED_ORIGINS": "https://coronerai.pro,https://www.coronerai.pro,https://coroner.example.com"
   },
+  "triggers": { "crons": ["*/30 * * * *"] },
   "observability": { "enabled": true }
 }

@@ -62,3 +62,23 @@ export async function sendWaitlistConfirmation(apiKey: string, to: string): Prom
     return false;
   }
 }
+
+/** Plain transactional mail (Sentinel confirmations and alerts). Never throws. */
+export async function sendMail(apiKey: string, to: string, subject: string, bodyText: string, from = `${BRAND} Sentinel <sentinel@coronerai.pro>`): Promise<boolean> {
+  const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  const linked = esc(bodyText).replace(/(https:\/\/[^\s<]+)/g, '<a href="$1" style="color:#0a8fb3">$1</a>').replace(/\n/g, "<br />");
+  const htmlBody = `<!doctype html><html><body style="margin:0;padding:32px 16px;background:#f8fafc;font-family:-apple-system,Segoe UI,sans-serif;color:#0a1118"><div style="max-width:520px;margin:0 auto"><p style="font-size:17px;font-weight:600;margin:0 0 20px">${BRAND}</p><div style="font-size:15px;line-height:1.65;color:#2a3540">${linked}</div></div></body></html>`;
+  try {
+    const res = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: { authorization: `Bearer ${apiKey}`, "content-type": "application/json" },
+      body: JSON.stringify({ from, to, subject, html: htmlBody, text: bodyText }),
+      signal: AbortSignal.timeout(8000),
+    });
+    if (!res.ok) console.error(JSON.stringify({ event: "resend_failed", status: res.status, body: (await res.text()).slice(0, 300) }));
+    return res.ok;
+  } catch (err) {
+    console.error(JSON.stringify({ event: "resend_error", err: String(err) }));
+    return false;
+  }
+}

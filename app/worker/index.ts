@@ -5,6 +5,7 @@ import { CHAIN_ID } from "./chain";
 import { probeProvider, rpc } from "./rpc";
 import { autopsyRoute } from "./autopsyRoute";
 import { premortemRoute } from "./premortemRoute";
+import { runSentinel, sentinel } from "./sentinel";
 import { v1 } from "./v1";
 import { verdict } from "./verdictRoute";
 import type { AppEnv } from "./session";
@@ -40,6 +41,7 @@ api.route("/verdict", verdict);
 api.route("/premortem", premortemRoute);
 api.route("/autopsy", autopsyRoute);
 api.route("/waitlist", waitlist);
+api.route("/sentinel", sentinel);
 api.route("/auth", auth);
 
 api.notFound((c) => c.json({ error: "not_found" }, 404));
@@ -52,4 +54,10 @@ app.onError((err, c) => {
   return c.req.path.startsWith("/api/") ? c.json({ error: "internal" }, 500) : c.text("Something broke on our side.", 500);
 });
 
-export default app;
+export default {
+  fetch: app.fetch,
+  // Every 30 minutes: Sentinel checks the watches that have waited longest.
+  async scheduled(_event: ScheduledController, env: Env, ctx: ExecutionContext) {
+    ctx.waitUntil(runSentinel(env).then((r) => console.log(JSON.stringify({ event: "sentinel_run", ...r }))));
+  },
+};
