@@ -3,6 +3,7 @@ import "../landing/landing.css";
 import "./check.css";
 import "../landing/theme.css";
 import { plainWords } from "../landing/narr.js";
+import "../landing/menu.js";
 import "../premortem/premortem.css";
 
 const ADDRESS = /^0x[0-9a-fA-F]{40}$/;

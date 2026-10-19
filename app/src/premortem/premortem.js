@@ -4,6 +4,7 @@ import "../check/check.css";
 import "./premortem.css";
 import "../landing/theme.css";
 import { plainWords } from "../landing/narr.js";
+import "../landing/menu.js";
 
 const GT_SEARCH = "https://api.geckoterminal.com/api/v2/search/pools?network=robinhood&query=";
 const $ = (id) => document.getElementById(id);

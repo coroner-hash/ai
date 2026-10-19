@@ -2,6 +2,7 @@ import "../landing/fonts.js";
 import "../landing/landing.css";
 import "../check/check.css";
 import "../landing/theme.css";
+import "../landing/menu.js";
 
 const SITE_KEY = import.meta.env.VITE_TURNSTILE_SITE_KEY;
 const ADDRESS = /^0x[0-9a-fA-F]{40}$/;

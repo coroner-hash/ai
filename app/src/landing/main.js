@@ -3,6 +3,7 @@ import "./landing.css";
 import "./extra.css";
 import "./fx.css";
 import "./theme.css";
+import "./menu.js";
 import { wireWaitlist } from "./waitlist.js";
 import { wireHero } from "./hero.js";
 import { wireFx } from "./fx.js";

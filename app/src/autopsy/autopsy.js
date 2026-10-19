@@ -5,6 +5,7 @@ import "../premortem/premortem.css";
 import "./autopsy.css";
 import "../landing/theme.css";
 import { plainWords } from "../landing/narr.js";
+import "../landing/menu.js";
 
 const ADDRESS = /^0x[0-9a-fA-F]{40}$/;
 const RAW = "https://raw.githubusercontent.com/coroner-hash/ai/main/data/shards/";
