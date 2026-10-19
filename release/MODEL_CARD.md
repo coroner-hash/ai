@@ -12,6 +12,8 @@ language:
   - en
 ---
 
+![Coroner: every token dies. We write the report.](banner.png)
+
 # Coroner 31B
 
 An open model that reads a fact sheet about a token on Robinhood Chain and replies with one JSON verdict: flags that cite the facts behind them, the evidence, a risk class and a cause pattern.
