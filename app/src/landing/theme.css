@@ -35,7 +35,7 @@ main, .footer, .nav { position: relative; z-index: 1; }
 ::selection { background: rgba(25, 195, 238, 0.3); }
 
 /* nav: frosted bar */
-.nav { position: sticky; top: 0; inset: auto; z-index: 20; padding: 12px var(--gutter); background: rgba(248, 250, 252, 0.78);
+.nav { position: sticky; inset: 0 0 auto 0; z-index: 20; padding: 12px var(--gutter); background: rgba(248, 250, 252, 0.78);
   -webkit-backdrop-filter: blur(14px) saturate(1.4); backdrop-filter: blur(14px) saturate(1.4); border-bottom: 1px solid var(--line); }
 .nav-solid { position: sticky; background: rgba(248, 250, 252, 0.78); }
 .brand { font: 600 15px var(--display); letter-spacing: -0.02em; }
@@ -208,10 +208,12 @@ h2 { font: 500 clamp(24px, 3.4vw, 42px)/1.12 var(--display); letter-spacing: -0.
 .menu-btn { display: none; align-items: center; justify-content: center; width: 40px; height: 40px; padding: 0; margin: 0 6px 0 -8px; border: 1px solid var(--line-strong); border-radius: 8px; background: #fff; color: var(--ink); cursor: pointer; flex: none; }
 .menu-btn:hover { border-color: var(--cyan); color: var(--cyan); }
 .m-backdrop { position: fixed; inset: 0; z-index: 90; background: rgba(8, 20, 30, 0); -webkit-backdrop-filter: blur(0); backdrop-filter: blur(0); transition: background 0.25s, backdrop-filter 0.25s; }
-.m-drawer { position: fixed; z-index: 100; top: 0; bottom: 0; left: 0; width: min(84vw, 320px); display: flex; flex-direction: column; gap: 4px; padding: 14px 18px 22px; overflow-y: auto;
+.m-drawer { position: fixed; z-index: 100; top: 0; bottom: 0; left: 0; width: min(84vw, 320px); display: flex; flex-direction: column; gap: 4px; padding: 14px 18px 22px; overflow: hidden; touch-action: none; overscroll-behavior: none;
   background: linear-gradient(180deg, #ffffff, #f4f8fb); border-right: 1px solid var(--line-strong); box-shadow: 24px 0 60px -30px rgba(10, 60, 90, 0.55);
   transform: translateX(-102%); transition: transform 0.28s cubic-bezier(0.2, 0.7, 0.2, 1); visibility: hidden; }
 .m-drawer::after { content: ""; position: absolute; top: -1px; right: -1px; width: 14px; height: 14px; border: 0 solid var(--cyan); border-width: 2px 2px 0 0; pointer-events: none; }
+.m-backdrop { touch-action: none; }
+html.menu-open, html.menu-open body { overflow: hidden; overscroll-behavior: none; }
 .menu-open .m-backdrop { background: rgba(8, 20, 30, 0.38); -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px); }
 .menu-open .m-drawer { transform: none; visibility: visible; }
 .m-head { display: flex; align-items: center; justify-content: space-between; padding-bottom: 14px; margin-bottom: 6px; border-bottom: 1px solid var(--line); }
@@ -231,3 +233,17 @@ h2 { font: 500 clamp(24px, 3.4vw, 42px)/1.12 var(--display); letter-spacing: -0.
   .nav .nav-social, .nav .beta { margin-left: auto; }
 }
 @media (prefers-reduced-motion: reduce) { .m-drawer, .m-backdrop { transition: none; } }
+
+/* Status line locked at the top of the header on phones (landing page) */
+.nav-strip { display: none; }
+@media (max-width: 860px) {
+  .nav { flex-wrap: wrap; }
+  .nav-strip { display: flex; flex: 0 0 100%; order: 10; align-items: center; justify-content: center; gap: 10px; margin: 8px 0 0; padding: 7px 0 0; border-top: 1px solid var(--line); font: 500 10px var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+  .nav-strip .chip { padding: 2px 8px; font-size: 10px; }
+  .hero .eyebrow { display: none; }
+  .hero-copy { padding-top: 70px; }
+}
+@media (max-height: 640px) { .m-group a { min-height: 38px; } .m-group { padding: 6px 0; } .m-note { display: none; } }
+
+/* `overflow-x: hidden` on body turns it into a scroll container and breaks the sticky header; clip does not. */
+html, body { overflow-x: clip; }

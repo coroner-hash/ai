@@ -31,6 +31,15 @@ export function wireMenu() {
   btn.innerHTML = '<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>';
   nav.prepend(btn);
 
+  // Landing page only: on phones the status line above the hero title lives in the header, so it stays locked at the top.
+  const eyebrow = document.querySelector(".hero .eyebrow");
+  if (eyebrow && !nav.querySelector(".nav-strip")) {
+    const strip = document.createElement("p");
+    strip.className = "nav-strip";
+    strip.innerHTML = eyebrow.innerHTML;
+    nav.append(strip);
+  }
+
   const backdrop = document.createElement("div");
   backdrop.className = "m-backdrop";
   backdrop.hidden = true;
