@@ -5,6 +5,7 @@ import { CHAIN_ID } from "./chain";
 import { probeProvider, rpc } from "./rpc";
 import { autopsyRoute } from "./autopsyRoute";
 import { premortemRoute } from "./premortemRoute";
+import { v1 } from "./v1";
 import { verdict } from "./verdictRoute";
 import type { AppEnv } from "./session";
 import { waitlist } from "./waitlist";
@@ -34,6 +35,7 @@ api.get("/chain", async (c) => {
   }
 });
 
+api.route("/v1", v1);
 api.route("/verdict", verdict);
 api.route("/premortem", premortemRoute);
 api.route("/autopsy", autopsyRoute);

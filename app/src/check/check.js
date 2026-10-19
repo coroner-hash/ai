@@ -2,6 +2,7 @@ import "../landing/fonts.js";
 import "../landing/landing.css";
 import "./check.css";
 import "../landing/theme.css";
+import { plainWords } from "../landing/narr.js";
 import "../premortem/premortem.css";
 
 const ADDRESS = /^0x[0-9a-fA-F]{40}$/;
@@ -118,6 +119,7 @@ function render(d, gaps) {
   const ul = el("ul", "r-notes");
   for (const n of notes) ul.append(el("li", "", n));
   out.append(ul);
+  out.append(plainWords(v));
   out.hidden = false;
 }
 

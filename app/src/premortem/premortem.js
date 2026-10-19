@@ -3,6 +3,7 @@ import "../landing/landing.css";
 import "../check/check.css";
 import "./premortem.css";
 import "../landing/theme.css";
+import { plainWords } from "../landing/narr.js";
 
 const GT_SEARCH = "https://api.geckoterminal.com/api/v2/search/pools?network=robinhood&query=";
 const $ = (id) => document.getElementById(id);
@@ -118,6 +119,7 @@ function render(d, similarCount) {
   const ul = el("ul", "r-notes");
   for (const n of notes) ul.append(el("li", "", n));
   out.append(ul);
+  out.append(plainWords(v));
   out.hidden = false;
   out.scrollIntoView({ behavior: "smooth", block: "start" });
 }

@@ -4,6 +4,7 @@ import "../check/check.css";
 import "../premortem/premortem.css";
 import "./autopsy.css";
 import "../landing/theme.css";
+import { plainWords } from "../landing/narr.js";
 
 const ADDRESS = /^0x[0-9a-fA-F]{40}$/;
 const RAW = "https://raw.githubusercontent.com/coroner-hash/ai/main/data/shards/";
@@ -89,6 +90,7 @@ function render(d, rec) {
   const ul = el("ul", "r-notes");
   for (const n of notes) ul.append(el("li", "", n));
   out.append(ul);
+  out.append(plainWords(v));
   out.hidden = false;
 }
 

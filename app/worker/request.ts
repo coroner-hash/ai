@@ -16,6 +16,8 @@ export async function hashIp(ip: string, salt: string): Promise<string> {
  * stops other sites from submitting forms through a visitor's browser.
  */
 export function originAllowed<E extends { Bindings: Env }>(c: Context<E>): boolean {
+  // The public read-only API (/api/v1) is stateless and uses no cookies; rate limits protect it.
+  if (c.req.path.startsWith("/api/v1/")) return true;
   const origin = c.req.header("origin");
   if (!origin) return true; // non-browser clients; still gated by captcha + rate limit
   const allowed = c.env.ALLOWED_ORIGINS.split(",").map((o) => o.trim());

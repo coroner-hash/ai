@@ -1,0 +1,11 @@
+{
+  "name": "coroner-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Coroner: token verdicts, launch-draft pre-mortems and autopsies on Robinhood Chain. Rule-based today.",
+  "type": "module",
+  "bin": { "coroner-mcp": "server.mjs" },
+  "main": "server.mjs",
+  "engines": { "node": ">=20" },
+  "license": "Apache-2.0",
+  "dependencies": { "@modelcontextprotocol/sdk": "^1.12.0", "zod": "^3.24.0" }
+}

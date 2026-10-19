@@ -1,0 +1,13 @@
+.docs { max-width: 860px; margin: 0 auto; padding: 40px var(--gutter) 96px; }
+.docs h1 { font: 500 clamp(30px, 4.6vw, 52px)/1.06 var(--display); letter-spacing: -0.045em; margin: 0 0 14px; }
+.docs h2 { font: 500 22px var(--display); letter-spacing: -0.035em; margin: 48px 0 14px; }
+.docs h3 { font: 500 13px var(--mono); letter-spacing: 0.06em; color: var(--cyan); margin: 26px 0 8px; }
+.docs p, .docs li { line-height: 1.7; color: var(--body-2); }
+.docs code { font: 12px var(--mono); background: rgba(10, 143, 179, 0.08); padding: 2px 6px; border-radius: 3px; color: var(--ink); }
+.docs pre { margin: 10px 0 18px; padding: 14px 16px; border-radius: 4px; background: #0a1118; color: #d7e7ef; font: 12px/1.65 var(--mono); overflow-x: auto; }
+.docs pre code { background: none; padding: 0; color: inherit; }
+.docs table { width: 100%; border-collapse: collapse; margin: 10px 0 18px; font-size: 14px; }
+.docs th, .docs td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.docs th { font: 500 11px var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.docs .status { display: inline-block; }
+.docs a { color: var(--cyan); text-underline-offset: 3px; }
