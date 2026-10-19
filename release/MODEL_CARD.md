@@ -12,7 +12,7 @@ language:
   - en
 ---
 
-![Coroner: every token dies. We write the report.](banner.png)
+![Coroner: every token dies. We write the report.](https://raw.githubusercontent.com/coroner-hash/ai/main/release/banner.png)
 
 # Coroner 31B
 
