@@ -9,13 +9,12 @@ import { buildAutopsy, type PoolRec, type PoolSnap } from "./autopsy";
 import { overLimit } from "./ratelimit";
 import { ChainUnavailable } from "./rpc";
 import { bumpUsage } from "./usage";
-import { buildVerdict, mergeExt, type Ext, type Facts } from "./verdict";
+import { buildVerdict, type Facts } from "./verdict";
 import { cachedContractFacts } from "./verdictRoute";
 
 const API = "https://api.telegram.org";
 const SITE = "https://coronerai.pro";
 const ADDRESS = /0x[a-fA-F0-9]{40}/;
-const GT = "https://api.geckoterminal.com/api/v2/networks/robinhood";
 const SHARDS = "https://raw.githubusercontent.com/coroner-hash/ai/main/data/shards";
 
 const token = (env: Env) => (env.TELEGRAM_BOT_TOKEN ?? "").trim().replace(/^["']|["']$/g, "").replace(/^bot/i, "").trim();
@@ -62,53 +61,120 @@ const esc = (s: string) => s.replace(/[<>&]/g, (c) => ({ "<": "&lt;", ">": "&gt;
 const short = (a: string) => `${a.slice(0, 6)}…${a.slice(-4)}`;
 const usd = (n: unknown) => (typeof n !== "number" || !isFinite(n) ? "n/a" : n >= 1e6 ? `$${(n / 1e6).toFixed(1)}M` : n >= 1e3 ? `$${(n / 1e3).toFixed(1)}K` : `$${n.toFixed(0)}`);
 
-/** Market facts from GeckoTerminal. Best effort: the API sometimes refuses cloud servers, then we say so. */
-async function marketExt(address: string): Promise<Ext | null> {
+const SYMBOLS = "https://raw.githubusercontent.com/coroner-hash/ai/main/data/symbols.json";
+const DEX_LABEL: Record<string, string> = { "pons-v2": "Pons (on the curve)", "pons-v2-dex": "Pons (graduated)", "uniswap-v4-robinhood": "Uniswap v4", "uniswap-v3-robinhood": "Uniswap v3", "uniswap-v2-robinhood": "Uniswap v2", "bankr-robinhood": "Bankr", "clanker-robinhood": "Clanker", "virtuals-robinhood": "Virtuals" };
+const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, "");
+const when = (iso: string) => new Date(iso).toLocaleString("en-GB", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", timeZone: "UTC" }) + " UTC";
+const ago = (iso: string) => {
+  const h = (Date.now() - Date.parse(iso)) / 3_600_000;
+  return h < 1 ? `${Math.max(1, Math.round(h * 60))} min ago` : h < 48 ? `${Math.round(h)} h ago` : `${Math.round(h / 24)} days ago`;
+};
+
+type SymEntry = [string, string, string | null, number | null, number | null]; // token, first seen, dex, first liq, first 24h vol
+
+/** Open collector data, read from GitHub (cached at the edge for 10 minutes). Best effort. */
+async function symbolIndex(): Promise<Record<string, SymEntry[]> | null> {
   try {
-    const r = await fetch(`${GT}/tokens/${address}/pools`, { headers: { accept: "application/json" }, signal: AbortSignal.timeout(6000) });
-    if (!r.ok) return null;
-    const list: any[] = ((await r.json()) as any).data ?? [];
-    const market: NonNullable<Ext["market"]> = { poolCount: list.length };
-    if (list.length) {
-      const top = list.reduce((a, b) => (Number(b.attributes.reserve_in_usd) > Number(a.attributes.reserve_in_usd) ? b : a)).attributes;
-      const tx = top.transactions?.h24 ?? {};
-      Object.assign(market, { topPoolName: top.name, poolCreated: top.pool_created_at, liqUsd: Number(top.reserve_in_usd), vol24Usd: Number(top.volume_usd?.h24), fdvUsd: top.fdv_usd ? Number(top.fdv_usd) : null, buys24: tx.buys ?? null, sells24: tx.sells ?? null });
-    }
-    return { market };
+    const r = await fetch(SYMBOLS, { signal: AbortSignal.timeout(8000), cf: { cacheTtl: 600, cacheEverything: true } } as RequestInit);
+    return r.ok ? ((await r.json()) as Record<string, SymEntry[]>) : null;
   } catch {
     return null;
   }
 }
 
-const RISK_DOT: Record<string, string> = { low: "🟢", medium: "🟡", high: "🔴", dead: "⚫" };
+async function shardRecords(address: string): Promise<any[]> {
+  try {
+    const r = await fetch(`${SHARDS}/${address.slice(2, 4)}.json`, { signal: AbortSignal.timeout(6000), cf: { cacheTtl: 600, cacheEverything: true } } as RequestInit);
+    const shard: Record<string, any[]> = r.ok ? await r.json() : {};
+    return (shard[address] ?? []).filter((x) => x.first && x.outcome).sort((x, y) => String(x.created).localeCompare(String(y.created)));
+  } catch {
+    return [];
+  }
+}
+
+export function buttons(address: string) {
+  return {
+    inline_keyboard: [
+      [{ text: "📄 Full report", url: `${SITE}/check?address=${address}` }, { text: "🧾 Autopsy", url: `${SITE}/autopsy?address=${address}` }],
+      [{ text: "🛰 Watch this contract", url: `${SITE}/sentinel` }],
+    ],
+  };
+}
 
 export async function verdictText(env: Env, address: string): Promise<string> {
-  const { facts } = await cachedContractFacts(env, address);
-  if (facts["contract.is_contract"] === false) return `<b>${short(address)}</b> holds no contract code on Robinhood Chain. Check the address.`;
-  const merged: Facts = { ...facts };
-  const ext = await marketExt(address);
-  mergeExt(merged, ext ?? undefined);
-  const v = buildVerdict(merged, "live");
-  const sym = String(merged["token.symbol"] ?? "").replace(/[^ -~]/g, "").trim().slice(0, 16) || "Token";
-  const haveMarket = Boolean(ext?.market);
-  // Without market and holder data this is a contract check, not an overall verdict; say so in the headline.
-  const scope = haveMarket ? "contract + market" : "contract check";
-  const head = v.flags.length ? `${RISK_DOT[v.risk_class] ?? ""} <b>$${esc(sym)} · ${scope}: ${v.risk_class.toUpperCase()}</b>` : `⚪ <b>$${esc(sym)} · ${scope}: no flags</b>`;
-  const owner = merged["contract.owner_renounced"] === true ? "renounced" : merged["contract.owner"] ? short(String(merged["contract.owner"])) : "none found";
-  const contractLines = [
-    `Mint function: ${merged["contract.selector_mint"] ? "yes" : "no"}`,
-    `Blacklist: ${merged["contract.selector_blacklist"] ? "yes" : "no"} · Pause: ${merged["contract.selector_pause"] ? "yes" : "no"}`,
-    `Owner: ${owner} · Upgradeable proxy: ${merged["contract.proxy_implementation"] ? "yes" : "no"}`,
+  const [{ facts }, index, history] = await Promise.all([cachedContractFacts(env, address), symbolIndex(), shardRecords(address)]);
+  if (facts["contract.is_contract"] === false) return `⛔ <code>${address}</code> holds no contract code on Robinhood Chain. Check the address.`;
+  const v = buildVerdict({ ...facts } as Facts, "live");
+  const sym = String(facts["token.symbol"] ?? "").replace(/[^ -~]/g, "").trim().slice(0, 16) || "Token";
+  const name = String(facts["token.name"] ?? "").replace(/[^ -~]/g, "").trim().slice(0, 32);
+  const ok = (good: boolean) => (good ? "✅" : "⚠️");
+  const stable = facts["token.category"] === "stablecoin";
+  const ownerOk = facts["contract.owner_renounced"] === true || !facts["contract.owner"];
+  const ownerTxt = facts["contract.owner_renounced"] === true ? "Ownership renounced" : facts["contract.owner"] ? `Owner active: <code>${short(String(facts["contract.owner"]))}</code>` : "No owner function";
+  const contract = [
+    `${ok(!facts["contract.selector_mint"] || stable)} ${facts["contract.selector_mint"] ? (stable ? "Mint function (expected for a stablecoin issuer)" : "Mint function: supply can grow") : "No mint function"}`,
+    `${ok(!facts["contract.selector_blacklist"])} ${facts["contract.selector_blacklist"] ? "Blacklist: wallets can be blocked" : "No blacklist"}`,
+    `${ok(!facts["contract.selector_pause"])} ${facts["contract.selector_pause"] ? "Pause: transfers can be halted" : "No pause"}`,
+    `${ok(ownerOk)} ${ownerTxt}`,
+    `${ok(!facts["contract.proxy_implementation"])} ${facts["contract.proxy_implementation"] ? "Upgradeable proxy: logic can change" : "Not upgradeable"}`,
   ].join("\n");
-  const lines = [
-    head,
-    `<code>${address}</code>`,
-    v.flags.length ? v.flags.slice(0, 4).map((f) => `• ${esc(f.text)}`).join("\n") : contractLines,
-    haveMarket ? (ext!.market!.poolCount ? `Liquidity ${usd(merged["market.liq_usd"])} · 24h volume ${usd(merged["market.vol_h24_usd"])}` : "No trading pool found.") : "",
-    `Full verdict with market and holders: ${SITE}/check?address=${address}`,
-    "<i>Rule-based reading of public on-chain data. Not an audit, not financial advice.</i>",
-  ];
-  return lines.filter(Boolean).join("\n\n");
+  const warns = [facts["contract.selector_mint"] && !stable, facts["contract.selector_blacklist"], facts["contract.selector_pause"], facts["contract.proxy_implementation"], !ownerOk].filter(Boolean).length;
+
+  // Ticker: who else uses it, in our data since 14 Oct 2026
+  let ticker = "Ticker check unavailable right now.";
+  let mine: SymEntry | undefined;
+  let copyCat = false;
+  let shared = 0;
+  if (index) {
+    const entries = index[norm(sym)] ?? [];
+    mine = entries.find((e) => e[0] === address);
+    const others = entries.filter((e) => e[0] !== address);
+    shared = mine ? others.length : entries.length;
+    if (!others.length) ticker = `✅ No other token uses $${esc(sym)} in our data.`;
+    else {
+      const n = `${others.length} other token${others.length > 1 ? "s" : ""} use $${esc(sym)}`;
+      const busiest = entries.reduce((x, y) => ((y[4] ?? 0) > (x[4] ?? 0) ? y : x));
+      if (!mine) {
+        // Not in our records: we cannot compare, so we only count.
+        ticker = `⚠️ ${entries.length} token${entries.length > 1 ? "s" : ""} use $${esc(sym)} in our data (oldest first seen ${when(entries[0][1])}). Check the address, not the ticker.`;
+      } else if (busiest[0] === address) {
+        ticker = `⚠️ ${n}. This one was the most active when first seen${entries[0][0] === address ? ", and the oldest" : ""}. Check the address, not the ticker.`;
+      } else {
+        const olderBusier = others.find((e) => e[1] < mine![1] && (e[4] ?? 0) > (mine![4] ?? 0));
+        copyCat = Boolean(olderBusier);
+        ticker = olderBusier
+          ? `🚩 <b>Copy-cat pattern.</b> ${n}, and an older one was busier:\n<code>${olderBusier[0]}</code> (first seen ${when(olderBusier[1])})`
+          : `⚠️ ${n}. A more active one:\n<code>${busiest[0]}</code> (first seen ${when(busiest[1])})`;
+      }
+    }
+  }
+
+  // History from the open collector
+  let hist = "Not in our records: we track pools created since 14 Oct 2026.";
+  const firstSeen = mine?.[1] ?? history[0]?.created;
+  if (firstSeen) {
+    const dex = DEX_LABEL[mine?.[2] ?? history[0]?.dex ?? ""] ?? "a DEX";
+    const lines = [`First pool ${ago(firstSeen)} on ${dex}, liquidity ${usd(mine?.[3] ?? history[0]?.first?.liq_usd)}`];
+    const last = history[history.length - 1];
+    if (last?.outcome) {
+      const swaps = (last.outcome.buys_h24 ?? 0) + (last.outcome.sells_h24 ?? 0);
+      const dead = (last.outcome.vol_h24 ?? 0) < 50 && swaps <= 2;
+      lines.push(`24h later: ${swaps.toLocaleString("en-US")} swaps, ${usd(last.outcome.vol_h24)} volume → ${dead ? "⚫ dead by our rule" : "🟢 still trading"}`);
+    } else lines.push("24-hour re-check still pending.");
+    hist = lines.join("\n");
+  }
+
+  const dot = v.flags.some((f) => f.code === "mint_with_live_owner") || copyCat ? "🔴" : warns ? "🟡" : "⚪";
+  const parts = [warns ? `${warns} contract flag${warns > 1 ? "s" : ""}` : "", copyCat ? "copy-cat ticker" : shared ? `ticker shared with ${shared} other token${shared > 1 ? "s" : ""}` : ""].filter(Boolean);
+  const summary = parts.length ? `Worth a look: ${parts.join(" · ")}.` : "Nothing flagged in the contract or the ticker.";
+  return [
+    `${dot} <b>$${esc(sym)}</b>${name ? ` · ${esc(name)}` : ""}`,
+    `<code>${address}</code>\n${summary}`,
+    `<b>Contract</b>\n${contract}`,
+    `<b>Ticker</b>\n${ticker}`,
+    `<b>History</b> <i>(open collector)</i>\n${hist}`,
+    `<i>Holders and the live market are in the full report. Rule-based reading of public on-chain data, not financial advice.</i>`,
+  ].join("\n\n");
 }
 
 async function autopsyText(env: Env, address: string): Promise<string> {
@@ -146,7 +212,7 @@ export async function handleTelegramUpdate(env: Env, update: any, ctx: Execution
   const cmd = lower.match(/^\/(\w+)(@\w+)?/);
   if (cmd?.[2] && me && cmd[2].slice(1) !== me) return; // a command for another bot
 
-  const reply = (body: string) => tg(env, "sendMessage", { chat_id: chatId, reply_to_message_id: msg.message_id, text: body, parse_mode: "HTML", disable_web_page_preview: true });
+  const reply = (body: string, markup?: unknown) => tg(env, "sendMessage", { chat_id: chatId, reply_to_message_id: msg.message_id, text: body, parse_mode: "HTML", disable_web_page_preview: true, ...(markup ? { reply_markup: markup } : {}) });
 
   if (cmd && (cmd[1] === "start" || cmd[1] === "help")) {
     await tg(env, "sendMessage", { chat_id: chatId, text: HELP, parse_mode: "HTML", disable_web_page_preview: true });
@@ -171,7 +237,7 @@ export async function handleTelegramUpdate(env: Env, update: any, ctx: Execution
   const address = hit[0].toLowerCase();
   await tg(env, "sendChatAction", { chat_id: chatId, action: "typing" });
   try {
-    await reply(isAutopsy ? await autopsyText(env, address) : await verdictText(env, address));
+    await reply(isAutopsy ? await autopsyText(env, address) : await verdictText(env, address), buttons(address));
     ctx.waitUntil(bumpUsage(env.DB, isAutopsy ? "autopsy:telegram" : "verdict:telegram"));
   } catch (err) {
     if (err instanceof ChainUnavailable) {
