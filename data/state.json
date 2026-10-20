@@ -142395,7 +142395,15 @@
    "buys_h24": 1,
    "sells_h24": 0
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:09+00:00",
+   "liq_usd": 4126.7498,
+   "fdv_usd": 4214.964367,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.9
+  }
  },
  "0x50905c30c4d476e4889d82b2012a77ed1189b1a7": {
   "token": "0xf5d458325484559b87a94f73a6e2614470047ccd",
@@ -142411,7 +142419,15 @@
    "buys_h24": 2,
    "sells_h24": 0
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:09+00:00",
+   "liq_usd": 4610.4278,
+   "fdv_usd": 4706.332227,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 25.0
+  }
  },
  "0x238edb12092ddc0287c9b7fecd2c86d5a2d572fc": {
   "token": "0x3fa292949185c40a74e90af723d7d3eadf327d3e",
@@ -144683,7 +144699,15 @@
    "buys_h24": 3,
    "sells_h24": 1
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:42+00:00",
+   "liq_usd": 4105.5442,
+   "fdv_usd": 4202.690427,
+   "vol_h24": 189.9845782172,
+   "buys_h24": 5,
+   "sells_h24": 3,
+   "age_h": 24.0
+  }
  },
  "0x563082c7777bdd05a3c084cb374f4fb379a8809c": {
   "token": "0x656b42923d28ff3b179412a5693bbd6880a084bf",
@@ -144699,7 +144723,15 @@
    "buys_h24": 1,
    "sells_h24": 0
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:42+00:00",
+   "liq_usd": 3909.6904,
+   "fdv_usd": 4003.84885,
+   "vol_h24": 52.5643950414,
+   "buys_h24": 1,
+   "sells_h24": 1,
+   "age_h": 24.0
+  }
  },
  "0x5984f6dfd7511b0d7327c7e41aac4af2f267605a": {
   "token": "0x0a6a0ddd347a079d3c10eba4a453a4444cef31dc",
@@ -144715,7 +144747,15 @@
    "buys_h24": 11,
    "sells_h24": 3
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:42+00:00",
+   "liq_usd": 3957.1051,
+   "fdv_usd": 4045.727934,
+   "vol_h24": 472.6068553269,
+   "buys_h24": 12,
+   "sells_h24": 7,
+   "age_h": 24.0
+  }
  },
  "0x27787e3ca5bcb4db10e50fae9799806ba35bf576744ae404f44edfa4b36ae4ba": {
   "token": "0x423a66d0906f154fb74d0abc6af33af5b1bb8888",
@@ -144731,7 +144771,15 @@
    "buys_h24": 17,
    "sells_h24": 0
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:42+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 4315048.338,
+   "vol_h24": 31.4574700203,
+   "buys_h24": 18,
+   "sells_h24": 0,
+   "age_h": 24.0
+  }
  },
  "0xced9cfea3720f7e037ab6c730aaa481e67424615ae30fa93c69967572db830cb": {
   "token": "0xf53e2830c8aeb35a6cc093eb125f1b0e53668f4e",
@@ -144747,7 +144795,15 @@
    "buys_h24": 37,
    "sells_h24": 29
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:42+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 10477.8062,
+   "vol_h24": 4716.5911678692,
+   "buys_h24": 37,
+   "sells_h24": 29,
+   "age_h": 24.0
+  }
  },
  "0x43125053a05d70f0dbea470ba77d983351b2dae4aff2208b3505db370fed3863": {
   "token": "0x400ee95e76d7efc3b6fddf6c50749c45b6698888",
@@ -144763,7 +144819,15 @@
    "buys_h24": 12,
    "sells_h24": 0
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:42+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 727395.9043,
+   "vol_h24": 5.4643011179,
+   "buys_h24": 12,
+   "sells_h24": 0,
+   "age_h": 24.0
+  }
  },
  "0x01e432897ff7e1eeb0ed1aca6b0b72261b233bd1": {
   "token": "0x4f37d4c2debed896821c35baf4e4cf142ca73489",
@@ -144779,7 +144843,15 @@
    "buys_h24": 2,
    "sells_h24": 0
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:42+00:00",
+   "liq_usd": 3901.5894,
+   "fdv_usd": 3995.482881,
+   "vol_h24": 39.5695553855,
+   "buys_h24": 2,
+   "sells_h24": 1,
+   "age_h": 24.0
+  }
  },
  "0x0114d43e19fc63982d5a7c91446c6b05c9a32605": {
   "token": "0xeaf7c8d81446f83569efbbef44aec2c7a6a40a93",
@@ -144795,7 +144867,15 @@
    "buys_h24": 7,
    "sells_h24": 0
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:42+00:00",
+   "liq_usd": 0.01094507484,
+   "fdv_usd": 0.03638164633,
+   "vol_h24": 31195.7549906532,
+   "buys_h24": 28,
+   "sells_h24": 1,
+   "age_h": 24.1
+  }
  },
  "0xf60fcbfa1686756c8bf2255e52b55039668d0fc81625182ef135e30cb25e06d0": {
   "token": "0x8b18ba3b7a9914c2f6a9b37e7c07245ad6631111",
@@ -144811,7 +144891,15 @@
    "buys_h24": 1,
    "sells_h24": 0
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:42+00:00",
+   "liq_usd": 6129.6054,
+   "fdv_usd": 6227.597444,
+   "vol_h24": 315.942119379,
+   "buys_h24": 2,
+   "sells_h24": 2,
+   "age_h": 24.1
+  }
  },
  "0xca913872aabee9697cc0dcdf457cbb32efd4370c": {
   "token": "0x444be1f4bcebbf822504da309b9e885fcbf1d889",
@@ -144827,7 +144915,15 @@
    "buys_h24": 1,
    "sells_h24": 3
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:34+00:00",
+   "liq_usd": 4043.3571,
+   "fdv_usd": 4139.081215,
+   "vol_h24": 13.6560077084,
+   "buys_h24": 2,
+   "sells_h24": 3,
+   "age_h": 24.1
+  }
  },
  "0xf83587102c9288fe8246c66e454fdf556111a36436a5b8ac593d2aae3e569d99": {
   "token": "0x5d5088d812a1aa18a71dda7ca6cbac15523de97b",
@@ -144843,7 +144939,15 @@
    "buys_h24": 94,
    "sells_h24": 81
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:34+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 189465.0298,
+   "vol_h24": 64465.5892740831,
+   "buys_h24": 94,
+   "sells_h24": 81,
+   "age_h": 24.1
+  }
  },
  "0xa8f1e451242ff38ed895b8baf3a1f926d9d32a804b4bb1d93781dcba40bcf4ea": {
   "token": "0x295a701e7038a7a7b9b23d700e096416b074f526",
@@ -144859,7 +144963,15 @@
    "buys_h24": 6,
    "sells_h24": 10
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:34+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 21608.99308,
+   "vol_h24": 1577.480078587,
+   "buys_h24": 78,
+   "sells_h24": 84,
+   "age_h": 24.1
+  }
  },
  "0x0af21c0e244fdf58d865cdfbb06071e49b5bd5de": {
   "token": "0xe80325ee08b983722127f992095c227d60f25229",
@@ -144875,7 +144987,15 @@
    "buys_h24": 3,
    "sells_h24": 3
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:34+00:00",
+   "liq_usd": 3893.9649,
+   "fdv_usd": 3982.554921,
+   "vol_h24": 538.7982493594,
+   "buys_h24": 3,
+   "sells_h24": 3,
+   "age_h": 24.1
+  }
  },
  "0x498778886bc0faf8ae918ca4eafe75723ae843fec132983eafd85a00828521ce": {
   "token": "0x5221567f796f6dc320c590504f7264a9bf017777",
@@ -144891,7 +145011,15 @@
    "buys_h24": 108,
    "sells_h24": 92
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:34+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 187420.7561,
+   "vol_h24": 50087.9734830254,
+   "buys_h24": 124,
+   "sells_h24": 106,
+   "age_h": 24.1
+  }
  },
  "0xd6df175e9f5b71b98ab75aa454fbacc98b14f206cae43b88497394695ebd5f62": {
   "token": "0x29864840cec7671371d4dc145d5e55ad2d5d4ba4",
@@ -144907,7 +145035,15 @@
    "buys_h24": 32,
    "sells_h24": 21
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:34+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 9950.910981,
+   "vol_h24": 4065.3664802125,
+   "buys_h24": 32,
+   "sells_h24": 21,
+   "age_h": 24.1
+  }
  },
  "0xf5fa0beee9e47477dbd853af5656d09f6a7d789440cb2864199278c9614c8781": {
   "token": "0x4c46ff46f71f22c9925f6dca5f73ce4ae84ed436",
@@ -144923,7 +145059,15 @@
    "buys_h24": 33,
    "sells_h24": 26
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:34+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 89565.38239,
+   "vol_h24": 15532.5159443572,
+   "buys_h24": 33,
+   "sells_h24": 26,
+   "age_h": 24.1
+  }
  },
  "0x04443cf6d92f2523c61dd4a1d731bef0655edee2": {
   "token": "0x28a50eba3a61fed2fba2ac965b9693e6b7b3d712",
@@ -144939,7 +145083,15 @@
    "buys_h24": 1,
    "sells_h24": 1
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:34+00:00",
+   "liq_usd": 3927.322,
+   "fdv_usd": 4018.144581,
+   "vol_h24": 9.557812576,
+   "buys_h24": 1,
+   "sells_h24": 1,
+   "age_h": 24.1
+  }
  },
  "0x25a9aa2ca2ee86e3263878e9f9fa4165adc7408bcc630fb2f5069aeebf73426d": {
   "token": "0x4a41ef12f71db2c1614feafbbefd2b3d54347777",
@@ -144955,7 +145107,15 @@
    "buys_h24": 21,
    "sells_h24": 0
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:34+00:00",
+   "liq_usd": 9.0541,
+   "fdv_usd": 1481506.35,
+   "vol_h24": 6.3705951479,
+   "buys_h24": 21,
+   "sells_h24": 0,
+   "age_h": 24.1
+  }
  },
  "0x82ac823a1a0b6f9db69f57ac4b9af2e6a26d63f6": {
   "token": "0x33abe8bfceecafab36ae4b23175e4a4365954f0e",
@@ -144971,7 +145131,15 @@
    "buys_h24": 1,
    "sells_h24": 3
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:34+00:00",
+   "liq_usd": 3765.5401,
+   "fdv_usd": 3851.761975,
+   "vol_h24": 13.7894666186,
+   "buys_h24": 1,
+   "sells_h24": 3,
+   "age_h": 24.1
+  }
  },
  "0xcf12996b7f8e3b99899934c129c78d3b0fd0210d": {
   "token": "0xa8785b144e7ce2a518a277bd525d64bfe9090155",
@@ -144987,7 +145155,15 @@
    "buys_h24": 1,
    "sells_h24": 1
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:34+00:00",
+   "liq_usd": 3902.5424,
+   "fdv_usd": 3992.692558,
+   "vol_h24": 33.1489365376,
+   "buys_h24": 1,
+   "sells_h24": 1,
+   "age_h": 24.1
+  }
  },
  "0xc36a97e326a9a0308e513f1a6d58a8766bce40c7": {
   "token": "0x0080186c5914d6720ea6db1d041a7dc61dd73bb6",
@@ -145003,7 +145179,15 @@
    "buys_h24": 1,
    "sells_h24": 3
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:34+00:00",
+   "liq_usd": 3926.6072,
+   "fdv_usd": 4016.368559,
+   "vol_h24": 17.4506956627,
+   "buys_h24": 1,
+   "sells_h24": 3,
+   "age_h": 24.1
+  }
  },
  "0xdd502c2c8198e8f0ce9453c2fe85e8417111846d": {
   "token": "0x186b7d8971eadcc3add6d4f41054a58aa6f179f2",
@@ -145019,7 +145203,15 @@
    "buys_h24": 95,
    "sells_h24": 71
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:34+00:00",
+   "liq_usd": 3932.0873,
+   "fdv_usd": 4026.719855,
+   "vol_h24": 20139.9666341073,
+   "buys_h24": 95,
+   "sells_h24": 73,
+   "age_h": 24.1
+  }
  },
  "0x824155163036c16cb2365b71d99a6e5c51cd2745a8243f265ea629fab8379b3d": {
   "token": "0xbb72dbf88d92183b9702d8c0069aa259459a866b",
@@ -145035,7 +145227,15 @@
    "buys_h24": 1,
    "sells_h24": 0
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:34+00:00",
+   "liq_usd": 1456.0374,
+   "fdv_usd": 1490.608742,
+   "vol_h24": 9.658242,
+   "buys_h24": 1,
+   "sells_h24": 1,
+   "age_h": 24.1
+  }
  },
  "0xf9c88a27d2130817dd731ed5dfa728ad30f41b4e88428f8cc97d312203243384": {
   "token": "0x3537ceb76b5ac7e9a5abc3a73511bf0a03d920cc",
@@ -145051,7 +145251,15 @@
    "buys_h24": 2,
    "sells_h24": 2
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:34+00:00",
+   "liq_usd": 7198.2239,
+   "fdv_usd": 7363.26801,
+   "vol_h24": 30.2585563901,
+   "buys_h24": 2,
+   "sells_h24": 2,
+   "age_h": 24.1
+  }
  },
  "0x8186fbb29c07de0da2b4660114c3e979e041c4a428fa2d125b36eb6c561c041f": {
   "token": "0x1e3e85d863dc47d5730ef13a0974f9c6fb9f719a",
@@ -145067,7 +145275,15 @@
    "buys_h24": 37,
    "sells_h24": 26
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:34+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 10641.51456,
+   "vol_h24": 2660.0970437459,
+   "buys_h24": 21,
+   "sells_h24": 17,
+   "age_h": 24.2
+  }
  },
  "0x509791cc1b466db14f52874bdb612ee3b6635d25": {
   "token": "0x2f3db46d98273313568957c95c0e964534f1d317",
@@ -145083,7 +145299,15 @@
    "buys_h24": 2,
    "sells_h24": 3
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:34+00:00",
+   "liq_usd": 3927.0837,
+   "fdv_usd": 4019.853094,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.2
+  }
  },
  "0xfe364f90f0d725530bed98ed42bd3a4f8ea392b0e3985e5834e0263c99da5388": {
   "token": "0xbe382383d8fdea652b46574cb1af901013c8fbe6",
@@ -145099,7 +145323,15 @@
    "buys_h24": 2,
    "sells_h24": 0
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:34+00:00",
+   "liq_usd": 1.4296,
+   "fdv_usd": 69913.5851106,
+   "vol_h24": 12.1417539458,
+   "buys_h24": 3,
+   "sells_h24": 0,
+   "age_h": 24.2
+  }
  },
  "0x42957a579085119792c0aca6df9ebcdbd456d082": {
   "token": "0xc6bf21196751ece3d995ab52df157f512acd9fb7",
@@ -145115,7 +145347,15 @@
    "buys_h24": 3,
    "sells_h24": 3
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:34+00:00",
+   "liq_usd": 3988.0796,
+   "fdv_usd": 4317.560404,
+   "vol_h24": 513.5696788575,
+   "buys_h24": 0,
+   "sells_h24": 18,
+   "age_h": 24.2
+  }
  },
  "0xd50a8b89d39f5d1422a343a8671758bb8fd9077f5e30bdbc8f704a9257014b82": {
   "token": "0x14ee5b45835047e224588310e78ff2d994ca7777",
@@ -145131,7 +145371,15 @@
    "buys_h24": 19,
    "sells_h24": 0
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:34+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 2892293.027,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.2
+  }
  },
  "0xe9db4e0dc449ed3dc280ac11f962b481d494220b": {
   "token": "0x9a6d9b1b8885bfd570968afe60ade2120bb3dd92",
@@ -145147,7 +145395,15 @@
    "buys_h24": 6,
    "sells_h24": 1
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:34+00:00",
+   "liq_usd": 3920.174,
+   "fdv_usd": 4012.697086,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.2
+  }
  },
  "0xe101985d6e56c896709011dc77da645a5932d8f8eb14b0f94f7ae08f19b7392e": {
   "token": "0x3afba1611544331eb80923377652110d95657777",
@@ -145163,7 +145419,15 @@
    "buys_h24": 6,
    "sells_h24": 0
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:34+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 321901.8088,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.2
+  }
  },
  "0x22d896fc099ac91e32f8c995d88161d3f819c5efc4ddfcc24d9a8bfe64e6f76b": {
   "token": "0x6c7af7ba21702a574fd8035cb62aa0bad34c9ef2",
@@ -145179,7 +145443,15 @@
    "buys_h24": 2,
    "sells_h24": 0
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:34+00:00",
+   "liq_usd": 3618.7688,
+   "fdv_usd": 3684.638434,
+   "vol_h24": 311.2463778387,
+   "buys_h24": 0,
+   "sells_h24": 2,
+   "age_h": 24.2
+  }
  },
  "0x74b7a10b502562a4bdb5908e60a82a3c8da367d97df32b17056c302b8bbbb048": {
   "token": "0x9800ef64a3c5381e33236c38320cc44c6109ffca",
@@ -145195,7 +145467,15 @@
    "buys_h24": 88,
    "sells_h24": 44
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:34+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 83052.56668,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.2
+  }
  },
  "0x3a7f0d9501f901e3db67c9fb63737b1dfca6f511549b1679566ed2fb193cb4c2": {
   "token": "0x8d3985461af4b22419e9f63b59cd43de261dee14",
@@ -145211,7 +145491,15 @@
    "buys_h24": 161,
    "sells_h24": 75
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:34+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 47860.38424,
+   "vol_h24": 34363.0323285679,
+   "buys_h24": 74,
+   "sells_h24": 36,
+   "age_h": 24.2
+  }
  },
  "0x4fe3b2ac1f8c0693d8812dc5812a8b49814d23243bb2137126dfd2f399f31b91": {
   "token": "0x295a701e7038a7a7b9b23d700e096416b074f526",
@@ -145227,7 +145515,15 @@
    "buys_h24": 8,
    "sells_h24": 19
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:34+00:00",
+   "liq_usd": 4.0505,
+   "fdv_usd": 7380.796624,
+   "vol_h24": 0.9301249201,
+   "buys_h24": 2,
+   "sells_h24": 6,
+   "age_h": 24.2
+  }
  },
  "0x2f3678dcc6ec742f716e98093ed002c90e6fc2de": {
   "token": "0x07793ceac787b9598b5df94a80d1d0af644e794e",
@@ -145243,7 +145539,15 @@
    "buys_h24": 3,
    "sells_h24": 3
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:34+00:00",
+   "liq_usd": 3929.2281,
+   "fdv_usd": 4018.80107,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.2
+  }
  },
  "0xc7551bd32f64b14dea0286323c7a330afa85e9ff": {
   "token": "0x4a5acd4071889da1a2eb13b7393a7dde5f15e0b8",
@@ -145259,7 +145563,15 @@
    "buys_h24": 24,
    "sells_h24": 1
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:34+00:00",
+   "liq_usd": 0.005626984282,
+   "fdv_usd": 0.003432680049,
+   "vol_h24": 13128.2816437334,
+   "buys_h24": 14,
+   "sells_h24": 1,
+   "age_h": 24.3
+  }
  },
  "0xcb55618f56b62ab9b358ede9dc926684f7d6139e266634125aed94e729f0a1aa": {
   "token": "0xab27884236f2444b219b2462519dffafea1a2238",
@@ -145275,7 +145587,15 @@
    "buys_h24": 890,
    "sells_h24": 380
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:34+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 91855.73332,
+   "vol_h24": 309296.39128589,
+   "buys_h24": 266,
+   "sells_h24": 248,
+   "age_h": 24.3
+  }
  },
  "0xae199401d23ce1098989ce4644a422f79ed56b045b7f913a6d83facae61cc1f2": {
   "token": "0x9c69fb50d4427b9e7778d24713aad2f23a351111",
@@ -145291,7 +145611,15 @@
    "buys_h24": 1,
    "sells_h24": 2
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:34+00:00",
+   "liq_usd": 6166.0599,
+   "fdv_usd": 6088.112323,
+   "vol_h24": 2.3292849109,
+   "buys_h24": 0,
+   "sells_h24": 1,
+   "age_h": 24.3
+  }
  },
  "0x64a997e9d581de75233595aa2fca9fc8f3bdbccb32f4059083dad764005d7530": {
   "token": "0x462c39bc2bf181b950ac6256bed98c4213417777",
@@ -145307,7 +145635,15 @@
    "buys_h24": 123,
    "sells_h24": 107
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:16+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 202221.9756,
+   "vol_h24": 6286.4877680534,
+   "buys_h24": 16,
+   "sells_h24": 11,
+   "age_h": 24.3
+  }
  },
  "0xfa492f6bf6063aadcf1765bb227ab014eb6fbb9316100500a242ce13b25d3bab": {
   "token": "0x90ccbcf4aa8f1a2cb81ff60ad3178542c22a8c93",
@@ -145323,7 +145659,15 @@
    "buys_h24": 126,
    "sells_h24": 107
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:16+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 333863.0994,
+   "vol_h24": 21460.6454542361,
+   "buys_h24": 16,
+   "sells_h24": 11,
+   "age_h": 24.3
+  }
  },
  "0x48fbb94ee4d13aea738150896d3dee5c5751ee6f163986fbe7b38192a8d67366": {
   "token": "0xdbf8b2c422f28a2ba2bcc83debc5576a68d27b97",
@@ -145339,7 +145683,15 @@
    "buys_h24": 26,
    "sells_h24": 3
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:16+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 11680.75122,
+   "vol_h24": 1712.9946266927,
+   "buys_h24": 20,
+   "sells_h24": 8,
+   "age_h": 24.3
+  }
  },
  "0x6351e71780d23d6df84f4cd32323218fb21556632593699b5c44c54c239e747b": {
   "token": "0x9ae06a8aab278c1ab64da7f929491c9813a10000",
@@ -145355,7 +145707,15 @@
    "buys_h24": 48,
    "sells_h24": 0
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:16+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 113021.2385,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.3
+  }
  },
  "0x4388148da75f1c729404b5867bd2ec903618f03bace92b9481a9b8eec30dbf3f": {
   "token": "0xf9d1dd1b2ae40b9406b6b98431bef30c83d35195",
@@ -145371,7 +145731,15 @@
    "buys_h24": 1,
    "sells_h24": 1
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:16+00:00",
+   "liq_usd": 1456.0374,
+   "fdv_usd": 1489.520912,
+   "vol_h24": 4.8258144,
+   "buys_h24": 0,
+   "sells_h24": 1,
+   "age_h": 24.3
+  }
  },
  "0x1e514898ca04a029f1de607fba437b3f42bfe0119019623199bb55ae5e3b0139": {
   "token": "0x295a701e7038a7a7b9b23d700e096416b074f526",
@@ -145387,7 +145755,15 @@
    "buys_h24": 1128,
    "sells_h24": 1038
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:16+00:00",
+   "liq_usd": 90346.7224,
+   "fdv_usd": 3404.549231,
+   "vol_h24": 94925.6801941261,
+   "buys_h24": 1061,
+   "sells_h24": 834,
+   "age_h": 24.3
+  }
  },
  "0xd32529746293baa156713130c37321fec1c9ab12e6d2145e9bae77affb9f1572": {
   "token": "0x69a68473b08b40cdf197527ba52641718a9a1ff3",
@@ -145403,7 +145779,15 @@
    "buys_h24": 1,
    "sells_h24": 0
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:16+00:00",
+   "liq_usd": 4813.4295,
+   "fdv_usd": 4913.457377,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.3
+  }
  },
  "0x15615807eb675f890c4d6b1f4ac47b52fd91f0e8": {
   "token": "0x295a701e7038a7a7b9b23d700e096416b074f526",
@@ -145419,7 +145803,15 @@
    "buys_h24": 92,
    "sells_h24": 33
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:16+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 43295.19668,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.3
+  }
  },
  "0x2cbba98845041eba0231edc8604faf8f025aaba1": {
   "token": "0xeabc5b52f04a1b939c1b99ecacd2ea07b558515f",
@@ -145435,7 +145827,15 @@
    "buys_h24": 68,
    "sells_h24": 37
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:16+00:00",
+   "liq_usd": 4018.101,
+   "fdv_usd": 4044.28595,
+   "vol_h24": 1640.0234784155,
+   "buys_h24": 12,
+   "sells_h24": 23,
+   "age_h": 24.3
+  }
  },
  "0xf959024d3076baa2bc98e47ac246811b7ce44ef8b2c6e639e203908a0866590c": {
   "token": "0x4746a211932c456293539fd4ec4b2d2e485a0143",
@@ -145451,7 +145851,15 @@
    "buys_h24": 2,
    "sells_h24": 0
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:16+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 1522.120373,
+   "vol_h24": 0.6248294437,
+   "buys_h24": 1,
+   "sells_h24": 3,
+   "age_h": 24.3
+  }
  },
  "0x9724b67cd62f382d4e2d45a3bd1d35617cd9f9ec3c5f3ffab27cc1406acc2999": {
   "token": "0xfe91c855c15065c3c3fd968d9b8cfa31da9a6896",
@@ -145467,7 +145875,15 @@
    "buys_h24": 571,
    "sells_h24": 423
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:16+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 66586.1154,
+   "vol_h24": 174627.003827241,
+   "buys_h24": 229,
+   "sells_h24": 276,
+   "age_h": 24.3
+  }
  },
  "0xc8767b18c71af4854517fc690c5dfff8fe45411b": {
   "token": "0x1cd97f5b37b5aca6c7534f3a32183bed6dd68524",
@@ -145483,7 +145899,15 @@
    "buys_h24": 7,
    "sells_h24": 4
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:16+00:00",
+   "liq_usd": 3942.3327,
+   "fdv_usd": 4027.991315,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.3
+  }
  },
  "0xc920f0128f5e00f6594b4be7fc690d686593b9da": {
   "token": "0x2e99571ece5044107ed79a6c34e2b5338cb0c9f2",
@@ -145499,7 +145923,15 @@
    "buys_h24": 4,
    "sells_h24": 6
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:16+00:00",
+   "liq_usd": 3891.1057,
+   "fdv_usd": 3966.807495,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.4
+  }
  },
  "0x4ceb91d0b1d5a917c2cfa69988f854bf4327f5b90ae3143fff9420795284839a": {
   "token": "0x19993e8a9c75c6104f0bf2998784ea8154baf51c",
@@ -145515,7 +145947,15 @@
    "buys_h24": 1,
    "sells_h24": 0
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:16+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 1646.960257,
+   "vol_h24": 25.4008504931,
+   "buys_h24": 4,
+   "sells_h24": 11,
+   "age_h": 24.4
+  }
  },
  "0x94fd4ebe736dddffb763d10a9bea0c6557a5388a516c7492d235135a69f05fe5": {
   "token": "0xad56ac3bc276bafc83c202ac61897ddc7759ee3e",
@@ -145531,7 +145971,15 @@
    "buys_h24": 6,
    "sells_h24": 2
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:16+00:00",
+   "liq_usd": 3414.5757,
+   "fdv_usd": 3419.299084,
+   "vol_h24": 121.2160915623,
+   "buys_h24": 0,
+   "sells_h24": 4,
+   "age_h": 24.4
+  }
  },
  "0xa8d6cffbbef6ee0a0e3de2fdca5171478900225e4222194c31fcaf06484978f0": {
   "token": "0x84d1c8f30c5b2baeaf37616816f32e989bce94de",
@@ -145547,7 +145995,15 @@
    "buys_h24": 36,
    "sells_h24": 24
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:16+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 10825.84954,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.4
+  }
  },
  "0x766c050355bcfaf9003089ddca1b15cabbf030e56daf875a305d529684ed633b": {
   "token": "0x19993e8a9c75c6104f0bf2998784ea8154baf51c",
@@ -145563,7 +146019,15 @@
    "buys_h24": 2,
    "sells_h24": 0
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:16+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 1598.766423,
+   "vol_h24": 9.7204034818,
+   "buys_h24": 2,
+   "sells_h24": 10,
+   "age_h": 24.4
+  }
  },
  "0x1535eda2f604aa6c1e307cd31ce06714c2e27829": {
   "token": "0x5a5532415e6cff552b6bd1bedc547429de30c43a",
@@ -145579,7 +146043,15 @@
    "buys_h24": 23,
    "sells_h24": 23
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:16+00:00",
+   "liq_usd": 3932.8021,
+   "fdv_usd": 4018.539965,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.4
+  }
  },
  "0x302ee183a855e9e0ac7ad904e818b1dcc34ac447eb99c92505428b68146a1cf2": {
   "token": "0x7c9f31bb47708fb0054f2395900091ec44633ba3",
@@ -145595,7 +146067,15 @@
    "buys_h24": 1,
    "sells_h24": 2
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:16+00:00",
+   "liq_usd": 8562.291,
+   "fdv_usd": 10407.45018,
+   "vol_h24": 4.9131743993,
+   "buys_h24": 1,
+   "sells_h24": 2,
+   "age_h": 24.4
+  }
  },
  "0xc708e607144afeaa4da39cf9d11a41e8370e0c43": {
   "token": "0xf023cbff0132572e89dcda951a33bb49ddedded8",
@@ -145611,7 +146091,15 @@
    "buys_h24": 29,
    "sells_h24": 1
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:16+00:00",
+   "liq_usd": 0.005799820675,
+   "fdv_usd": 9.6703013228,
+   "vol_h24": 2668.6041840168,
+   "buys_h24": 6,
+   "sells_h24": 1,
+   "age_h": 24.4
+  }
  },
  "0x4341cb6f181fa5035c6ce8e058da5b45c1238f75": {
   "token": "0x144d537549962760d682c92c62e8a61b224cd441",
@@ -145627,7 +146115,15 @@
    "buys_h24": 56,
    "sells_h24": 47
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:16+00:00",
+   "liq_usd": 3894.6797,
+   "fdv_usd": 3948.075702,
+   "vol_h24": 1.4138449401,
+   "buys_h24": 0,
+   "sells_h24": 1,
+   "age_h": 24.4
+  }
  },
  "0x8be7e486d0c969966d5bd1617ac45f475e91e427c9f186496fe525b52b0b1d01": {
   "token": "0x3bce5a4f7a1b13f6e7778af54fa7e5a71b257337",
@@ -145643,7 +146139,15 @@
    "buys_h24": 1,
    "sells_h24": 1
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:16+00:00",
+   "liq_usd": 1456.0374,
+   "fdv_usd": 1487.748604,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.4
+  }
  },
  "0x3548cb412ed4b78c63717ffafe1485b8850a29a8543bd085849676dbfadc3ed4": {
   "token": "0x21bc6c5d5bf3fbf15f5b5f70308349df3d0f7777",
@@ -145659,7 +146163,15 @@
    "buys_h24": 129,
    "sells_h24": 106
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:16+00:00",
+   "liq_usd": 31943.2355,
+   "fdv_usd": 216068.1906,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.4
+  }
  },
  "0x52af849bdc5fb51f617fa3d13674bed2817f8718": {
   "token": "0x06a3785cc35755dd32218994c311a571e699fe89",
@@ -145675,7 +146187,15 @@
    "buys_h24": 161,
    "sells_h24": 134
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:16+00:00",
+   "liq_usd": 0.2383,
+   "fdv_usd": 20075.3043,
+   "vol_h24": 22407.5411366606,
+   "buys_h24": 36,
+   "sells_h24": 57,
+   "age_h": 24.4
+  }
  },
  "0x7fddb555b7133031e05ff371fee19da32f2697127405f7d1e88d65ccf20a1441": {
   "token": "0x08a06cd04ae0566a2ea9f0da72f5912b1076d526",
@@ -145691,7 +146211,15 @@
    "buys_h24": 127,
    "sells_h24": 108
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:16+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 304377.4317,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.4
+  }
  },
  "0xa5a0f7bcfbdf187ffbc3b586e3b9cbd9d9f8a10c602d3998bea18e8f9a652b71": {
   "token": "0x5a50313de6e1a5507ef3105d943211b483b766ea",
@@ -145707,7 +146235,15 @@
    "buys_h24": 1,
    "sells_h24": 0
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:16+00:00",
+   "liq_usd": 2939.4753,
+   "fdv_usd": 2999.733528,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.5
+  }
  },
  "0x15acbac0051864472823af4fb68146a922fc121917bbb5589ba51beb0b89aa53": {
   "token": "0x83609421c7641898e10081b6fbf2bd61e8d8ad0b",
@@ -145723,7 +146259,15 @@
    "buys_h24": 154,
    "sells_h24": 88
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:16+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 744538.3651,
+   "vol_h24": 5641455.88408181,
+   "buys_h24": 5087,
+   "sells_h24": 3666,
+   "age_h": 24.5
+  }
  },
  "0x93e2b57445ea49c139e5503e5e5c3b3d23776a6dfc759f7fe1a2c264d01850b5": {
   "token": "0x27d03818c932b383de866531bc764a671e9ce8f6",
@@ -145739,7 +146283,15 @@
    "buys_h24": 55,
    "sells_h24": 52
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:16+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 13442.01289,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.5
+  }
  },
  "0x1ecd70c3394284aeac7addd30e4f4445a8b421e9": {
   "token": "0x5789836ec797066f4c3f97de3babad3120ec1737",
@@ -145755,7 +146307,15 @@
    "buys_h24": 2,
    "sells_h24": 2
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:16+00:00",
+   "liq_usd": 4086.2448,
+   "fdv_usd": 4035.316701,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.5
+  }
  },
  "0x6d028ca5d22016e129d0db1662f800aee0815362ecdcbaf7835f23c66af15ab2": {
   "token": "0x7db52be53210a7559975692fef6e3e696e6a676a",
@@ -145771,7 +146331,15 @@
    "buys_h24": 180,
    "sells_h24": 54
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:16+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 71501.15085,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.5
+  }
  },
  "0x04bf5f54365ed95db99bf1396139bf8af41f1cb4": {
   "token": "0x544f02d5b1df4c28547158babf8df63191ff4c2c",
@@ -145787,7 +146355,15 @@
    "buys_h24": 1,
    "sells_h24": 0
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:09+00:00",
+   "liq_usd": 3733.6126,
+   "fdv_usd": 3809.063481,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.5
+  }
  },
  "0x00e2f32b248c582ebb6a5ed3447dbb6f20e452ba": {
   "token": "0x7ac05f9e963a69330d76c5db91d98ba018c9cabb",
@@ -145803,7 +146379,15 @@
    "buys_h24": 1,
    "sells_h24": 3
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:09+00:00",
+   "liq_usd": 3887.2935,
+   "fdv_usd": 3970.076364,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.5
+  }
  },
  "0x5c7f673cfbf0e2b123d775486684c7a0d772ef28dc5dbcb552179e864a8411b9": {
   "token": "0x0b301422777fa1d5ff64801c15b20b9db1227bf2",
@@ -145819,7 +146403,15 @@
    "buys_h24": 243,
    "sells_h24": 137
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:09+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 106690.441,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.5
+  }
  },
  "0xdcb0da0fa2a677729e3df97959e5e1f503512b1f6bb5d218a131f1e01d9e4a3d": {
   "token": "0x79850ec785cdf96fbf16267df5453b376f644f20",
@@ -145835,7 +146427,15 @@
    "buys_h24": 55,
    "sells_h24": 54
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:09+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 13636.42332,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.6
+  }
  },
  "0xae53567563b7aa0a3e353d6ee56f3ab403185a37": {
   "token": "0x24d40a8e4ea291f0a7d69abd6332c8aa7d02d367",
@@ -145851,7 +146451,15 @@
    "buys_h24": 75,
    "sells_h24": 0
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:09+00:00",
+   "liq_usd": 0.005632319749,
+   "fdv_usd": 0.003611073709,
+   "vol_h24": 9661.5865728442,
+   "buys_h24": 44,
+   "sells_h24": 1,
+   "age_h": 24.6
+  }
  },
  "0x93ee3fd2a2ecb42c7ca32302836066fe15c975a9bba6c0ed662ef82d3f5b5a58": {
   "token": "0x834c4926281587146c0a85f520917b86d01a7777",
@@ -145867,7 +146475,15 @@
    "buys_h24": 20,
    "sells_h24": 0
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:09+00:00",
+   "liq_usd": 9.5306,
+   "fdv_usd": 60257.33572,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.6
+  }
  },
  "0x9886accb9729f62834930e185aced9f57ab02b8562334e4fe8131738dc68d871": {
   "token": "0x2ea0c50872f0d9a1a1009600315bca43aeae8177",
@@ -145883,7 +146499,15 @@
    "buys_h24": 1,
    "sells_h24": 1
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:09+00:00",
+   "liq_usd": 1453.893,
+   "fdv_usd": 1485.14332,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.6
+  }
  },
  "0xcf50e91ce4698a45f806fb316c7bcd8fc40383cd93d794c18812a83d67ee48e7": {
   "token": "0xb9a714b0ce56eee65702ac2d172960336601bd05",
@@ -145899,7 +146523,15 @@
    "buys_h24": 1,
    "sells_h24": 0
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:09+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 12392.3415,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.6
+  }
  },
  "0x9cc0d1bd1c5f17bd25e3d22f5baa1ed04ffc8c133ed01ceda674fe02df2a4077": {
   "token": "0x91cdf4ec0ed63a47e0e8a079cd323c2e7afe1f8b",
@@ -145915,7 +146547,15 @@
    "buys_h24": 27,
    "sells_h24": 17
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:09+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 9859.799112,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.6
+  }
  },
  "0x2b8dff8448987f7485dca0b45cd7513ae928c5634350f1e67ada617eacac0341": {
   "token": "0xb6fbd561570096aa6b1f8a973799b47ca52d50da",
@@ -145931,7 +146571,15 @@
    "buys_h24": 1,
    "sells_h24": 1
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:09+00:00",
+   "liq_usd": 2015.2454,
+   "fdv_usd": 2055.867304,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.6
+  }
  },
  "0x58f15388cbc4de80b342c169e4c4c47511825b21": {
   "token": "0x2dad20c462c2d701301c7d0d4379c2de5a294c83",
@@ -145947,7 +146595,15 @@
    "buys_h24": 25,
    "sells_h24": 26
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:09+00:00",
+   "liq_usd": 3988.3178,
+   "fdv_usd": 4073.399028,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.6
+  }
  },
  "0x419a35eac1fc9c4081f85d5e2a9d01be619a28c5a7cfc814fad17e45dc8fd71b": {
   "token": "0xe5b0187a5d0d17057c163260f43b1b1b8dfed306",
@@ -145963,7 +146619,15 @@
    "buys_h24": 7,
    "sells_h24": 1
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:09+00:00",
+   "liq_usd": 3431.2543,
+   "fdv_usd": 3467.808537,
+   "vol_h24": 183.791437813,
+   "buys_h24": 1,
+   "sells_h24": 6,
+   "age_h": 24.6
+  }
  },
  "0xd8a158de4a4703c273d2d904e2c45cc3a7591ae1": {
   "token": "0x459bbec89aef1e4642a5f96101de5159c0d57c48",
@@ -145979,7 +146643,15 @@
    "buys_h24": 351,
    "sells_h24": 433
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:09+00:00",
+   "liq_usd": 4243.2614,
+   "fdv_usd": 4274.050309,
+   "vol_h24": 4944.9146880144,
+   "buys_h24": 29,
+   "sells_h24": 25,
+   "age_h": 24.6
+  }
  },
  "0x8ab5d683e8ad9a7538a1a3bd44ae4896ee93922656db21914594533c1aa52e42": {
   "token": "0xf8740fc82b16226ca63259718b423e3416558906",
@@ -145995,7 +146667,15 @@
    "buys_h24": 50,
    "sells_h24": 24
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:09+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 75043.09349,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.6
+  }
  },
  "0xf9df2e5c561963706f7fce9239f58d4f91415b56": {
   "token": "0x0989a9aaa5449436ff7ffd3d125459f09d9c945e",
@@ -146011,7 +146691,15 @@
    "buys_h24": 33,
    "sells_h24": 1
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:09+00:00",
+   "liq_usd": 0.006386312208,
+   "fdv_usd": 14.454757928,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.7
+  }
  },
  "0xe418240feb2fa47441d9942fe63172fa2b2918aba689981c5b074f2ba0ad9659": {
   "token": "0xe83318a044d490ebf62db9d56be962ab3fb502ac",
@@ -146027,7 +146715,15 @@
    "buys_h24": 35,
    "sells_h24": 25
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:09+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 9811.259497,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.7
+  }
  },
  "0x62f9fb09ce0c75331130a1382a6ae9b7bbf24dce": {
   "token": "0xa2166381cb4cf0703653e4262de53b6090631888",
@@ -146043,7 +146739,15 @@
    "buys_h24": 4,
    "sells_h24": 2
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:09+00:00",
+   "liq_usd": 4053.6024,
+   "fdv_usd": 4073.559428,
+   "vol_h24": 51.9415997786,
+   "buys_h24": 0,
+   "sells_h24": 2,
+   "age_h": 24.7
+  }
  },
  "0x8b66026a8eddffa0eebcc21b5400cc867cac2868": {
   "token": "0x22869ff271068816673d1f80b02a988df1576a6a",
@@ -146059,7 +146763,15 @@
    "buys_h24": 4,
    "sells_h24": 4
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:09+00:00",
+   "liq_usd": 3967.827,
+   "fdv_usd": 4051.422733,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.7
+  }
  },
  "0x7c4de919e11ca4a8c62f667fb3e87f6f46f26e43": {
   "token": "0x24e6a91b687e4b95c82a2fa1ed2418aa6d60ac7c",
@@ -146075,7 +146787,15 @@
    "buys_h24": 55,
    "sells_h24": 44
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:09+00:00",
+   "liq_usd": 4028.3464,
+   "fdv_usd": 4052.010717,
+   "vol_h24": 465.710852801,
+   "buys_h24": 4,
+   "sells_h24": 11,
+   "age_h": 24.7
+  }
  },
  "0xf487301f36b3629d9ade55e6433ac8e883b05d8a": {
   "token": "0x014e159a91cf834773a583c027b8553db5ae278b",
@@ -146091,7 +146811,15 @@
    "buys_h24": 44,
    "sells_h24": 42
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:09+00:00",
+   "liq_usd": 3969.9714,
+   "fdv_usd": 3994.077579,
+   "vol_h24": 159.4649551869,
+   "buys_h24": 0,
+   "sells_h24": 5,
+   "age_h": 24.7
+  }
  },
  "0xc0d86c216577fe2b063c5ca4e85ed07ff8a85118a84d6f4faa64a5d12138138c": {
   "token": "0x388b6f84a6f52566f9068b44be89498cfba58a71",
@@ -146107,7 +146835,15 @@
    "buys_h24": 35,
    "sells_h24": 21
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:09+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 10729.77227,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.7
+  }
  },
  "0x1b2df3b71f3d7b0922c5b461fd1687fe1d5bede7": {
   "token": "0x692f773e6e7fb3b27ff29fb61bd15e46438ce374",
@@ -146123,7 +146859,15 @@
    "buys_h24": 5,
    "sells_h24": 5
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:09+00:00",
+   "liq_usd": 4691.1996,
+   "fdv_usd": 4801.99831,
+   "vol_h24": 586.2659934563,
+   "buys_h24": 0,
+   "sells_h24": 1,
+   "age_h": 24.7
+  }
  },
  "0xa6ac496441b92c97cb9d61e4f97ad32375e1ef1e525b3d59a09f94a857a6841c": {
   "token": "0x5dcfb19bc316b3c54f46017c2f56909591557b25",
@@ -146139,7 +146883,15 @@
    "buys_h24": 1,
    "sells_h24": 1
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:09+00:00",
+   "liq_usd": 1456.0374,
+   "fdv_usd": 1487.204689,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.7
+  }
  },
  "0x8e6c8b6bd76864e50bbe94dfb27f0144881d75b136b78d6953fcfb672c1f8905": {
   "token": "0x377d4a83384306cb1b19919d7ebfb45f8d2eba4e",
@@ -146155,7 +146907,15 @@
    "buys_h24": 5,
    "sells_h24": 3
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:09+00:00",
+   "liq_usd": 3687.8657,
+   "fdv_usd": 3724.467909,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.7
+  }
  },
  "0x7202eb3b2cbb1f282d6e0b204e5f5ee152fc9ed006c7621d57db22bd71aeb211": {
   "token": "0x7c7e0b504c195bd2bf2014a6e7761f657fd37777",
@@ -146171,7 +146931,15 @@
    "buys_h24": 116,
    "sells_h24": 100
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:09+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 215688.3042,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.7
+  }
  },
  "0xbd8b8b45b7003a75c2f6a68af5be0bed04bf90ca61484bbe4b4ae1610ea82c49": {
   "token": "0xeba7033c271c04add2ef4cfa25909c867b107777",
@@ -146187,7 +146955,15 @@
    "buys_h24": 17,
    "sells_h24": 13
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:09+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 69329.83583,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.7
+  }
  },
  "0x8fa4d2cb7b45b05f41c1d83e6a0e99a85f487606228b77446a3f7516bcbc0f11": {
   "token": "0x1026cb5ed52327155c20fe66d3f081e6ebe0f3cb",
@@ -146203,7 +146979,15 @@
    "buys_h24": 224,
    "sells_h24": 179
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:09+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 43614.38949,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.8
+  }
  },
  "0x7c3921595d843fe26dc22700df8b3a0738a040d9": {
   "token": "0x09745273ab5f34b871798c324191419ac50cd940",
@@ -146219,7 +147003,15 @@
    "buys_h24": 31,
    "sells_h24": 1
   },
-  "outcome": null
+  "outcome": {
+   "at": "2026-10-20T09:34:09+00:00",
+   "liq_usd": 0.006230997392,
+   "fdv_usd": 12.5826436648,
+   "vol_h24": 0.0,
+   "buys_h24": 0,
+   "sells_h24": 0,
+   "age_h": 24.8
+  }
  },
  "0x4fab119136da48a6dab2a54300b2d2d0c8c440da": {
   "token": "0xf8ab2caf88cd77bbf39fbe605cfb68482720fbe5",
@@ -192954,6 +193746,2566 @@
    "vol_h24": 13.2612801229,
    "buys_h24": 5,
    "sells_h24": 8
+  },
+  "outcome": null
+ },
+ "0x47ab500af6d26bccac7ef7ac5b1773dedd4a3265": {
+  "token": "0x92635afd715ecca595c78375b8deae8d36173534",
+  "name": "SPROUT / WETH",
+  "symbol": "SPROUT",
+  "dex": "pons-v2",
+  "created": "2026-10-20T09:30:54Z",
+  "first": {
+   "at": "2026-10-20T09:32:33+00:00",
+   "liq_usd": 4354.9691,
+   "fdv_usd": 3995.375033,
+   "vol_h24": 224.4870962003,
+   "buys_h24": 2,
+   "sells_h24": 1
+  },
+  "outcome": null
+ },
+ "0xacba32e042671c237c9a4cd3f1c30602cca6d1ccbe629ba172ae65385e68c833": {
+  "token": "0xee1c7f19e66eb7fbfbdce3cc59a85677cc251111",
+  "name": "BOOKSTORE / WETH 0.3%",
+  "symbol": "BOOKSTORE",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:30:13Z",
+  "first": {
+   "at": "2026-10-20T09:32:33+00:00",
+   "liq_usd": 6004.95368660692,
+   "fdv_usd": 6004.98943,
+   "vol_h24": 11.91445,
+   "buys_h24": 1,
+   "sells_h24": 0
+  },
+  "outcome": null
+ },
+ "0xfae5ce5352296a8fe181a4eb4cfe06da9cd45e7d": {
+  "token": "0x717d87166fb25b0d20cc66370a99bbecd59a16ee",
+  "name": "MESKU / WETH",
+  "symbol": "MESKU",
+  "dex": "pons-v2",
+  "created": "2026-10-20T09:30:07Z",
+  "first": {
+   "at": "2026-10-20T09:32:33+00:00",
+   "liq_usd": 3963.2226,
+   "fdv_usd": 3963.269357,
+   "vol_h24": 4.7650494098,
+   "buys_h24": 1,
+   "sells_h24": 1
+  },
+  "outcome": null
+ },
+ "0x9f464912ae78e4caf2f72263e8b7debb90d3f3c5": {
+  "token": "0x67b70476c19fbdf5ca68632fe735b7135cf1ca4b",
+  "name": "NEONFUND / WETH",
+  "symbol": "NEONFUND",
+  "dex": "pons-v2",
+  "created": "2026-10-20T09:30:03Z",
+  "first": {
+   "at": "2026-10-20T09:32:33+00:00",
+   "liq_usd": 3908.90449848532,
+   "fdv_usd": 4377.464927,
+   "vol_h24": 133.448,
+   "buys_h24": 2,
+   "sells_h24": 0
+  },
+  "outcome": null
+ },
+ "0x57dba848768d15ba66d79a0bc8127dced9bf34b2dd70324bcc5bc58ad6d3692f": {
+  "token": "0xa6c72fbeab86d3fadd6a14b823d9e241ac495bf5",
+  "name": "POW / WETH",
+  "symbol": "POW",
+  "dex": "bankr-robinhood",
+  "created": "2026-10-20T09:29:41Z",
+  "first": {
+   "at": "2026-10-20T09:32:33+00:00",
+   "liq_usd": 5020.7848,
+   "fdv_usd": 5020.652026,
+   "vol_h24": 0.4766,
+   "buys_h24": 1,
+   "sells_h24": 0
+  },
+  "outcome": null
+ },
+ "0x51237cc30cffcc5bc153f687ee7af3e07f94b6f7": {
+  "token": "0x532302ca0bf62e78dc239fef7a74fea1974d42f7",
+  "name": "TTK / WETH",
+  "symbol": "TTK",
+  "dex": "uniswap-v2-robinhood",
+  "created": "2026-10-20T09:29:07Z",
+  "first": {
+   "at": "2026-10-20T09:32:33+00:00",
+   "liq_usd": 8213.7933,
+   "fdv_usd": 7173.784532,
+   "vol_h24": 1805.4843952993,
+   "buys_h24": 16,
+   "sells_h24": 1
+  },
+  "outcome": null
+ },
+ "0x9389e1d92ebc82ac7f3b7105dab2c44d4290531b2df976692dd09a9ccc542120": {
+  "token": "0xfa24cd4f4e69952b1ee6c3b99361e5d11edb7777",
+  "name": "EVOLVE / WETH 1%",
+  "symbol": "EVOLVE",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:28:17Z",
+  "first": {
+   "at": "2026-10-20T09:32:33+00:00",
+   "liq_usd": null,
+   "fdv_usd": 129633.7075,
+   "vol_h24": 25741.0784500641,
+   "buys_h24": 71,
+   "sells_h24": 64
+  },
+  "outcome": null
+ },
+ "0x9e0b71460a041a5b5b6eb9b264e446b8c7a4a9a9": {
+  "token": "0x92f62dd2f16535876dd2b588824000ce3286a9e4",
+  "name": "YEFLIP / WETH",
+  "symbol": "YEFLIP",
+  "dex": "pons-v2",
+  "created": "2026-10-20T09:28:10Z",
+  "first": {
+   "at": "2026-10-20T09:32:33+00:00",
+   "liq_usd": 4009.6695,
+   "fdv_usd": 4009.012715,
+   "vol_h24": 1033.0969411133,
+   "buys_h24": 7,
+   "sells_h24": 6
+  },
+  "outcome": null
+ },
+ "0x0d3ca4e6638ac4044d596417e0e2ce789e9af6c81292170863dfd2a96a99071c": {
+  "token": "0x061f1c3cddaa1128274fc084d696f7cb524c5a43",
+  "name": "Pump / WETH 1%",
+  "symbol": "Pump",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:28:10Z",
+  "first": {
+   "at": "2026-10-20T09:32:33+00:00",
+   "liq_usd": 19106.7359,
+   "fdv_usd": 127836.1444,
+   "vol_h24": 36223.9082034967,
+   "buys_h24": 78,
+   "sells_h24": 65
+  },
+  "outcome": null
+ },
+ "0x983734e967d8d4027ea674e4c1ad83ba630af45004041ed547510b36ada24044": {
+  "token": "0x01467faafb3d212bbdad266fef484ba0d53104bf",
+  "name": "CARB / WETH 0.05%",
+  "symbol": "CARB",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:28:07Z",
+  "first": {
+   "at": "2026-10-20T09:32:33+00:00",
+   "liq_usd": 12346.6649,
+   "fdv_usd": 27479.11566,
+   "vol_h24": 9986.7108341633,
+   "buys_h24": 71,
+   "sells_h24": 10
+  },
+  "outcome": null
+ },
+ "0x4c31d24cd04ed4942e08c6a3752822a1c2b00c2f04921ed6cc63018227a57676": {
+  "token": "0x424a2d8a040d6348a02d7d3cffae25ddd400a6b1",
+  "name": "earth / WETH 1%",
+  "symbol": "earth",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:28:07Z",
+  "first": {
+   "at": "2026-10-20T09:32:33+00:00",
+   "liq_usd": 20181.4734,
+   "fdv_usd": 159532.1734,
+   "vol_h24": 45373.2703462834,
+   "buys_h24": 81,
+   "sells_h24": 70
+  },
+  "outcome": null
+ },
+ "0x1facff360911f31a088e16dfc71be828c94d32a047b18ee33e085a5ff511180f": {
+  "token": "0x4598459313fe9df8a79814d43f6312c0b4147a57",
+  "name": "BRIGHTER / WETH 0.24%",
+  "symbol": "BRIGHTER",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:27:56Z",
+  "first": {
+   "at": "2026-10-20T09:32:33+00:00",
+   "liq_usd": 15984.7799,
+   "fdv_usd": 14353.3874,
+   "vol_h24": 7483.6741322087,
+   "buys_h24": 63,
+   "sells_h24": 61
+  },
+  "outcome": null
+ },
+ "0x99cc0052ea0f0a163533d176a4bdcbe716f4d41c": {
+  "token": "0xe19ba0c16841c850c7118ad63c0c97a77344c74d",
+  "name": "UHI / WETH",
+  "symbol": "UHI",
+  "dex": "uniswap-v2-robinhood",
+  "created": "2026-10-20T09:27:47Z",
+  "first": {
+   "at": "2026-10-20T09:32:33+00:00",
+   "liq_usd": 252878.9333,
+   "fdv_usd": 133212.10188,
+   "vol_h24": 7073.022539,
+   "buys_h24": 5,
+   "sells_h24": 0
+  },
+  "outcome": null
+ },
+ "0xeb61ab95d403231bb505eeb774805b3d4727cc9d": {
+  "token": "0x6764639a9b067e50d058f1aaaf89c6c11c2fb966",
+  "name": "SALIEND / WETH",
+  "symbol": "SALIEND",
+  "dex": "pons-v2",
+  "created": "2026-10-20T09:27:09Z",
+  "first": {
+   "at": "2026-10-20T09:32:33+00:00",
+   "liq_usd": 3994.4181,
+   "fdv_usd": 3994.20662,
+   "vol_h24": 228.9389274315,
+   "buys_h24": 1,
+   "sells_h24": 1
+  },
+  "outcome": null
+ },
+ "0x6a723aa4637eb685fd5759a7b5eb3e296f30e755": {
+  "token": "0x23dd8ea7c23058e75ee6dfeb5e66a826af27eb91",
+  "name": "API / WETH 0.01%",
+  "symbol": "API",
+  "dex": "uniswap-v3-robinhood",
+  "created": "2026-10-20T09:26:33Z",
+  "first": {
+   "at": "2026-10-20T09:32:33+00:00",
+   "liq_usd": 45407.0163,
+   "fdv_usd": 78866.48892,
+   "vol_h24": 39607.5845054902,
+   "buys_h24": 139,
+   "sells_h24": 59
+  },
+  "outcome": null
+ },
+ "0xdea38ec0eb4670068b2a21de8327f48b6da4647fc6c4fda78535c1d82b357190": {
+  "token": "0x627585efeea0f8bccbfb480293010663e62444d5",
+  "name": "ENTROPYIO / WETH 0.33%",
+  "symbol": "ENTROPYIO",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:26:11Z",
+  "first": {
+   "at": "2026-10-20T09:32:33+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 7211.76685,
+   "vol_h24": 1137.3314664595,
+   "buys_h24": 12,
+   "sells_h24": 4
+  },
+  "outcome": null
+ },
+ "0x74516d8b2b8860332ae3d78d67851bfa681351fc": {
+  "token": "0xbaffdf55f903c160f41a8a81e0c561e62e0c27fe",
+  "name": "RETRIRE / WETH",
+  "symbol": "RETRIRE",
+  "dex": "pons-v2",
+  "created": "2026-10-20T09:25:55Z",
+  "first": {
+   "at": "2026-10-20T09:32:33+00:00",
+   "liq_usd": 3887.8971,
+   "fdv_usd": 3887.982465,
+   "vol_h24": 18.9271415628,
+   "buys_h24": 1,
+   "sells_h24": 2
+  },
+  "outcome": null
+ },
+ "0xcfc2bee9ff816d041c6edd658f22e1acc6aaae984edafaaad058110bbebcfbd6": {
+  "token": "0xfa797c5b928092cc1e79a4e72eb8e70653ed930b",
+  "name": "ZPLUS / WETH 87%",
+  "symbol": "ZPLUS",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:25:33Z",
+  "first": {
+   "at": "2026-10-20T09:32:33+00:00",
+   "liq_usd": 0.2383,
+   "fdv_usd": 8265.653047,
+   "vol_h24": 2.989332959e-05,
+   "buys_h24": 0,
+   "sells_h24": 1
+  },
+  "outcome": null
+ },
+ "0x7f80d46f9dbaafac4db3a3132e7a9902437f4e67bad09d9cbb1d193033ab2ce1": {
+  "token": "0x70e57e22b09b2664bc4cd2898fa13f8850248bac",
+  "name": "POW / WETH",
+  "symbol": "POW",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:24:48Z",
+  "first": {
+   "at": "2026-10-20T09:32:33+00:00",
+   "liq_usd": 3435.1233,
+   "fdv_usd": 3468.691314,
+   "vol_h24": 148.0842562363,
+   "buys_h24": 5,
+   "sells_h24": 0
+  },
+  "outcome": null
+ },
+ "0x57ff26f8d1ae007d63c352b87162f2a6092a08009222a424c90debfaf46881f5": {
+  "token": "0x2a2c3aa7b1f515c0bf4769a74b31143878323cf9",
+  "name": "STRIKER / WETH 0.45%",
+  "symbol": "STRIKER",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:24:39Z",
+  "first": {
+   "at": "2026-10-20T09:32:33+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 9250.861059,
+   "vol_h24": 4246.0057953673,
+   "buys_h24": 22,
+   "sells_h24": 14
+  },
+  "outcome": null
+ },
+ "0x74405a494d83dba257907641f9c3d84b91957f0a": {
+  "token": "0x921a20669f11da73e253dba9b90c267071794a6e",
+  "name": "API / WETH 0.01%",
+  "symbol": "API",
+  "dex": "uniswap-v3-robinhood",
+  "created": "2026-10-20T09:24:32Z",
+  "first": {
+   "at": "2026-10-20T09:32:35+00:00",
+   "liq_usd": 2.859624036e-14,
+   "fdv_usd": 14845.89203,
+   "vol_h24": 2382.8000601972,
+   "buys_h24": 29,
+   "sells_h24": 5
+  },
+  "outcome": null
+ },
+ "0x87e13fffa37320693460a0b1439fbfca92fb43e19300f20a19996503b8b3e03d": {
+  "token": "0x0afb16e2221eef68f5fb43fc12659cc25cc87290",
+  "name": "SPRITE / WETH 0.25%",
+  "symbol": "SPRITE",
+  "dex": "uniswap-pools-trade",
+  "created": "2026-10-20T09:24:25Z",
+  "first": {
+   "at": "2026-10-20T09:32:35+00:00",
+   "liq_usd": 9801.1696,
+   "fdv_usd": 6017.61247,
+   "vol_h24": 30876.4789773232,
+   "buys_h24": 117,
+   "sells_h24": 43
+  },
+  "outcome": null
+ },
+ "0x1e7c8853f9e4204469dd9d3cd00bcc03094ded1e465af45fdcadee9a5d8ac1eb": {
+  "token": "0xd8d5c24e6d1493b522a12efd695cb344024bee1b",
+  "name": "QUIV / WETH 87%",
+  "symbol": "QUIV",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:24:07Z",
+  "first": {
+   "at": "2026-10-20T09:32:35+00:00",
+   "liq_usd": 0.2383,
+   "fdv_usd": 6924.77147,
+   "vol_h24": 2.977412568e-05,
+   "buys_h24": 0,
+   "sells_h24": 1
+  },
+  "outcome": null
+ },
+ "0x45af48dd1d8f31e5d8a803f196f571b95b71aba041b981a85ed1cf939d31a866": {
+  "token": "0x31b62be683f161113149b4af7ddef972b1764e2a",
+  "name": "SPRITE / WETH 0.01%",
+  "symbol": "SPRITE",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:23:26Z",
+  "first": {
+   "at": "2026-10-20T09:32:35+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 76179.41832,
+   "vol_h24": 70243.8706676712,
+   "buys_h24": 132,
+   "sells_h24": 71
+  },
+  "outcome": null
+ },
+ "0xb8af613636230c90ec08226e4fc5ebf29c7a026563e1ee63bf7b94a77af741f9": {
+  "token": "0x3ad8a386329a5374525e6f0ac8a861eed1f85386",
+  "name": "HOOMER / WETH",
+  "symbol": "HOOMER",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:21:02Z",
+  "first": {
+   "at": "2026-10-20T09:32:35+00:00",
+   "liq_usd": 3559.9786,
+   "fdv_usd": 4233.00577551,
+   "vol_h24": 554.8889908135,
+   "buys_h24": 10,
+   "sells_h24": 1
+  },
+  "outcome": null
+ },
+ "0xf2873ef25b07fb6ea8da67a9fd8626ca95c7d0c0": {
+  "token": "0xa963a78bddd5cf07fa5a856a2da3f4a3b25749ae",
+  "name": "BLURR / WETH",
+  "symbol": "BLURR",
+  "dex": "pons-v2",
+  "created": "2026-10-20T09:21:01Z",
+  "first": {
+   "at": "2026-10-20T09:32:35+00:00",
+   "liq_usd": 3888.7198,
+   "fdv_usd": 3886.978164,
+   "vol_h24": 256.8659489006,
+   "buys_h24": 2,
+   "sells_h24": 4
+  },
+  "outcome": null
+ },
+ "0x879cbff964397b3c28201df9554a61287d76075c": {
+  "token": "0x5c114eb8f2c7da3912dbac221d2c2731fabac28f",
+  "name": "NOA / WETH",
+  "symbol": "NOA",
+  "dex": "uniswap-v2-robinhood",
+  "created": "2026-10-20T09:20:57Z",
+  "first": {
+   "at": "2026-10-20T09:32:35+00:00",
+   "liq_usd": 0.005242706627,
+   "fdv_usd": 0.04633629456,
+   "vol_h24": 418.7844558068,
+   "buys_h24": 11,
+   "sells_h24": 1
+  },
+  "outcome": null
+ },
+ "0xfa0ecb410f6102f51b23e5dc7f74d57fd94bbf06e0c4cbf294f40060036776d5": {
+  "token": "0xaf6a11dd2360dbfd5afcc9c99b59ff2a4733ad3c",
+  "name": "SPRITE / WETH 0.01%",
+  "symbol": "SPRITE",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:20:38Z",
+  "first": {
+   "at": "2026-10-20T09:32:35+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 35060.23925,
+   "vol_h24": 5627.1613576042,
+   "buys_h24": 17,
+   "sells_h24": 0
+  },
+  "outcome": null
+ },
+ "0xc0239559231b767e73fca7ba03b2ac5ef95bbbf2": {
+  "token": "0x75a1a2837cce4dbaa9df62d8e9f73e00d07ad1b0",
+  "name": "SPROUT / WETH",
+  "symbol": "SPROUT",
+  "dex": "pons-v2",
+  "created": "2026-10-20T09:20:31Z",
+  "first": {
+   "at": "2026-10-20T09:32:35+00:00",
+   "liq_usd": 6520.3646,
+   "fdv_usd": 6424.524114,
+   "vol_h24": 4758.8805896733,
+   "buys_h24": 51,
+   "sells_h24": 23
+  },
+  "outcome": null
+ },
+ "0x5a55ce05dee4d8cf7f5ca522103bc6d58780db67": {
+  "token": "0xa0bb09c5ff988d015ad7f45e00c437ed061d03cd",
+  "name": "OBLAHPAD / WETH",
+  "symbol": "OBLAHPAD",
+  "dex": "pons-v2",
+  "created": "2026-10-20T09:20:29Z",
+  "first": {
+   "at": "2026-10-20T09:32:35+00:00",
+   "liq_usd": 3932.0893,
+   "fdv_usd": 3931.433803,
+   "vol_h24": 401.516942178,
+   "buys_h24": 5,
+   "sells_h24": 5
+  },
+  "outcome": null
+ },
+ "0x41422fb283faa02a5d17e65a94a355acec52421b50db1619f53a545e9e539513": {
+  "token": "0x51798a04063c89e450271a4a024d62ddfe2b1b27",
+  "name": "CHECKPOINT / WETH 0.26%",
+  "symbol": "CHECKPOINT",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:20:14Z",
+  "first": {
+   "at": "2026-10-20T09:32:35+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 14044.17594,
+   "vol_h24": 7458.2928738429,
+   "buys_h24": 61,
+   "sells_h24": 57
+  },
+  "outcome": null
+ },
+ "0x32cc0f76cc6d1ef561d321b0824fc628e8ca5553": {
+  "token": "0x0a44947d040bdc8b96feaa5d7cc5be826a6ebfc6",
+  "name": "SENDLY / WETH",
+  "symbol": "SENDLY",
+  "dex": "pons-v2",
+  "created": "2026-10-20T09:19:47Z",
+  "first": {
+   "at": "2026-10-20T09:32:35+00:00",
+   "liq_usd": 3889.8035,
+   "fdv_usd": 3888.773368,
+   "vol_h24": 392.9326038001,
+   "buys_h24": 5,
+   "sells_h24": 7
+  },
+  "outcome": null
+ },
+ "0xf00df9da5ec7eddaf1975b7bf0934bb5bee1f26173fa2be9745704bcb7cf1ddc": {
+  "token": "0x347c77899fda5705b883e61042dceb38326585ba",
+  "name": "MINIES / WETH 0.45%",
+  "symbol": "MINIES",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:19:38Z",
+  "first": {
+   "at": "2026-10-20T09:32:35+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 37071.68989,
+   "vol_h24": 36940.5899322891,
+   "buys_h24": 160,
+   "sells_h24": 144
+  },
+  "outcome": null
+ },
+ "0xda1eb6bb70426a3600c8613b30417a97576f7767708437dcacc4650b05271c16": {
+  "token": "0x4609f92dca9f1c70ad678eb20cd8ba10b65aca9e",
+  "name": "SPRITE / WETH 0.01%",
+  "symbol": "SPRITE",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:19:34Z",
+  "first": {
+   "at": "2026-10-20T09:32:35+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 26300.74435,
+   "vol_h24": 1452.723615157,
+   "buys_h24": 12,
+   "sells_h24": 0
+  },
+  "outcome": null
+ },
+ "0xc2057dc14ce62228c2f5c48b410ce3e84e7bf879": {
+  "token": "0xfa797c5b928092cc1e79a4e72eb8e70653ed930b",
+  "name": "ZPLUS / WETH",
+  "symbol": "ZPLUS",
+  "dex": "pons-v2",
+  "created": "2026-10-20T09:19:32Z",
+  "first": {
+   "at": "2026-10-20T09:32:35+00:00",
+   "liq_usd": 9992.7178,
+   "fdv_usd": 12231.92266,
+   "vol_h24": 5318.4176938422,
+   "buys_h24": 50,
+   "sells_h24": 16
+  },
+  "outcome": null
+ },
+ "0x7be9c371de8641591efffecf79742392e13602b8": {
+  "token": "0x461d9192c5f61487460e57e89e3a26ad77498b42",
+  "name": "NEONFUND / WETH",
+  "symbol": "NEONFUND",
+  "dex": "pons-v2",
+  "created": "2026-10-20T09:19:03Z",
+  "first": {
+   "at": "2026-10-20T09:32:35+00:00",
+   "liq_usd": 3911.3422,
+   "fdv_usd": 3911.939235,
+   "vol_h24": 37.1342248964,
+   "buys_h24": 2,
+   "sells_h24": 2
+  },
+  "outcome": null
+ },
+ "0x0f23480ac75d37db2b5dd0d142d068c71027e078": {
+  "token": "0x6d347c05cd0686839dde4bb9c2c6d3e41c1c363f",
+  "name": "OPENFOUR / WETH",
+  "symbol": "OPENFOUR",
+  "dex": "pons-v2",
+  "created": "2026-10-20T09:19:01Z",
+  "first": {
+   "at": "2026-10-20T09:32:35+00:00",
+   "liq_usd": 3888.8503,
+   "fdv_usd": 3885.91282,
+   "vol_h24": 394.8292600926,
+   "buys_h24": 2,
+   "sells_h24": 4
+  },
+  "outcome": null
+ },
+ "0xdf12f3281be0ff6c0d9dc5a445cc66fc9a78a068": {
+  "token": "0xbdfb3cf70257a9bb740118b0a6f1ede7c974eee1",
+  "name": "LPMODEL / WETH",
+  "symbol": "LPMODEL",
+  "dex": "pons-v2",
+  "created": "2026-10-20T09:18:45Z",
+  "first": {
+   "at": "2026-10-20T09:32:35+00:00",
+   "liq_usd": 5642.7531,
+   "fdv_usd": 5810.483612,
+   "vol_h24": 7585.7675334892,
+   "buys_h24": 64,
+   "sells_h24": 47
+  },
+  "outcome": null
+ },
+ "0x9c6c18b499b9076b12864fea45c18b381af5064b": {
+  "token": "0xb2b44ea386ac33520e15482433234c6f6bc0964b",
+  "name": "RHSL / USDG",
+  "symbol": "RHSL",
+  "dex": "pons-v2",
+  "created": "2026-10-20T09:18:22Z",
+  "first": {
+   "at": "2026-10-20T09:32:35+00:00",
+   "liq_usd": 3397.3576,
+   "fdv_usd": 3397.312056,
+   "vol_h24": 15.3124452397,
+   "buys_h24": 11,
+   "sells_h24": 0
+  },
+  "outcome": null
+ },
+ "0x6393e1ea39c632e97797ae22c9308aeec253e29f": {
+  "token": "0xebbd825106832b4cce168b701c86c6cbd1125299",
+  "name": "HIKIGANE / WETH",
+  "symbol": "HIKIGANE",
+  "dex": "pons-v2",
+  "created": "2026-10-20T09:18:12Z",
+  "first": {
+   "at": "2026-10-20T09:32:35+00:00",
+   "liq_usd": 3973.6525,
+   "fdv_usd": 3973.71075,
+   "vol_h24": 213.0625621955,
+   "buys_h24": 6,
+   "sells_h24": 4
+  },
+  "outcome": null
+ },
+ "0x24e66d59f957ef09f64da1152f2e6d8c07eac9a45711ef6814c5e6d91d8ba82c": {
+  "token": "0x49a1ec75f26b789f660db04140cdb9bb24ea7777",
+  "name": "COLLECTOOO / WETH 1%",
+  "symbol": "COLLECTOOO",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:18:08Z",
+  "first": {
+   "at": "2026-10-20T09:32:37+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 173986.84,
+   "vol_h24": 48146.3431621095,
+   "buys_h24": 120,
+   "sells_h24": 104
+  },
+  "outcome": null
+ },
+ "0xbbf68b63fa89606562b60aebc2471335338add8fc223768252d1eee19554d946": {
+  "token": "0x076555f1dfc156206b69fb5e4483a6abe4ecf180",
+  "name": "EVOLVE / WETH 1%",
+  "symbol": "EVOLVE",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:18:06Z",
+  "first": {
+   "at": "2026-10-20T09:32:37+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 211067.4755,
+   "vol_h24": 60350.285110914,
+   "buys_h24": 124,
+   "sells_h24": 108
+  },
+  "outcome": null
+ },
+ "0x409e00d00295ea6892456e84e5d108523632eae8ee3a5a0b9ca6a4fcb7dd68dc": {
+  "token": "0xa8cc05e2d53680979233b1661af796665df6aa32",
+  "name": "earth / WETH 1%",
+  "symbol": "earth",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:18:04Z",
+  "first": {
+   "at": "2026-10-20T09:32:37+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 328057.2537,
+   "vol_h24": 87532.495507728,
+   "buys_h24": 118,
+   "sells_h24": 104
+  },
+  "outcome": null
+ },
+ "0xbcf913434e66ac226179f0809735832e87c09374": {
+  "token": "0x107755dcf6649d4d707dd31710ec43e8b1ca2389",
+  "name": "Dacity / WETH",
+  "symbol": "Dacity",
+  "dex": "uniswap-v2-robinhood",
+  "created": "2026-10-20T09:17:03Z",
+  "first": {
+   "at": "2026-10-20T09:32:37+00:00",
+   "liq_usd": 249123.7704,
+   "fdv_usd": 158901.94575,
+   "vol_h24": 27819.994219,
+   "buys_h24": 21,
+   "sells_h24": 0
+  },
+  "outcome": null
+ },
+ "0x0e40080f39c897b93a60eadfd2b45ffb3e143b39": {
+  "token": "0x232cdfc415d10b673845d83dc02ba2eabe7e30d1",
+  "name": "IF / WETH 0.3%",
+  "symbol": "IF",
+  "dex": "topaz-robinhood",
+  "created": "2026-10-20T09:16:29Z",
+  "first": {
+   "at": "2026-10-20T09:32:37+00:00",
+   "liq_usd": 2751.9115,
+   "fdv_usd": 212931.321965154,
+   "vol_h24": 4.5486097603,
+   "buys_h24": 0,
+   "sells_h24": 1
+  },
+  "outcome": null
+ },
+ "0x4305ca38ab9a268cb587b67bb9e875507f402df693d3d90fa60b104c2cf20d17": {
+  "token": "0xe248e7b62fcd98b375f9d9d9a83cb1e2512b9f42",
+  "name": "STONKBROKER / WETH 0.01%",
+  "symbol": "STONKBROKER",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:15:54Z",
+  "first": {
+   "at": "2026-10-20T09:32:37+00:00",
+   "liq_usd": 28777.1112,
+   "fdv_usd": 51756.9137,
+   "vol_h24": 5798.8558807683,
+   "buys_h24": 25,
+   "sells_h24": 21
+  },
+  "outcome": null
+ },
+ "0xe0dbb1b79d35f6d6cc559980704aa4642b820bf3": {
+  "token": "0x20cd570ef68948152ea0fd88de7a689f92837fb9",
+  "name": "OBLAUNCH / WETH",
+  "symbol": "OBLAUNCH",
+  "dex": "pons-v2",
+  "created": "2026-10-20T09:15:53Z",
+  "first": {
+   "at": "2026-10-20T09:32:37+00:00",
+   "liq_usd": 3978.2136,
+   "fdv_usd": 3968.502697,
+   "vol_h24": 2134.9565281246,
+   "buys_h24": 17,
+   "sells_h24": 16
+  },
+  "outcome": null
+ },
+ "0x93eff681b976add4cd047972332d1c733c9302128978edbd297bac7c6a1bcc68": {
+  "token": "0xcdbe45a308d3a61ea7dd54fb974ff25158895492",
+  "name": "SHINOBI / WETH 0.05%",
+  "symbol": "SHINOBI",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:15:15Z",
+  "first": {
+   "at": "2026-10-20T09:32:37+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 67145.87906,
+   "vol_h24": 45424.2437557376,
+   "buys_h24": 171,
+   "sells_h24": 133
+  },
+  "outcome": null
+ },
+ "0xf313c30c40908e7ba8d16d83ac87aa6000e1c0574ab06187442f8193552cfa75": {
+  "token": "0xaa07a0e9209e16ac99708c3ec70159c6ef3128a3",
+  "name": "ORBIO / USDG 0.885%",
+  "symbol": "ORBIO",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:14:58Z",
+  "first": {
+   "at": "2026-10-20T09:32:37+00:00",
+   "liq_usd": 25.0217,
+   "fdv_usd": 23934077.2629496,
+   "vol_h24": 1.3537858825,
+   "buys_h24": 0,
+   "sells_h24": 2
+  },
+  "outcome": null
+ },
+ "0x9c8b16a262439a66f7d9f37eb56861c561970c2e725ec501d9e4f466fc96f624": {
+  "token": "0xaa07a0e9209e16ac99708c3ec70159c6ef3128a3",
+  "name": "ORBIO / USDG 0.894%",
+  "symbol": "ORBIO",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:13:35Z",
+  "first": {
+   "at": "2026-10-20T09:32:37+00:00",
+   "liq_usd": 25.4983,
+   "fdv_usd": 23938709.3443035,
+   "vol_h24": 1.3710997806,
+   "buys_h24": 0,
+   "sells_h24": 2
+  },
+  "outcome": null
+ },
+ "0x2dfa959b54e14b524c8e928a6d388e1b887f230f3bd1a8ed2e8e512f4490da37": {
+  "token": "0xaa07a0e9209e16ac99708c3ec70159c6ef3128a3",
+  "name": "ORBIO / USDG 0.838%",
+  "symbol": "ORBIO",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:13:31Z",
+  "first": {
+   "at": "2026-10-20T09:32:37+00:00",
+   "liq_usd": 33.124,
+   "fdv_usd": 23931784.8582489,
+   "vol_h24": 1.8211534858,
+   "buys_h24": 0,
+   "sells_h24": 2
+  },
+  "outcome": null
+ },
+ "0xd5df3a46382d2b1b3ab2a9393c35f7bdc129bec23eb9430d3c2b26f8e9b95e96": {
+  "token": "0xaa07a0e9209e16ac99708c3ec70159c6ef3128a3",
+  "name": "ORBIO / USDG 0.809%",
+  "symbol": "ORBIO",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:13:26Z",
+  "first": {
+   "at": "2026-10-20T09:32:37+00:00",
+   "liq_usd": 50.0434,
+   "fdv_usd": 23933155.573874,
+   "vol_h24": 4.8990580817,
+   "buys_h24": 1,
+   "sells_h24": 3
+  },
+  "outcome": null
+ },
+ "0x7d38397243fe5d0d4590d6c897c33798a045ccb05c4df64ff08bb14584ef647f": {
+  "token": "0x33161c9dc79a2a090fa6224376ff1605a9431430",
+  "name": "NODIENS / WETH 0.21%",
+  "symbol": "NODIENS",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:12:33Z",
+  "first": {
+   "at": "2026-10-20T09:32:37+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 14482.92479,
+   "vol_h24": 7305.2164271917,
+   "buys_h24": 62,
+   "sells_h24": 62
+  },
+  "outcome": null
+ },
+ "0x5c6638072f7b6db7eaf78b3231b0611a6e238bac94641799e6299acd2fa7e979": {
+  "token": "0x546f9817dee526a2a2099105d41864c0662089bd",
+  "name": "WARDEN / WETH 87%",
+  "symbol": "WARDEN",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:12:05Z",
+  "first": {
+   "at": "2026-10-20T09:32:37+00:00",
+   "liq_usd": 0.2383,
+   "fdv_usd": 13730.44469,
+   "vol_h24": 2.682629915e-05,
+   "buys_h24": 0,
+   "sells_h24": 1
+  },
+  "outcome": null
+ },
+ "0x33ba394e67429835a665971e0c7910d085de13b7": {
+  "token": "0xed8b0c1bb3c92bede762d3090c58909b682b9c25",
+  "name": "GEM / WETH",
+  "symbol": "GEM",
+  "dex": "pons-v2",
+  "created": "2026-10-20T09:11:22Z",
+  "first": {
+   "at": "2026-10-20T09:32:37+00:00",
+   "liq_usd": 4542.2649,
+   "fdv_usd": 4560.533091,
+   "vol_h24": 2950.1350210325,
+   "buys_h24": 15,
+   "sells_h24": 20
+  },
+  "outcome": null
+ },
+ "0x203468fdcbaaa61ec8141e076bd9e55d18a8e243": {
+  "token": "0xc051887679b6c1f9b9491d0355fb0a9780c15307",
+  "name": "SMARTMONEY / WETH",
+  "symbol": "SMARTMONEY",
+  "dex": "pons-v2",
+  "created": "2026-10-20T09:11:06Z",
+  "first": {
+   "at": "2026-10-20T09:32:37+00:00",
+   "liq_usd": 3986.5542,
+   "fdv_usd": 3981.725393,
+   "vol_h24": 212.513217024,
+   "buys_h24": 1,
+   "sells_h24": 1
+  },
+  "outcome": null
+ },
+ "0xeddb2f5c39bfc3bab8078e33298ac11c1e04d205a0d0d347709e5248e07c12c8": {
+  "token": "0x7ea533a827bf4602b3f0571774084e9c9fe6ea7e",
+  "name": "NVIDIA / WETH 0.05%",
+  "symbol": "NVIDIA",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:10:54Z",
+  "first": {
+   "at": "2026-10-20T09:32:37+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 52787.90898,
+   "vol_h24": 49820.0154572904,
+   "buys_h24": 219,
+   "sells_h24": 169
+  },
+  "outcome": null
+ },
+ "0xdceb832ed5894800901a07c30e56e9398f50f593c29258847caeb8dc706060ef": {
+  "token": "0x7f63d616847de57e909e83e808c14a5e90c84907",
+  "name": "TSLA / WETH 0.4%",
+  "symbol": "TSLA",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:10:39Z",
+  "first": {
+   "at": "2026-10-20T09:32:37+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 52250.02398,
+   "vol_h24": 42208.6234710497,
+   "buys_h24": 160,
+   "sells_h24": 135
+  },
+  "outcome": null
+ },
+ "0xfcd7bb71b3eccf67e4d692e1f3b15b82a4db36ff9c88e5a44314604a3a51937a": {
+  "token": "0x72d3a10992b62900063d3025676a9b458b065472",
+  "name": "GTEST2 / WETH",
+  "symbol": "GTEST2",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:10:13Z",
+  "first": {
+   "at": "2026-10-20T09:32:37+00:00",
+   "liq_usd": 3791.6231,
+   "fdv_usd": 3787.398505,
+   "vol_h24": 0.7069231734,
+   "buys_h24": 1,
+   "sells_h24": 1
+  },
+  "outcome": null
+ },
+ "0xb732e6a1ef04134d75c03e8b910f131e51d319d3": {
+  "token": "0x468510c72fbfbae15effbc4bd56fd7d75bfaf2f5",
+  "name": "EVOLVE / WETH 0.01%",
+  "symbol": "EVOLVE",
+  "dex": "uniswap-v3-robinhood",
+  "created": "2026-10-20T09:09:31Z",
+  "first": {
+   "at": "2026-10-20T09:32:37+00:00",
+   "liq_usd": 10599.9113,
+   "fdv_usd": 21708.03931,
+   "vol_h24": 19826.9341537056,
+   "buys_h24": 118,
+   "sells_h24": 59
+  },
+  "outcome": null
+ },
+ "0xb2efa4617455004dc440a4d7fb7bf75f4f020bb4": {
+  "token": "0x49aa37baa0b0322630b9fc5299b7da60b8b2fc18",
+  "name": "INVO / WETH",
+  "symbol": "INVO",
+  "dex": "pons-v2",
+  "created": "2026-10-20T09:08:45Z",
+  "first": {
+   "at": "2026-10-20T09:32:39+00:00",
+   "liq_usd": 4350.0798,
+   "fdv_usd": 4356.740347,
+   "vol_h24": 258.7014413188,
+   "buys_h24": 4,
+   "sells_h24": 2
+  },
+  "outcome": null
+ },
+ "0xb3dd3f296d468208e5315830e634ffc30081cab4161c1f8498be44adb0713d20": {
+  "token": "0x64139072c981c960dc72ccd5dec6a40cbe43b137",
+  "name": "Pshik / WETH 0.05%",
+  "symbol": "Pshik",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:08:44Z",
+  "first": {
+   "at": "2026-10-20T09:32:39+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 8382.986308,
+   "vol_h24": 595.5877226987,
+   "buys_h24": 9,
+   "sells_h24": 0
+  },
+  "outcome": null
+ },
+ "0xd3ee08e3d05427129976c480c1cd13cfdb46d2e7e687ad87049b094b654db32a": {
+  "token": "0x6fa764e9253d803db7c3afb3a6ad2b8c87e7e961",
+  "name": "earth / WETH 1%",
+  "symbol": "earth",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:08:11Z",
+  "first": {
+   "at": "2026-10-20T09:32:39+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 303418.9917,
+   "vol_h24": 86657.7512739532,
+   "buys_h24": 122,
+   "sells_h24": 109
+  },
+  "outcome": null
+ },
+ "0x1d1016b925930bf7f2cfc34139786ad38d87d125bda705a752badecce63afb9f": {
+  "token": "0xd5d5e38b4fcf04d0c4dea751d49a6166664d1d47",
+  "name": "EVOLVE / WETH 1%",
+  "symbol": "EVOLVE",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:08:11Z",
+  "first": {
+   "at": "2026-10-20T09:32:39+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 205174.2106,
+   "vol_h24": 69275.5577286375,
+   "buys_h24": 124,
+   "sells_h24": 105
+  },
+  "outcome": null
+ },
+ "0xcd038aa03119332e663b70158d48a4d7fab6cc9f": {
+  "token": "0xc30ead7a031b56437cc4c557e61e64fb2c94ccd0",
+  "name": "PARALLELL / WETH",
+  "symbol": "PARALLELL",
+  "dex": "pons-v2",
+  "created": "2026-10-20T09:08:11Z",
+  "first": {
+   "at": "2026-10-20T09:32:39+00:00",
+   "liq_usd": 3895.7611,
+   "fdv_usd": 3890.522971,
+   "vol_h24": 25.6147766395,
+   "buys_h24": 2,
+   "sells_h24": 1
+  },
+  "outcome": null
+ },
+ "0xb4562084757e98f479d8cdbd89c6b68e6901b595": {
+  "token": "0xeb5a0792c54846b3af4f2bd76dbb8099c4e2ec5b",
+  "name": "CREATIADS / WETH",
+  "symbol": "CREATIADS",
+  "dex": "pons-v2",
+  "created": "2026-10-20T09:08:10Z",
+  "first": {
+   "at": "2026-10-20T09:32:39+00:00",
+   "liq_usd": 3902.6719,
+   "fdv_usd": 3883.720645,
+   "vol_h24": 116.052666021,
+   "buys_h24": 2,
+   "sells_h24": 4
+  },
+  "outcome": null
+ },
+ "0x64251e5a43cbe577eeb3997f4fcd277bf8db5e99529fb7e22763fd8f536acbe8": {
+  "token": "0x4df19a3a2634549ee6bd5701a52ad744a8527777",
+  "name": "earth / WETH 1%",
+  "symbol": "earth",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:07:57Z",
+  "first": {
+   "at": "2026-10-20T09:32:39+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 193174.2748,
+   "vol_h24": 50560.1653388012,
+   "buys_h24": 127,
+   "sells_h24": 106
+  },
+  "outcome": null
+ },
+ "0x2d96a3078ab0ad903b85fd8dabdb32e1058b8c37": {
+  "token": "0xcdb99a87637974626517f7ad91241a56f698556d",
+  "name": "VITALIK / WETH",
+  "symbol": "VITALIK",
+  "dex": "uniswap-v2-robinhood",
+  "created": "2026-10-20T09:07:46Z",
+  "first": {
+   "at": "2026-10-20T09:32:39+00:00",
+   "liq_usd": 11.4385,
+   "fdv_usd": 161.9673979,
+   "vol_h24": 3.9667764823,
+   "buys_h24": 2,
+   "sells_h24": 0
+  },
+  "outcome": null
+ },
+ "0x595130f309edcf92c1ed07d686becc6d8147e6f87af813d2ff754c63ace6ecea": {
+  "token": "0x5faab72d42d3f50e7d4164c50748ef6701a22e07",
+  "name": "CURZ / WETH 0.05%",
+  "symbol": "CURZ",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:07:11Z",
+  "first": {
+   "at": "2026-10-20T09:32:39+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 11908.81416,
+   "vol_h24": 0.8804432076,
+   "buys_h24": 5,
+   "sells_h24": 0
+  },
+  "outcome": null
+ },
+ "0x66fd44f03cae8e890d67758a0e6f9ec218314254": {
+  "token": "0x546f9817dee526a2a2099105d41864c0662089bd",
+  "name": "WARDEN / WETH",
+  "symbol": "WARDEN",
+  "dex": "pons-v2",
+  "created": "2026-10-20T09:06:38Z",
+  "first": {
+   "at": "2026-10-20T09:32:39+00:00",
+   "liq_usd": 7208.8398,
+   "fdv_usd": 8200.147967,
+   "vol_h24": 17189.9390442299,
+   "buys_h24": 193,
+   "sells_h24": 105
+  },
+  "outcome": null
+ },
+ "0x279f3f6fd11ce8ccda58d6b958da431fc6f37c07": {
+  "token": "0xe7a8c974c4f9f924a5abfe1d6d2a19e3933d5a71",
+  "name": "API / WETH 0.01%",
+  "symbol": "API",
+  "dex": "uniswap-v3-robinhood",
+  "created": "2026-10-20T09:05:25Z",
+  "first": {
+   "at": "2026-10-20T09:32:39+00:00",
+   "liq_usd": 2.1447,
+   "fdv_usd": 96776.05259,
+   "vol_h24": 89506.3349888446,
+   "buys_h24": 253,
+   "sells_h24": 214
+  },
+  "outcome": null
+ },
+ "0xe6fdaceaa3bce247eaa527b7617fe70fead77275": {
+  "token": "0xbba597cb5111f0372cd1f17e52a30dcb8ab72c05",
+  "name": "TECHTEAMT / WETH",
+  "symbol": "TECHTEAMT",
+  "dex": "pons-v2",
+  "created": "2026-10-20T09:05:21Z",
+  "first": {
+   "at": "2026-10-20T09:32:39+00:00",
+   "liq_usd": 3883.3694,
+   "fdv_usd": 3874.243638,
+   "vol_h24": 26.5311352366,
+   "buys_h24": 2,
+   "sells_h24": 4
+  },
+  "outcome": null
+ },
+ "0xe12d33adcdf17fca76e819f1c2a0ebc6214227ef": {
+  "token": "0xf66d67726159368590b00d0eabdf8e032b27e338",
+  "name": "saluteface / WETH",
+  "symbol": "saluteface",
+  "dex": "uniswap-v2-robinhood",
+  "created": "2026-10-20T09:05:19Z",
+  "first": {
+   "at": "2026-10-20T09:32:39+00:00",
+   "liq_usd": 0.007775756313,
+   "fdv_usd": 0.02951502389,
+   "vol_h24": 35864.6784603937,
+   "buys_h24": 30,
+   "sells_h24": 1
+  },
+  "outcome": null
+ },
+ "0x7500c53c030f17f88adc0232015b87d7105a4836": {
+  "token": "0x890e76c108e6c3ae04ad1abb0fe76ccd8d2bd83d",
+  "name": "SMARTMONEY / WETH",
+  "symbol": "SMARTMONEY",
+  "dex": "pons-v2",
+  "created": "2026-10-20T09:04:55Z",
+  "first": {
+   "at": "2026-10-20T09:32:39+00:00",
+   "liq_usd": 3909.8209,
+   "fdv_usd": 3888.124726,
+   "vol_h24": 32.7308752739,
+   "buys_h24": 1,
+   "sells_h24": 3
+  },
+  "outcome": null
+ },
+ "0xb0fa6914250d55f7a6c3b2765dc061a6d0d828a4": {
+  "token": "0xd751d9512e879cf6f26847d581afcb63c5703481",
+  "name": "PERL / DEGEN 1%",
+  "symbol": "PERL",
+  "dex": "uniswap-v3-robinhood",
+  "created": "2026-10-20T09:04:07Z",
+  "first": {
+   "at": "2026-10-20T09:32:39+00:00",
+   "liq_usd": 7594.6847,
+   "fdv_usd": 15084.99193,
+   "vol_h24": 0.009908309164,
+   "buys_h24": 1,
+   "sells_h24": 0
+  },
+  "outcome": null
+ },
+ "0x4a4a56ea54804666767001cb5ec41bbc8cae7964c4d50eb2a9eb10a09c102ed0": {
+  "token": "0x81bb18b9636c53b95162118112940c31f7e5564b",
+  "name": "HUDI / WETH 0.47%",
+  "symbol": "HUDI",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T09:03:14Z",
+  "first": {
+   "at": "2026-10-20T09:32:39+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 8446.545549,
+   "vol_h24": 2313.9898887499,
+   "buys_h24": 21,
+   "sells_h24": 15
+  },
+  "outcome": null
+ },
+ "0xbc905ecbbd21353105ebb78d4e90457a3d9f1d24": {
+  "token": "0x4ea2b9de00a8b96217d77c851ed1c4d503d451a3",
+  "name": "COMPUTABLE / WETH",
+  "symbol": "COMPUTABLE",
+  "dex": "pons-v2",
+  "created": "2026-10-20T09:01:14Z",
+  "first": {
+   "at": "2026-10-20T09:32:39+00:00",
+   "liq_usd": 3931.983,
+   "fdv_usd": 3926.651818,
+   "vol_h24": 60.4536133144,
+   "buys_h24": 2,
+   "sells_h24": 2
+  },
+  "outcome": null
+ },
+ "0xbcbab0ac998189b8f7950cf656d107c71162fac6": {
+  "token": "0x1a88ce04c9927fda5e8e8765cd95f95e9acbe149",
+  "name": "ATLAS / WETH",
+  "symbol": "ATLAS",
+  "dex": "pons-v2",
+  "created": "2026-10-20T09:01:06Z",
+  "first": {
+   "at": "2026-10-20T09:32:39+00:00",
+   "liq_usd": 3910.0592,
+   "fdv_usd": 3909.031481,
+   "vol_h24": 1017.6505195155,
+   "buys_h24": 6,
+   "sells_h24": 7
+  },
+  "outcome": null
+ },
+ "0xfbcf4dafd91116ff1a7110222a0208e17e9fdcfe": {
+  "token": "0xb76658e419b16400bb6d7b96d48de3e7392b68b3",
+  "name": "BTK / WETH",
+  "symbol": "BTK",
+  "dex": "pons-v2",
+  "created": "2026-10-20T08:59:09Z",
+  "first": {
+   "at": "2026-10-20T09:32:42+00:00",
+   "liq_usd": 7060.4117,
+   "fdv_usd": 7637.878642,
+   "vol_h24": 1471.0714498719,
+   "buys_h24": 12,
+   "sells_h24": 0
+  },
+  "outcome": null
+ },
+ "0x0f6cc9820b58880940c5168ecc004ac939a28de9": {
+  "token": "0x6addfc49338b7a33e5c5ebee1b664b4deae55d8d",
+  "name": "LOCKIN / USDG",
+  "symbol": "LOCKIN",
+  "dex": "pons-v2",
+  "created": "2026-10-20T08:58:59Z",
+  "first": {
+   "at": "2026-10-20T09:32:42+00:00",
+   "liq_usd": 3604.7944,
+   "fdv_usd": 3609.723249,
+   "vol_h24": 1783.8048612499,
+   "buys_h24": 8,
+   "sells_h24": 5
+  },
+  "outcome": null
+ },
+ "0x80b1d4ac6751674b5abb939c824549c561f547b341b7656963dc25cdea94aa54": {
+  "token": "0x4952b5a87ec6631e80857771da4f390786b67777",
+  "name": "COLLECTOOO / WETH 1%",
+  "symbol": "COLLECTOOO",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:58:09Z",
+  "first": {
+   "at": "2026-10-20T09:32:42+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 193143.8581,
+   "vol_h24": 48102.1894569412,
+   "buys_h24": 119,
+   "sells_h24": 105
+  },
+  "outcome": null
+ },
+ "0xd0c5dcfbe42594bd1dcf581b16fbe81c3a0f7ffda98a3c5b0e85744e23f844ba": {
+  "token": "0x125553284d99b7ed20af0340a88508f712baf5af",
+  "name": "earth / WETH 1%",
+  "symbol": "earth",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:58:07Z",
+  "first": {
+   "at": "2026-10-20T09:32:42+00:00",
+   "liq_usd": null,
+   "fdv_usd": 264962.032,
+   "vol_h24": 81658.1822980847,
+   "buys_h24": 121,
+   "sells_h24": 109
+  },
+  "outcome": null
+ },
+ "0xcc840e07a61f41f77c2f656e8a46ba8cf5b81e54d3d93f2bb5b2666a903f1e12": {
+  "token": "0xb3a5d87ba642d1afda2af516d27acf06db01fcde",
+  "name": "EVOLVE / WETH 1%",
+  "symbol": "EVOLVE",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:58:06Z",
+  "first": {
+   "at": "2026-10-20T09:32:42+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 186953.5764,
+   "vol_h24": 67573.8267535408,
+   "buys_h24": 127,
+   "sells_h24": 110
+  },
+  "outcome": null
+ },
+ "0xcad6014dccdc66ce46a6a76fd96eb6773adad242b0d1ff400c62d8736f4d7c84": {
+  "token": "0xa4ff9f8d46cbf0dfc80dfc19d85c16b30aaff880",
+  "name": "ROBIN / WETH 0.4%",
+  "symbol": "ROBIN",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:57:54Z",
+  "first": {
+   "at": "2026-10-20T09:32:42+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 13608.05768,
+   "vol_h24": 7393.7083139666,
+   "buys_h24": 63,
+   "sells_h24": 60
+  },
+  "outcome": null
+ },
+ "0x78afe3e48dd700233f0ba9bcd9056dc3412f79b682e98894ed04e274a9c43398": {
+  "token": "0xd1d949ebdb8854a085b795a5c2acd002504f1111",
+  "name": "BOOKSTORE / WETH 0.3%",
+  "symbol": "BOOKSTORE",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:57:25Z",
+  "first": {
+   "at": "2026-10-20T09:32:42+00:00",
+   "liq_usd": 2408.9949,
+   "fdv_usd": 2390.280972,
+   "vol_h24": 23.7238023387,
+   "buys_h24": 1,
+   "sells_h24": 1
+  },
+  "outcome": null
+ },
+ "0xe92bd925e97e3c4da8883250a55136eef6e3f715": {
+  "token": "0x39ebb0d9c219d2063845f639c7fc6592bd779626",
+  "name": "Pok\u00e9mon / WETH",
+  "symbol": "Pok\u00e9mon",
+  "dex": "uniswap-v2-robinhood",
+  "created": "2026-10-20T08:57:14Z",
+  "first": {
+   "at": "2026-10-20T09:32:42+00:00",
+   "liq_usd": 0.007579294447,
+   "fdv_usd": 0.03289163651,
+   "vol_h24": 29988.6736377598,
+   "buys_h24": 28,
+   "sells_h24": 1
+  },
+  "outcome": null
+ },
+ "0x7f27baa3221ad09b4c446faefb0b71d6c3eb7a5aeb12fc5962ded3fc8ac5c489": {
+  "token": "0xf1951657ed09bd471a4bd54601eeb05b6535e5fb",
+  "name": "NIHAO / WETH 0.01%",
+  "symbol": "NIHAO",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:57:13Z",
+  "first": {
+   "at": "2026-10-20T09:32:42+00:00",
+   "liq_usd": 83525.9303,
+   "fdv_usd": 434541.5563,
+   "vol_h24": 598400.049159342,
+   "buys_h24": 577,
+   "sells_h24": 361
+  },
+  "outcome": null
+ },
+ "0x6b8f1b4fa57ea2865e56511a663e57811ebaec1cca0b4ebd40fe1e14578dead7": {
+  "token": "0xae1491bd7cc1b8a53f96d299691b6eb7aa604ee1",
+  "name": "SBC / WETH",
+  "symbol": "SBC",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:56:13Z",
+  "first": {
+   "at": "2026-10-20T09:32:42+00:00",
+   "liq_usd": 23830462.1322,
+   "fdv_usd": 2380530000240.4,
+   "vol_h24": 0.00238053,
+   "buys_h24": 1,
+   "sells_h24": 0
+  },
+  "outcome": null
+ },
+ "0x1e4037b90f3e7f1223f178f20a270974a6cf06dc": {
+  "token": "0x2a4ac6a43f803bb1472f50084044590e5b0bcdf6",
+  "name": "PAPRIKA / WETH",
+  "symbol": "PAPRIKA",
+  "dex": "pons-v2",
+  "created": "2026-10-20T08:55:02Z",
+  "first": {
+   "at": "2026-10-20T09:32:42+00:00",
+   "liq_usd": 3928.1702,
+   "fdv_usd": 3923.974991,
+   "vol_h24": 261.8004721992,
+   "buys_h24": 2,
+   "sells_h24": 2
+  },
+  "outcome": null
+ },
+ "0x19fcd5e0313529365646c47f8004dc1aecad72cd": {
+  "token": "0xca5c94d3cda4bf3d59bde01575d34eac57d1e315",
+  "name": "AFTS / WETH",
+  "symbol": "AFTS",
+  "dex": "pons-v2",
+  "created": "2026-10-20T08:55:02Z",
+  "first": {
+   "at": "2026-10-20T09:32:42+00:00",
+   "liq_usd": 3908.8677,
+   "fdv_usd": 3904.631351,
+   "vol_h24": 267.9198474578,
+   "buys_h24": 2,
+   "sells_h24": 2
+  },
+  "outcome": null
+ },
+ "0xf0d4e17c63d9bc66a516fe6a55cb216061c478cebca1b08683a72993c602cbd7": {
+  "token": "0xae1491bd7cc1b8a53f96d299691b6eb7aa604ee1",
+  "name": "SBC / WETH 0.001%",
+  "symbol": "SBC",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:53:06Z",
+  "first": {
+   "at": "2026-10-20T09:32:42+00:00",
+   "liq_usd": 2383046213.4583,
+   "fdv_usd": 2380308563726.6,
+   "vol_h24": 0.000238028,
+   "buys_h24": 1,
+   "sells_h24": 0
+  },
+  "outcome": null
+ },
+ "0x8154a5e48ee7492d5010edafdfb5a8ee4ae1cb84": {
+  "token": "0xe27f848d48d28094fa17d93ca795ef153cbc5535",
+  "name": "GOOBZ / WETH",
+  "symbol": "GOOBZ",
+  "dex": "pons-v2",
+  "created": "2026-10-20T08:53:01Z",
+  "first": {
+   "at": "2026-10-20T09:32:42+00:00",
+   "liq_usd": 3908.8677,
+   "fdv_usd": 3904.631351,
+   "vol_h24": 267.9025314592,
+   "buys_h24": 2,
+   "sells_h24": 2
+  },
+  "outcome": null
+ },
+ "0x0ceab40fa6535554d64b8f5ff566d52c5dd7f23a": {
+  "token": "0xd1ff01cc7b3163c0505165815abc67bddd230abf",
+  "name": "HEXX / WETH",
+  "symbol": "HEXX",
+  "dex": "pons-v2",
+  "created": "2026-10-20T08:52:52Z",
+  "first": {
+   "at": "2026-10-20T09:32:42+00:00",
+   "liq_usd": 3865.2584,
+   "fdv_usd": 3861.127987,
+   "vol_h24": 45.7391272,
+   "buys_h24": 1,
+   "sells_h24": 1
+  },
+  "outcome": null
+ },
+ "0x994f49153a9df2b4a7d36f4bef2ee81c9bbdf5c38697b2d58cce18400c12dc12": {
+  "token": "0x54451fae2f3060296f053802629d346008123456",
+  "name": "Test / NVDA 1%",
+  "symbol": "Test",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:52:36Z",
+  "first": {
+   "at": "2026-10-20T09:32:42+00:00",
+   "liq_usd": 2598.445,
+   "fdv_usd": 2731.799107,
+   "vol_h24": 3.2869502347,
+   "buys_h24": 2,
+   "sells_h24": 0
+  },
+  "outcome": null
+ },
+ "0xbd15ca0ebf0e7d3ef1b5fbd5a875d7cd2a5e411cef2699def2463d5f305fc134": {
+  "token": "0xf90c2eb35569bb8a3d3912df1af4e30dd30d8b30",
+  "name": "JTX / WETH 0.22%",
+  "symbol": "JTX",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:52:32Z",
+  "first": {
+   "at": "2026-10-20T09:32:42+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 13785.75651,
+   "vol_h24": 7335.5931904119,
+   "buys_h24": 62,
+   "sells_h24": 60
+  },
+  "outcome": null
+ },
+ "0x1374001fb9f65f91f7255a41f5ce31f87c5828a5": {
+  "token": "0x721f44902dcc5aa60b1f77a2463009b08fad9781",
+  "name": "MMV3 / WETH 1%",
+  "symbol": "MMV3",
+  "dex": "uniswap-v3-robinhood",
+  "created": "2026-10-20T08:52:31Z",
+  "first": {
+   "at": "2026-10-20T09:32:42+00:00",
+   "liq_usd": 3265.4523,
+   "fdv_usd": 3197.136854,
+   "vol_h24": 1.5568179358,
+   "buys_h24": 2,
+   "sells_h24": 1
+  },
+  "outcome": null
+ },
+ "0xa2ac51582c2d8dc118e5a330d2ab4ce3444240fe": {
+  "token": "0xd1accf696a650b3938e600b6af1a23b72e605c4f",
+  "name": "LFGCAN / WETH",
+  "symbol": "LFGCAN",
+  "dex": "pons-v2",
+  "created": "2026-10-20T08:52:28Z",
+  "first": {
+   "at": "2026-10-20T09:32:42+00:00",
+   "liq_usd": 4174.8127,
+   "fdv_usd": 4169.91768,
+   "vol_h24": 4.76018,
+   "buys_h24": 1,
+   "sells_h24": 0
+  },
+  "outcome": null
+ },
+ "0x08d8d468dfa9c45df103edcf2a127b4390e564d0bbb853779ba9c183ebdd3984": {
+  "token": "0x204c1f76deaa2f289c1a5059f81756ee5abf1111",
+  "name": "CHAOS / WETH 0.3%",
+  "symbol": "CHAOS",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:52:11Z",
+  "first": {
+   "at": "2026-10-20T09:32:42+00:00",
+   "liq_usd": 11946.0793,
+   "fdv_usd": 11846.27454,
+   "vol_h24": 4.7038912686,
+   "buys_h24": 1,
+   "sells_h24": 1
+  },
+  "outcome": null
+ },
+ "0xf393850fa9f2ae752e0442fdf108c002cd79c6ed": {
+  "token": "0xf2b2c71e32f78c10d91d92b58144f2c3962599d6",
+  "name": "NOXUNEL / WETH",
+  "symbol": "NOXUNEL",
+  "dex": "pons-v2",
+  "created": "2026-10-20T08:52:01Z",
+  "first": {
+   "at": "2026-10-20T09:33:14+00:00",
+   "liq_usd": 3908.8677,
+   "fdv_usd": 3910.011506,
+   "vol_h24": 268.3246623187,
+   "buys_h24": 2,
+   "sells_h24": 2
+  },
+  "outcome": null
+ },
+ "0xb98e2997d3222ce94ec7e947d41c60e4ac4c712d09e37772a3ace56716c3d74c": {
+  "token": "0xeb579e280648b6f48a840086a9e6631500a20684",
+  "name": "Wheel Smith / USDG 7.713%",
+  "symbol": "Wheel Smith",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:52:00Z",
+  "first": {
+   "at": "2026-10-20T09:33:14+00:00",
+   "liq_usd": 25.9749,
+   "fdv_usd": 26301.04683,
+   "vol_h24": 10.1956412087,
+   "buys_h24": 0,
+   "sells_h24": 6
+  },
+  "outcome": null
+ },
+ "0xf66ebe109f3c66b1a91ca0afa1819e7c496aab65e737bd1afb33d46871aab339": {
+  "token": "0xeb579e280648b6f48a840086a9e6631500a20684",
+  "name": "Wheel Smith / USDG 7.684%",
+  "symbol": "Wheel Smith",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:51:45Z",
+  "first": {
+   "at": "2026-10-20T09:33:14+00:00",
+   "liq_usd": 25.9749,
+   "fdv_usd": 26294.69407,
+   "vol_h24": 10.1997135955,
+   "buys_h24": 0,
+   "sells_h24": 6
+  },
+  "outcome": null
+ },
+ "0xfc26d792e43165445304b5660248d68051d3bc3a04331b6bb6a49cd90f46ee9c": {
+  "token": "0xeb579e280648b6f48a840086a9e6631500a20684",
+  "name": "Wheel Smith / USDG 7.757%",
+  "symbol": "Wheel Smith",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:51:32Z",
+  "first": {
+   "at": "2026-10-20T09:33:14+00:00",
+   "liq_usd": 104.138,
+   "fdv_usd": 26288.5396,
+   "vol_h24": 40.8123004641,
+   "buys_h24": 0,
+   "sells_h24": 8
+  },
+  "outcome": null
+ },
+ "0x4392661b7596918d1b86392cc633281b23bb514d": {
+  "token": "0xf268d558201b64888ed0b955f0009bda4d3ab00f",
+  "name": "IAN / WETH",
+  "symbol": "IAN",
+  "dex": "pons-v2",
+  "created": "2026-10-20T08:51:01Z",
+  "first": {
+   "at": "2026-10-20T09:33:14+00:00",
+   "liq_usd": 3972.256,
+   "fdv_usd": 3968.075086,
+   "vol_h24": 136.3105791513,
+   "buys_h24": 2,
+   "sells_h24": 3
+  },
+  "outcome": null
+ },
+ "0xed52dcbd194339f9d2aa7dc779d33bfb9870e1ed": {
+  "token": "0x9d420c69d2bcff64b185c6cd33de429ee2953159",
+  "name": "SPACE / WETH",
+  "symbol": "SPACE",
+  "dex": "pons-v2",
+  "created": "2026-10-20T08:50:55Z",
+  "first": {
+   "at": "2026-10-20T09:33:14+00:00",
+   "liq_usd": 4462.4433,
+   "fdv_usd": 4468.920994,
+   "vol_h24": 1150.7602390661,
+   "buys_h24": 17,
+   "sells_h24": 14
+  },
+  "outcome": null
+ },
+ "0x17f06a86544cef604867a165585882a478fe92d8eb3e5d866e95f27cdae99f7c": {
+  "token": "0xeb579e280648b6f48a840086a9e6631500a20684",
+  "name": "Wheel Smith / USDG 7.74%",
+  "symbol": "Wheel Smith",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:50:42Z",
+  "first": {
+   "at": "2026-10-20T09:33:14+00:00",
+   "liq_usd": 51.9498,
+   "fdv_usd": 26233.74468,
+   "vol_h24": 20.4693733825,
+   "buys_h24": 0,
+   "sells_h24": 7
+  },
+  "outcome": null
+ },
+ "0x622101ec8a3997f9dbc67a33f6bc41cea8652c460b443fe559a0c68b01e83e50": {
+  "token": "0xeb579e280648b6f48a840086a9e6631500a20684",
+  "name": "Wheel Smith / USDG 7.759%",
+  "symbol": "Wheel Smith",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:50:33Z",
+  "first": {
+   "at": "2026-10-20T09:33:14+00:00",
+   "liq_usd": 104.3763,
+   "fdv_usd": 25981.48757,
+   "vol_h24": 41.6109525182,
+   "buys_h24": 0,
+   "sells_h24": 5
+  },
+  "outcome": null
+ },
+ "0x989c4174daf7d8e91a87e2161f6c37c2c0500ffb2ff60c2b4d95fadbed71d829": {
+  "token": "0xeb579e280648b6f48a840086a9e6631500a20684",
+  "name": "Wheel Smith / USDG 7.67%",
+  "symbol": "Wheel Smith",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:50:25Z",
+  "first": {
+   "at": "2026-10-20T09:33:14+00:00",
+   "liq_usd": 51.9498,
+   "fdv_usd": 26286.06932,
+   "vol_h24": 20.4003409765,
+   "buys_h24": 0,
+   "sells_h24": 5
+  },
+  "outcome": null
+ },
+ "0x5fcd6a9c1d48bdee5e00aac7dfc722f2232bd7b6b5976eef785a377e2b0e188a": {
+  "token": "0x74d60ea8f3752d95275d28dc4209f79579fc3ecf",
+  "name": "IAN / WETH 0.05%",
+  "symbol": "IAN",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:49:58Z",
+  "first": {
+   "at": "2026-10-20T09:33:14+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 69456.29961,
+   "vol_h24": 34759.3523955588,
+   "buys_h24": 163,
+   "sells_h24": 43
+  },
+  "outcome": null
+ },
+ "0x3e8f21c8f3f3572f670cc6b1e0a2bca37ca439e1": {
+  "token": "0x9e4a21de96cffa6cfe7b052b117f959c56d43181",
+  "name": "STRAION / WETH",
+  "symbol": "STRAION",
+  "dex": "pons-v2",
+  "created": "2026-10-20T08:49:40Z",
+  "first": {
+   "at": "2026-10-20T09:33:14+00:00",
+   "liq_usd": 3972.0177,
+   "fdv_usd": 3963.808483,
+   "vol_h24": 208.5804246316,
+   "buys_h24": 9,
+   "sells_h24": 6
+  },
+  "outcome": null
+ },
+ "0x0ca3685de654267a0a45abbfd55b9d5fa47ebed7abc7a502dd18adf2198fa2aa": {
+  "token": "0x67aded641c9910da6785776631d2518d9cf1fdc0",
+  "name": "PRISM / WETH 0.008%",
+  "symbol": "PRISM",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:49:30Z",
+  "first": {
+   "at": "2026-10-20T09:33:14+00:00",
+   "liq_usd": 590.2741,
+   "fdv_usd": 682.072303084,
+   "vol_h24": 159.779805278,
+   "buys_h24": 21,
+   "sells_h24": 0
+  },
+  "outcome": null
+ },
+ "0xdc00c407b26bb8afeb828f77464020b4a0c318983edd2191fa0a1d15af13b7a3": {
+  "token": "0xae1491bd7cc1b8a53f96d299691b6eb7aa604ee1",
+  "name": "SBC / WETH 0.001%",
+  "symbol": "SBC",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:49:24Z",
+  "first": {
+   "at": "2026-10-20T09:33:14+00:00",
+   "liq_usd": 4765987573.56,
+   "fdv_usd": 2386666253352.7,
+   "vol_h24": 0.04773101177,
+   "buys_h24": 1,
+   "sells_h24": 1
+  },
+  "outcome": null
+ },
+ "0x0af4e6f114b5be8a9e0a7eb4bfb7ee67c8a2c335": {
+  "token": "0xa5166c552b4a0cca39e520e850bc50607e0d923f",
+  "name": "NOXUNEL / WETH",
+  "symbol": "NOXUNEL",
+  "dex": "pons-v2",
+  "created": "2026-10-20T08:48:51Z",
+  "first": {
+   "at": "2026-10-20T09:33:14+00:00",
+   "liq_usd": 4109.518,
+   "fdv_usd": 4116.367645,
+   "vol_h24": 483.9841490027,
+   "buys_h24": 4,
+   "sells_h24": 3
+  },
+  "outcome": null
+ },
+ "0xe9a1d877fb126dbd2f64581a91352c4e552e6457": {
+  "token": "0xfc1c4383d8bbfac64422946ea1d83fa24570ef91",
+  "name": "NOXUNEL / WETH",
+  "symbol": "NOXUNEL",
+  "dex": "pons-v2",
+  "created": "2026-10-20T08:48:51Z",
+  "first": {
+   "at": "2026-10-20T09:33:14+00:00",
+   "liq_usd": 4564.1982,
+   "fdv_usd": 4571.370916,
+   "vol_h24": 1319.6436649009,
+   "buys_h24": 2,
+   "sells_h24": 2
+  },
+  "outcome": null
+ },
+ "0x3872947487ccff79fde1f2fbcf03376e6886a11c": {
+  "token": "0xf471ad72b74e38ce82b23960683efe270f3a6ca3",
+  "name": "1SHARE / WETH",
+  "symbol": "1SHARE",
+  "dex": "pons-v2",
+  "created": "2026-10-20T08:48:19Z",
+  "first": {
+   "at": "2026-10-20T09:33:14+00:00",
+   "liq_usd": 3908.8677,
+   "fdv_usd": 3916.22821,
+   "vol_h24": 268.7155765517,
+   "buys_h24": 2,
+   "sells_h24": 2
+  },
+  "outcome": null
+ },
+ "0x3dfda8c7fe162e3378b5d1334b36967b854f08aafe4cdb59a1c2b846bb8f07bd": {
+  "token": "0xfc08df0979de146da1532c30653b19cbbd604596",
+  "name": "earth / WETH 1%",
+  "symbol": "earth",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:48:06Z",
+  "first": {
+   "at": "2026-10-20T09:33:16+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 221283.8185,
+   "vol_h24": 79559.9165706697,
+   "buys_h24": 119,
+   "sells_h24": 107
+  },
+  "outcome": null
+ },
+ "0xbcee8d524e69708d386dca0640b4f45cc63c0737ccf9f2c0d855161d2e1916a0": {
+  "token": "0x3365fd45b10a00410c57a4b618cb6fe0a2741111",
+  "name": "IFRIT / WETH 0.3%",
+  "symbol": "IFRIT",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:47:43Z",
+  "first": {
+   "at": "2026-10-20T09:33:16+00:00",
+   "liq_usd": 2394.4585,
+   "fdv_usd": 2376.708066,
+   "vol_h24": 5.1798389924,
+   "buys_h24": 2,
+   "sells_h24": 1
+  },
+  "outcome": null
+ },
+ "0x8875661a5cc61da4e02d28315d323065915e0ac8": {
+  "token": "0xf636ed09e5627e8d91d2cd1d3f257b10fa4bec14",
+  "name": "ARCPERP / WETH",
+  "symbol": "ARCPERP",
+  "dex": "pons-v2",
+  "created": "2026-10-20T08:47:09Z",
+  "first": {
+   "at": "2026-10-20T09:33:16+00:00",
+   "liq_usd": 6410.3238,
+   "fdv_usd": 6344.385454,
+   "vol_h24": 1290.1610675539,
+   "buys_h24": 11,
+   "sells_h24": 1
+  },
+  "outcome": null
+ },
+ "0x0dbd61e25e37c12c8a1884a5f9bd4f425416d1a5": {
+  "token": "0x13509abfe9e508d0acfe68b8b07ae8b20373c8c1",
+  "name": "API / WETH 0.01%",
+  "symbol": "API",
+  "dex": "uniswap-v3-robinhood",
+  "created": "2026-10-20T08:46:41Z",
+  "first": {
+   "at": "2026-10-20T09:33:16+00:00",
+   "liq_usd": 0.4766,
+   "fdv_usd": 38981.35159,
+   "vol_h24": 21842.7996696122,
+   "buys_h24": 83,
+   "sells_h24": 46
+  },
+  "outcome": null
+ },
+ "0x2fe58987eb8e64f63b46c4def99ff4adaeac00df": {
+  "token": "0x1836883dd7728d9df1189a2848ed9d532a7b8ead",
+  "name": "TEPPO / WETH",
+  "symbol": "TEPPO",
+  "dex": "pons-v2",
+  "created": "2026-10-20T08:46:21Z",
+  "first": {
+   "at": "2026-10-20T09:33:16+00:00",
+   "liq_usd": 3908.8677,
+   "fdv_usd": 3916.244613,
+   "vol_h24": 268.7319808748,
+   "buys_h24": 2,
+   "sells_h24": 2
+  },
+  "outcome": null
+ },
+ "0x402b48918d0ed585ba9cf5ae4b9c1fc4a0e2af4888f5948282ca84f51b184fa2": {
+  "token": "0xfa22592b242316e553019cf22337352f15ac4f66",
+  "name": "WAR / WETH 87%",
+  "symbol": "WAR",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:45:55Z",
+  "first": {
+   "at": "2026-10-20T09:33:16+00:00",
+   "liq_usd": 0.2383,
+   "fdv_usd": 4762.260815,
+   "vol_h24": 3.103633787e-05,
+   "buys_h24": 0,
+   "sells_h24": 1
+  },
+  "outcome": null
+ },
+ "0x50b98c5f54d0c64aa36eae6375e862ef6de46729": {
+  "token": "0xec0134aab863dcd16ae6de573e92fccf95a712be",
+  "name": "MEWBIT / WETH",
+  "symbol": "MEWBIT",
+  "dex": "pons-v2",
+  "created": "2026-10-20T08:45:36Z",
+  "first": {
+   "at": "2026-10-20T09:33:16+00:00",
+   "liq_usd": 3975.5923,
+   "fdv_usd": 3974.898973,
+   "vol_h24": 360.6721703658,
+   "buys_h24": 2,
+   "sells_h24": 2
+  },
+  "outcome": null
+ },
+ "0x8d1a08f67403649b4904554c63592faa17bb4862": {
+  "token": "0xc56c35d9d23f36d89658f7515678a93102a1ff78",
+  "name": "WAR / WETH",
+  "symbol": "WAR",
+  "dex": "pons-v2",
+  "created": "2026-10-20T08:44:09Z",
+  "first": {
+   "at": "2026-10-20T09:33:16+00:00",
+   "liq_usd": 3908.8677,
+   "fdv_usd": 3916.22821,
+   "vol_h24": 268.7871177224,
+   "buys_h24": 2,
+   "sells_h24": 2
+  },
+  "outcome": null
+ },
+ "0xf0f1b0addbf416c9c18f27592c057138ace50202784c22b03c6c6e01bb8971df": {
+  "token": "0x684ffe4a6f6529d832389ff3767737237b939e2e",
+  "name": "earth / WETH",
+  "symbol": "earth",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:44:05Z",
+  "first": {
+   "at": "2026-10-20T09:33:16+00:00",
+   "liq_usd": 17223.2771,
+   "fdv_usd": 2389.326443,
+   "vol_h24": 351804.076548815,
+   "buys_h24": 358,
+   "sells_h24": 394
+  },
+  "outcome": null
+ },
+ "0x3cc7509dc6a782d276c5284a8800678b8a80e43f887375e275184b379b05cbbf": {
+  "token": "0x4e7a00c67733c8d5f06ca36d3153b6530fb272b1",
+  "name": "KMENS / WETH 0.45%",
+  "symbol": "KMENS",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:43:49Z",
+  "first": {
+   "at": "2026-10-20T09:33:16+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 60652.00841,
+   "vol_h24": 42368.3725928496,
+   "buys_h24": 168,
+   "sells_h24": 128
+  },
+  "outcome": null
+ },
+ "0xded02f51f16d365c0141ac4fe6dd36e6fd4657c5ee20725b6f908933b98012d0": {
+  "token": "0x303831d4a333c0017fc2d4d1b35e6ce1f426f1af",
+  "name": "DEGENERATE / WETH 0.25%",
+  "symbol": "DEGENERATE",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:42:41Z",
+  "first": {
+   "at": "2026-10-20T09:33:16+00:00",
+   "liq_usd": 11973.9606,
+   "fdv_usd": 10356.85388,
+   "vol_h24": 4301.162963307,
+   "buys_h24": 28,
+   "sells_h24": 12
+  },
+  "outcome": null
+ },
+ "0xa9f9f22be0d503201f3f56177713ff70c5413603": {
+  "token": "0xd921111a040108e4a20d31808e7401449c96432e",
+  "name": "EMPIREX / WETH",
+  "symbol": "EMPIREX",
+  "dex": "uniswap-v2-robinhood",
+  "created": "2026-10-20T08:42:40Z",
+  "first": {
+   "at": "2026-10-20T09:33:16+00:00",
+   "liq_usd": 0.007814960469,
+   "fdv_usd": 0.0112820412,
+   "vol_h24": 36472.3006413218,
+   "buys_h24": 32,
+   "sells_h24": 1
+  },
+  "outcome": null
+ },
+ "0xcbd844a5ce4a9d29102448dc42aeaab43f2c24d7": {
+  "token": "0x2e8644f0cf138032905ceb995d8faafc2dddedf3",
+  "name": "BUILD / WETH",
+  "symbol": "BUILD",
+  "dex": "pons-v2",
+  "created": "2026-10-20T08:42:17Z",
+  "first": {
+   "at": "2026-10-20T09:33:16+00:00",
+   "liq_usd": 3908.8677,
+   "fdv_usd": 3917.40922,
+   "vol_h24": 268.8668951947,
+   "buys_h24": 2,
+   "sells_h24": 2
+  },
+  "outcome": null
+ },
+ "0x1e3e2b9752a8cec961cdfa11cd18163fddc6fb924bc9e6de5ef57d9aff8ecd1c": {
+  "token": "0xbcdff1d41d61f04db96561add6c8af4dda9e3914",
+  "name": "STRAION / WETH 87%",
+  "symbol": "STRAION",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:41:26Z",
+  "first": {
+   "at": "2026-10-20T09:33:16+00:00",
+   "liq_usd": 0.2383,
+   "fdv_usd": 8586.533192,
+   "vol_h24": 3.105035224e-05,
+   "buys_h24": 0,
+   "sells_h24": 1
+  },
+  "outcome": null
+ },
+ "0x172f003312f4947eb8881194dc2cc6dd410cc4ba3b54a5ca7da78c44148e1332": {
+  "token": "0x187c5bc498f59c54b843978311918982c2380e4d",
+  "name": "KEEL / WETH 87%",
+  "symbol": "KEEL",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:40:08Z",
+  "first": {
+   "at": "2026-10-20T09:33:16+00:00",
+   "liq_usd": 0.2383,
+   "fdv_usd": 17042.9539,
+   "vol_h24": 3.049158841e-05,
+   "buys_h24": 0,
+   "sells_h24": 1
+  },
+  "outcome": null
+ },
+ "0x618cdc99be0021c68508069b57646c5060281395": {
+  "token": "0x0dd5a11a1ec1f8ab6f78e40a48dfe7e7a2622baa",
+  "name": "MonsterGo / WETH",
+  "symbol": "MonsterGo",
+  "dex": "pons-v2",
+  "created": "2026-10-20T08:40:07Z",
+  "first": {
+   "at": "2026-10-20T09:33:16+00:00",
+   "liq_usd": 3908.8677,
+   "fdv_usd": 3918.541021,
+   "vol_h24": 268.8895509924,
+   "buys_h24": 2,
+   "sells_h24": 2
+  },
+  "outcome": null
+ },
+ "0xd451953c74b9e7e72c916add29f111d7fddeb673": {
+  "token": "0xfa22592b242316e553019cf22337352f15ac4f66",
+  "name": "WAR / WETH",
+  "symbol": "WAR",
+  "dex": "pons-v2",
+  "created": "2026-10-20T08:39:57Z",
+  "first": {
+   "at": "2026-10-20T09:33:16+00:00",
+   "liq_usd": 3991.3202,
+   "fdv_usd": 3988.020168,
+   "vol_h24": 2968.6859039195,
+   "buys_h24": 36,
+   "sells_h24": 26
+  },
+  "outcome": null
+ },
+ "0xb43e7295b08478f6f43fc263f550fb99f5af5830": {
+  "token": "0xb87563eab0852df484b8196712d4767cf10cb078",
+  "name": "TEPPO / WETH",
+  "symbol": "TEPPO",
+  "dex": "pons-v2",
+  "created": "2026-10-20T08:39:49Z",
+  "first": {
+   "at": "2026-10-20T09:33:16+00:00",
+   "liq_usd": 3946.2811,
+   "fdv_usd": 3941.43856,
+   "vol_h24": 46.74948436,
+   "buys_h24": 1,
+   "sells_h24": 1
+  },
+  "outcome": null
+ },
+ "0xabe763e676e5a1e788c33668f7cb4e371763f5af": {
+  "token": "0x9f4ba41f91a59a34e17ee8c9eb3a51363b11abd5",
+  "name": "GRIFT / WETH 1%",
+  "symbol": "GRIFT",
+  "dex": "uniswap-v3-robinhood",
+  "created": "2026-10-20T08:39:19Z",
+  "first": {
+   "at": "2026-10-20T09:33:16+00:00",
+   "liq_usd": 41.2262,
+   "fdv_usd": 1046564.3546533,
+   "vol_h24": 4.9968167992,
+   "buys_h24": 2,
+   "sells_h24": 1
+  },
+  "outcome": null
+ },
+ "0xabdc4c0a921450915af9983e127582763e2b6b5c": {
+  "token": "0x5d2f57e93189fb9a5237f5b63efc936ae07f878b",
+  "name": "STRAION / WETH",
+  "symbol": "STRAION",
+  "dex": "pons-v2",
+  "created": "2026-10-20T08:38:48Z",
+  "first": {
+   "at": "2026-10-20T09:33:16+00:00",
+   "liq_usd": 3886.7056,
+   "fdv_usd": 3896.510544,
+   "vol_h24": 1409.5926310525,
+   "buys_h24": 3,
+   "sells_h24": 3
+  },
+  "outcome": null
+ },
+ "0xe1e65f799c525160ccf516fb0394a2038edbbe42040628c33084eef4f6fefc46": {
+  "token": "0xfedc3582fdd047ebd13e8396316c94c0f5bf04c1",
+  "name": "MCV / WETH 0.35%",
+  "symbol": "MCV",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:38:11Z",
+  "first": {
+   "at": "2026-10-20T09:33:34+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 62094.95713,
+   "vol_h24": 44082.2090918703,
+   "buys_h24": 169,
+   "sells_h24": 130
+  },
+  "outcome": null
+ },
+ "0xd23d876d5a360ada17c37d4272f79bb0d98a489895219613c4e50af311c2882a": {
+  "token": "0xe9eb4f3cb898cf67f2cfb9155af869c707d3d2cd",
+  "name": "earth / WETH 1%",
+  "symbol": "earth",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:38:06Z",
+  "first": {
+   "at": "2026-10-20T09:33:34+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 250559.5698,
+   "vol_h24": 73411.3619496814,
+   "buys_h24": 129,
+   "sells_h24": 110
+  },
+  "outcome": null
+ },
+ "0x726efc9b361541e4ee4cc6410aa1d6e2598348b9ad28e849c6ca0a072492cb55": {
+  "token": "0x7850aa9a90a86a978bfe24081ee81cd2fcb67777",
+  "name": "EVOLVE / WETH 1%",
+  "symbol": "EVOLVE",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:38:06Z",
+  "first": {
+   "at": "2026-10-20T09:33:34+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 197600.7533,
+   "vol_h24": 50920.6451552695,
+   "buys_h24": 125,
+   "sells_h24": 106
+  },
+  "outcome": null
+ },
+ "0x785dfe2c480b8c5d02da68e9367c1567117dbff8997244043b4d1ef50603f5b7": {
+  "token": "0xc75bcf2973378a49d50541a1d601738c1d34f4a3",
+  "name": "EVOLVE / WETH 1%",
+  "symbol": "EVOLVE",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:38:04Z",
+  "first": {
+   "at": "2026-10-20T09:33:34+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 330399.882,
+   "vol_h24": 99964.4531292524,
+   "buys_h24": 126,
+   "sells_h24": 109
+  },
+  "outcome": null
+ },
+ "0x91530486d883ee69c06e8c1630c9f6fe15bc98b2e4512a4ae3b41abb0eb55991": {
+  "token": "0x99efe1e97825494a7fefca93ee8e7b308bd29fa9",
+  "name": "ADIP / WETH 0.21%",
+  "symbol": "ADIP",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:37:50Z",
+  "first": {
+   "at": "2026-10-20T09:33:34+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 14624.73802,
+   "vol_h24": 7286.6506150102,
+   "buys_h24": 62,
+   "sells_h24": 58
+  },
+  "outcome": null
+ },
+ "0xcc6c34eb5014c8d07a5cf25d6a7e72c561b891a594e8e305c6701df703562e07": {
+  "token": "0xd4c2a7a70c13e6811e980c1013b35d54e64b37e3",
+  "name": "ETH / WETH",
+  "symbol": "ETH",
+  "dex": "bankr-robinhood",
+  "created": "2026-10-20T08:37:47Z",
+  "first": {
+   "at": "2026-10-20T09:33:34+00:00",
+   "liq_usd": 5272.1934,
+   "fdv_usd": 5034.269206,
+   "vol_h24": 0.5256328,
+   "buys_h24": 1,
+   "sells_h24": 0
+  },
+  "outcome": null
+ },
+ "0x64d22011ba63ba19fdd2813d5cfe5e7f0ad856809fe7a87d1cb6b4d1efec1113": {
+  "token": "0xb5a0e7a6a7a4e15b9e20401a0ca36ee549c5eaac",
+  "name": "CLSTR / META",
+  "symbol": "CLSTR",
+  "dex": "bankr-robinhood",
+  "created": "2026-10-20T08:37:37Z",
+  "first": {
+   "at": "2026-10-20T09:33:34+00:00",
+   "liq_usd": 9923.3719,
+   "fdv_usd": 9807.870471,
+   "vol_h24": 9.4986561777,
+   "buys_h24": 2,
+   "sells_h24": 3
+  },
+  "outcome": null
+ },
+ "0xdfcc6ad671033f7d3eceb24cbae5c0f7f6f8d91e": {
+  "token": "0x091f0c7e675a787a4018eb47c30bed3fa2013b65",
+  "name": "MSS2 / WETH 3%",
+  "symbol": "MSS2",
+  "dex": "topaz-robinhood",
+  "created": "2026-10-20T08:37:24Z",
+  "first": {
+   "at": "2026-10-20T09:33:34+00:00",
+   "liq_usd": 206440.7843,
+   "fdv_usd": 316836.802649644,
+   "vol_h24": 21.9757069774,
+   "buys_h24": 0,
+   "sells_h24": 2
+  },
+  "outcome": null
+ },
+ "0xcd8634e8d2c5a7f429b13850059a200b1c233d7c": {
+  "token": "0x0dd398708e9e30488188404b659c4b5ced7c133c",
+  "name": "HOODIE / WETH",
+  "symbol": "HOODIE",
+  "dex": "pons-v2",
+  "created": "2026-10-20T08:37:10Z",
+  "first": {
+   "at": "2026-10-20T09:33:34+00:00",
+   "liq_usd": 3908.8677,
+   "fdv_usd": 3919.049511,
+   "vol_h24": 186.8544741815,
+   "buys_h24": 3,
+   "sells_h24": 2
+  },
+  "outcome": null
+ },
+ "0xaa4c2d60bdc132820627f8599b10644489cd0ad3": {
+  "token": "0x318855b64e449a7bd7292e7733cb2599b80ba470",
+  "name": "FOLIO / WETH",
+  "symbol": "FOLIO",
+  "dex": "uniswap-v2-robinhood",
+  "created": "2026-10-20T08:37:07Z",
+  "first": {
+   "at": "2026-10-20T09:33:34+00:00",
+   "liq_usd": 0.007681807797,
+   "fdv_usd": 0.03134994142,
+   "vol_h24": 31395.893255922,
+   "buys_h24": 29,
+   "sells_h24": 1
+  },
+  "outcome": null
+ },
+ "0x4161e4e89318bbf43621ae1ce7653f260b8067726bb17a624b5c2aa7009f7936": {
+  "token": "0xa694c90d513c17df0823d221eb7b1c94f8925fcf",
+  "name": "AETHRON / WETH 87%",
+  "symbol": "AETHRON",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:36:38Z",
+  "first": {
+   "at": "2026-10-20T09:33:34+00:00",
+   "liq_usd": 0.2383,
+   "fdv_usd": 9836.317566,
+   "vol_h24": 3.082754311e-05,
+   "buys_h24": 0,
+   "sells_h24": 1
+  },
+  "outcome": null
+ },
+ "0x5c51877c34b791d6e1f0a1596ef569c6980f1e3c": {
+  "token": "0x131c88337e8baf6e8c9a585eee05c7b0f6811814",
+  "name": "GIGA / WETH",
+  "symbol": "GIGA",
+  "dex": "pons-v2",
+  "created": "2026-10-20T08:36:21Z",
+  "first": {
+   "at": "2026-10-20T09:33:34+00:00",
+   "liq_usd": 3903.8634,
+   "fdv_usd": 3899.050136,
+   "vol_h24": 600.9175376243,
+   "buys_h24": 5,
+   "sells_h24": 5
+  },
+  "outcome": null
+ },
+ "0x2aa1b53ba1b44b34b191ebea63e6deb4bdf9fafd": {
+  "token": "0xf248462886bedf58e77825311e2cda67e2f8c934",
+  "name": "API / WETH",
+  "symbol": "API",
+  "dex": "pons-v2",
+  "created": "2026-10-20T08:35:57Z",
+  "first": {
+   "at": "2026-10-20T09:33:34+00:00",
+   "liq_usd": 3908.8677,
+   "fdv_usd": 3912.832807,
+   "vol_h24": 275.3580289367,
+   "buys_h24": 3,
+   "sells_h24": 3
+  },
+  "outcome": null
+ },
+ "0xc7b092bd9f7eeef2f424021030aa10233c6264e0": {
+  "token": "0xbcdff1d41d61f04db96561add6c8af4dda9e3914",
+  "name": "STRAION / WETH",
+  "symbol": "STRAION",
+  "dex": "pons-v2",
+  "created": "2026-10-20T08:35:15Z",
+  "first": {
+   "at": "2026-10-20T09:33:34+00:00",
+   "liq_usd": 7616.8468,
+   "fdv_usd": 8422.709548,
+   "vol_h24": 8534.93197943,
+   "buys_h24": 98,
+   "sells_h24": 62
+  },
+  "outcome": null
+ },
+ "0xd7ac1270b2232015e457f9d23bb6b0780c804ac12effcf39396b83a1e7f65d13": {
+  "token": "0x8e27420aff7f76454ed12921abcd49ff839b5d5e",
+  "name": "API / WETH",
+  "symbol": "API",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:34:54Z",
+  "first": {
+   "at": "2026-10-20T09:33:34+00:00",
+   "liq_usd": 648598.9451,
+   "fdv_usd": 2393.657507,
+   "vol_h24": 213869.898552977,
+   "buys_h24": 171,
+   "sells_h24": 223
+  },
+  "outcome": null
+ },
+ "0xc9b469ad9e6ae4605df83828e85d5f2089da9f9e": {
+  "token": "0x187c5bc498f59c54b843978311918982c2380e4d",
+  "name": "KEEL / WETH",
+  "symbol": "KEEL",
+  "dex": "pons-v2",
+  "created": "2026-10-20T08:34:37Z",
+  "first": {
+   "at": "2026-10-20T09:33:34+00:00",
+   "liq_usd": 12639.5381,
+   "fdv_usd": 17325.65419,
+   "vol_h24": 4592.8991178117,
+   "buys_h24": 21,
+   "sells_h24": 2
+  },
+  "outcome": null
+ },
+ "0x115824964d4aecc549c1041cb78844f63b2feeaa": {
+  "token": "0x7bbe5769b38308b8767ba0d865ce79d4a09bae0d",
+  "name": "BRUNO / WETH",
+  "symbol": "BRUNO",
+  "dex": "uniswap-v2-robinhood",
+  "created": "2026-10-20T08:34:28Z",
+  "first": {
+   "at": "2026-10-20T09:33:34+00:00",
+   "liq_usd": 9715.5725,
+   "fdv_usd": 7743.759523,
+   "vol_h24": 2592.8290252448,
+   "buys_h24": 10,
+   "sells_h24": 1
+  },
+  "outcome": null
+ },
+ "0xcf26d35e13a60777800b9f453621fe340447cf51c1a59b9677db20d948f64bfd": {
+  "token": "0xdfa8a53a58c3b51bce8381c96324f0a122c0b61e",
+  "name": "SPRITE / WETH 0.05%",
+  "symbol": "SPRITE",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:34:23Z",
+  "first": {
+   "at": "2026-10-20T09:33:34+00:00",
+   "liq_usd": 30353.1225,
+   "fdv_usd": 99083.15346,
+   "vol_h24": 1972951.68182771,
+   "buys_h24": 2652,
+   "sells_h24": 1946
+  },
+  "outcome": null
+ },
+ "0x68fea6938a96946e4fc72ed01f3217f35c2dbccd": {
+  "token": "0xad5d29fc74fabb669d99fd6238500a0f5f8d76c3",
+  "name": "ORBITOPIA / WETH",
+  "symbol": "ORBITOPIA",
+  "dex": "pons-v2",
+  "created": "2026-10-20T08:34:17Z",
+  "first": {
+   "at": "2026-10-20T09:33:34+00:00",
+   "liq_usd": 3908.8677,
+   "fdv_usd": 3910.027909,
+   "vol_h24": 268.2634572342,
+   "buys_h24": 2,
+   "sells_h24": 2
+  },
+  "outcome": null
+ },
+ "0x6f5b2f3b3e99afd955f562b9ddb961a084dc5b41": {
+  "token": "0x4ead5f65698ee0cf4402ecba3cf1e93aacec9a7d",
+  "name": "PATCH / WETH",
+  "symbol": "PATCH",
+  "dex": "pons-v2",
+  "created": "2026-10-20T08:32:47Z",
+  "first": {
+   "at": "2026-10-20T09:33:41+00:00",
+   "liq_usd": 3908.8677,
+   "fdv_usd": 3910.700428,
+   "vol_h24": 268.3597102961,
+   "buys_h24": 2,
+   "sells_h24": 2
+  },
+  "outcome": null
+ },
+ "0x99532d8d580b33701799a42040e8f68fc9e8333b1084ea3af24f20d1895e6445": {
+  "token": "0x40e94f408ea4b9db5184d4ec4e80cb69493b1f35",
+  "name": "earth / WETH 0.05%",
+  "symbol": "earth",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:32:42Z",
+  "first": {
+   "at": "2026-10-20T09:33:41+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 37221.46779,
+   "vol_h24": 52655.367505367,
+   "buys_h24": 222,
+   "sells_h24": 176
+  },
+  "outcome": null
+ },
+ "0x1400e25cd219537ddb8e0a6e08a6f328042f19d5a3afad27485e578228a19543": {
+  "token": "0xa7d3d61e4aa367965f80c0d9c1af6802de07d085",
+  "name": "BEEP / WETH 0.31%",
+  "symbol": "BEEP",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:32:24Z",
+  "first": {
+   "at": "2026-10-20T09:33:41+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 14200.44315,
+   "vol_h24": 7204.5837772674,
+   "buys_h24": 61,
+   "sells_h24": 59
+  },
+  "outcome": null
+ },
+ "0x88ff341cecaa2dc59c7de4cf833529ee4285957c9458a38b3fb2ce62f0e29930": {
+  "token": "0x3ad9e21a15d0ba396b4b2f3f8577f6eab94fb82a",
+  "name": "EVOLVE / WETH 1%",
+  "symbol": "EVOLVE",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:31:53Z",
+  "first": {
+   "at": "2026-10-20T09:33:41+00:00",
+   "liq_usd": 0.0,
+   "fdv_usd": 178076.3047,
+   "vol_h24": 55622.9012422055,
+   "buys_h24": 92,
+   "sells_h24": 84
+  },
+  "outcome": null
+ },
+ "0x22d1e4434ffb25bb9d76dfc1133a127c81fa9017724494177a95a705101b76cb": {
+  "token": "0x18e674231a58c239dc7daedcffe15ec3a24cff5c",
+  "name": "HOOKR / USDG 1.113%",
+  "symbol": "HOOKR",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:24:03Z",
+  "first": {
+   "at": "2026-10-20T09:33:49+00:00",
+   "liq_usd": 25.0217,
+   "fdv_usd": 21017315.3410864,
+   "vol_h24": 0.4216893749,
+   "buys_h24": 0,
+   "sells_h24": 1
+  },
+  "outcome": null
+ },
+ "0xa01de5895a89d689cb125dd7cfef76b8afe22bac4e0cfe2fdf2105941f45da85": {
+  "token": "0x18e674231a58c239dc7daedcffe15ec3a24cff5c",
+  "name": "HOOKR / USDG 1.076%",
+  "symbol": "HOOKR",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:23:51Z",
+  "first": {
+   "at": "2026-10-20T09:33:49+00:00",
+   "liq_usd": 25.0217,
+   "fdv_usd": 21025058.5794444,
+   "vol_h24": 0.4218447346,
+   "buys_h24": 0,
+   "sells_h24": 1
+  },
+  "outcome": null
+ },
+ "0x360fb9d70e5a1bacb7c2e0612f437cebd3279f49d00f176b7204d8555a5edec4": {
+  "token": "0x18e674231a58c239dc7daedcffe15ec3a24cff5c",
+  "name": "HOOKR / USDG 1.051%",
+  "symbol": "HOOKR",
+  "dex": "uniswap-v4-robinhood",
+  "created": "2026-10-20T08:23:32Z",
+  "first": {
+   "at": "2026-10-20T09:33:49+00:00",
+   "liq_usd": 100.3251,
+   "fdv_usd": 20711373.1200116,
+   "vol_h24": 2.7782273766,
+   "buys_h24": 0,
+   "sells_h24": 2
   },
   "outcome": null
  }
