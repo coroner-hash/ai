@@ -11,7 +11,7 @@ import json, sys, time, datetime, pathlib
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from snapshot_pools import get, slim, BASE  # noqa: E402
-from shards import write_shards  # noqa: E402
+from shards import write_shards, write_symbol_index  # noqa: E402
 
 DATA = pathlib.Path(__file__).resolve().parent.parent / "data"
 STATE = DATA / "state.json"
@@ -85,7 +85,7 @@ def resolve(min_age_h=24, max_calls=60, budget_s=1020):
                 rec["outcome"] = m
                 done += 1
     save(st)
-    print(f"resolve: {done} outcomes stored from {calls} calls ({len(todo)} waiting); shards changed: {write_shards(st)}")
+    print(f"resolve: {done} outcomes stored from {calls} calls ({len(todo)} waiting); shards changed: {write_shards(st)}; symbol index changed: {write_symbol_index(st)}")
 
 
 if __name__ == "__main__":

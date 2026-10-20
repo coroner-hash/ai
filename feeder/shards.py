@@ -34,3 +34,37 @@ def write_shards(state):
             path.write_text(text, encoding="utf8")
             changed += 1
     return changed
+
+
+def _norm(s):
+    import re
+    return re.sub(r"[^a-z0-9]", "", (s or "").lower())
+
+
+def write_symbol_index(state):
+    """data/symbols.json: normalised ticker -> tokens using it, oldest first.
+    Each entry: [token, first_seen, dex, first_liq_usd, first_vol_h24]. Lets the Telegram bot spot copy-cat tickers
+    and show a token's first sighting without fetching the whole state."""
+    by_token = {}
+    for pool, rec in state.items():
+        tok = (rec.get("token") or "").lower()
+        if not tok.startswith("0x") or len(tok) != 42:
+            continue
+        f = rec.get("first") or {}
+        cur = by_token.get(tok)
+        if cur is None or rec["created"] < cur[1]:
+            by_token[tok] = [tok, rec["created"], rec.get("dex"), f.get("liq_usd"), f.get("vol_h24"), rec.get("symbol") or ""]
+    index = {}
+    for tok, e in by_token.items():
+        k = _norm(e[5])
+        if len(k) < 2:
+            continue
+        index.setdefault(k, []).append(e[:5])
+    for k in index:
+        index[k].sort(key=lambda e: e[1])
+    text = json.dumps(index, separators=(",", ":"), sort_keys=True)
+    path = DATA / "symbols.json"
+    if not path.exists() or path.read_text(encoding="utf8") != text:
+        path.write_text(text, encoding="utf8")
+        return True
+    return False
