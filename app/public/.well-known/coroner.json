@@ -1,4 +1,5 @@
 {
   "chainId": 4663,
-  "contracts": ["0x0000000000000000000000000000000000000000"]
+  "token": { "symbol": "CORONER", "name": "Coroner AI", "address": "0x48af9fe69e45b1ba7a1bbb42d9944d09cffb2f31" },
+  "contracts": ["0x48af9fe69e45b1ba7a1bbb42d9944d09cffb2f31"]
 }

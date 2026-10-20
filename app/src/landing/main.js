@@ -16,5 +16,18 @@ if (heroImg) wireHero(heroImg);
 
 wireFx();
 
+// Copy the token contract (set at launch by scripts/set_ca.py).
+document.querySelectorAll(".ca-copy").forEach((b) =>
+  b.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(b.dataset.ca);
+      b.textContent = "copied";
+      setTimeout(() => (b.textContent = "copy"), 1500);
+    } catch {
+      b.textContent = "select it";
+    }
+  }),
+);
+
 // Mark readiness for tools/record-anim.mjs.
 document.documentElement.dataset.ready = "1";

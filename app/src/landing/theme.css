@@ -243,3 +243,8 @@ html, body { overflow-x: clip; }
 /* keep the header on one row: the link group may shrink, the icons never leave the screen */
 .nav > .brand, .nav > .nav-social, .nav > .beta { flex: none; }
 .nav .nav-links { min-width: 0; }
+
+/* token contract in the hero (after launch) */
+.hero-meta .ca { font: 11px var(--mono); color: var(--ink); background: rgba(10, 143, 179, 0.08); padding: 1px 6px; border-radius: 3px; }
+.ca-copy { margin-left: 6px; font: 500 10px var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--cyan); background: #fff; border: 1px solid rgba(10, 143, 179, 0.4); border-radius: 3px; padding: 2px 6px; cursor: pointer; }
+.ca-full { font-family: var(--mono); word-break: break-all; }
