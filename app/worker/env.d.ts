@@ -12,4 +12,7 @@ interface Env {
   IP_SALT: string;
   /** Optional: waitlist confirmation emails are skipped (not failed) when unset. */
   RESEND_API_KEY?: string;
+  /** Optional: the Telegram bot is off unless both are set. Secrets. */
+  TELEGRAM_BOT_TOKEN?: string;
+  TELEGRAM_WEBHOOK_SECRET?: string;
 }

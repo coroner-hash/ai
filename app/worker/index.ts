@@ -7,6 +7,9 @@ import { autopsyRoute } from "./autopsyRoute";
 import { premortemRoute } from "./premortemRoute";
 import { runSentinel, sentinel } from "./sentinel";
 import { countUsage, usageStats } from "./usage";
+import { ensureTelegram, telegramWebhook, verdictText } from "./tgbot";
+import { clientIp, hashIp } from "./request";
+import { overLimit } from "./ratelimit";
 import { v1 } from "./v1";
 import { verdict } from "./verdictRoute";
 import type { AppEnv } from "./session";
@@ -50,6 +53,21 @@ api.route("/premortem", premortemRoute);
 api.route("/autopsy", autopsyRoute);
 api.route("/waitlist", waitlist);
 api.route("/sentinel", sentinel);
+api.post("/tg/webhook", (c) => telegramWebhook(c));
+// Runs the one-time bot setup now instead of waiting for the cron. Idempotent; reveals nothing.
+api.get("/tg/setup", async (c) => {
+  await ensureTelegram(c.env);
+  const row = await c.env.DB.prepare("SELECT value FROM settings WHERE key = 'tg_username'").first<{ value: string }>();
+  return c.json({ configured: Boolean(c.env.TELEGRAM_BOT_TOKEN && c.env.TELEGRAM_WEBHOOK_SECRET), bot: row?.value ?? null });
+});
+// What the bot would answer for an address (plain text), for testing without Telegram.
+api.get("/tg/preview/:address", async (c) => {
+  const a = c.req.param("address");
+  if (!/^0x[0-9a-fA-F]{40}$/.test(a)) return c.json({ error: "invalid_address" }, 400);
+  const { limited } = await overLimit(c.env.DB, `tgprev:${await hashIp(clientIp(c), c.env.IP_SALT)}`, 10, 600);
+  if (limited) return c.json({ error: "rate_limited" }, 429);
+  return c.text((await verdictText(c.env, a.toLowerCase())).replace(/<[^>]+>/g, ""));
+});
 api.route("/auth", auth);
 
 api.notFound((c) => c.json({ error: "not_found" }, 404));
@@ -67,5 +85,6 @@ export default {
   // Every 30 minutes: Sentinel checks the watches that have waited longest.
   async scheduled(_event: ScheduledController, env: Env, ctx: ExecutionContext) {
     ctx.waitUntil(runSentinel(env).then((r) => console.log(JSON.stringify({ event: "sentinel_run", ...r }))));
+    ctx.waitUntil(ensureTelegram(env).catch((e) => console.error(JSON.stringify({ event: "tg_setup_error", err: String(e) }))));
   },
 };

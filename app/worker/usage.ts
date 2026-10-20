@@ -46,3 +46,9 @@ export async function usageStats(db: D1Database, days = 14) {
   }
   return { since: Object.keys(byDay).sort()[0] ?? null, days, totals, by_day: byDay, note: "Counts of successful requests only. Days are UTC. Counting started 20 Oct 2026 (UTC)." };
 }
+
+/** Count one event outside the HTTP middleware (Telegram bot, cron). */
+export async function bumpUsage(db: D1Database, kind: string): Promise<void> {
+  const day = new Date().toISOString().slice(0, 10);
+  await db.prepare("INSERT INTO usage_daily (day, kind, n) VALUES (?1, ?2, 1) ON CONFLICT (day, kind) DO UPDATE SET n = n + 1").bind(day, kind).run().catch(() => undefined);
+}
