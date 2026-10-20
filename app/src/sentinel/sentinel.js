@@ -16,6 +16,7 @@ const MESSAGES = {
   captcha_unavailable: "Our spam check is down for a moment. Try again in a minute.",
   too_many_watches: "That email already watches three tokens. Unsubscribe from one first.",
   email_unavailable: "Email sending is not available right now. Try again later.",
+  mail_failed: "We saved your request but could not send the email.",
 };
 const HASH = {
   "#confirmed": "Confirmed. Sentinel is now watching that contract and will email you if it changes.",
@@ -73,7 +74,7 @@ form.addEventListener("submit", async (e) => {
       return;
     }
     const body = await r.json().catch(() => ({}));
-    say(MESSAGES[body.error] ?? "Something broke on our side. Try again.");
+    say((MESSAGES[body.error] ?? "Something broke on our side. Try again.") + (body.error === "mail_failed" ? ` (mail status ${body.mail_status}${body.mail_error ? ": " + body.mail_error : ""})` : ""));
   } catch {
     say("Couldn't reach the server. Check your connection and retry.");
   } finally {

@@ -3,7 +3,7 @@
 // the address still holds code. Market and liquidity alerts are not in this version (those sources block server egress).
 // Double opt-in: nothing is checked or sent until the email's owner confirms. Every alert carries a one-click unsubscribe.
 import { Hono } from "hono";
-import { sendMail } from "./email";
+import { sendMail, sendMailDetailed } from "./email";
 import { overLimit } from "./ratelimit";
 import { clientIp, hashIp, originAllowed } from "./request";
 import { ChainUnavailable } from "./rpc";
@@ -112,14 +112,22 @@ sentinel.post("/watch", async (c) => {
   // Only an unconfirmed watch gets a (re)sent confirmation; a confirmed one answers the same way without mailing anyone.
   if (!existing || existing.confirmed === 0) {
     const origin = new URL(c.req.url).origin;
-    c.executionCtx.waitUntil(
-      sendMail(
-        c.env.RESEND_API_KEY,
-        email,
-        "Confirm your Coroner Sentinel watch",
-        `Someone (hopefully you) asked Coroner Sentinel to watch this token and email ${email} if its contract changes:\n\n${address}\n\nConfirm here:\n${origin}/api/sentinel/confirm?t=${token}\n\nIf this was not you, ignore this email and nothing will be watched.\n\nSentinel watches the contract only: owner, mint, blacklist, pause, upgrades and supply. It does not watch price or liquidity yet. Not financial advice.`,
-      ),
+    const sent = await sendMailDetailed(
+      c.env.RESEND_API_KEY,
+      email,
+      "Confirm your Coroner Sentinel watch",
+      `Someone (hopefully you) asked Coroner Sentinel to watch this token and email ${email} if its contract changes:
+
+${address}
+
+Confirm here:
+${origin}/api/sentinel/confirm?t=${token}
+
+If this was not you, ignore this email and nothing will be watched.
+
+Sentinel watches the contract only: owner, mint, blacklist, pause, upgrades and supply. It does not watch price or liquidity yet. Not financial advice.`,
     );
+    if (!sent.ok) return c.json({ ok: false, error: "mail_failed", mail_status: sent.status, mail_error: sent.error ?? "" }, 502);
   }
   return c.json({ ok: true });
 });

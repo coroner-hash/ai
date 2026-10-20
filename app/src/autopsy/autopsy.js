@@ -85,7 +85,7 @@ function render(d, rec) {
   out.append(flags);
 
   const notes = [
-    `Pool created ${rec.created.replace("T", " ").replace("Z", " UTC")}. First seen by the collector, then re-checked at least 24 hours after launch (the exact hour is in the table header).`,
+    `Pool created ${rec.created.replace("T", " ").replace("Z", " UTC")}. First seen by the collector, then re-checked at least 24 hours after the pool was created (the exact hour is in the table header).`,
     `Confidence ${Math.round(v.confidence * 100)}%. Rule baseline, not the Coroner model.`,
   ];
   const ul = el("ul", "r-notes");
