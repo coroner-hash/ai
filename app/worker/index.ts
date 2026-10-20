@@ -6,6 +6,7 @@ import { probeProvider, rpc } from "./rpc";
 import { autopsyRoute } from "./autopsyRoute";
 import { premortemRoute } from "./premortemRoute";
 import { runSentinel, sentinel } from "./sentinel";
+import { countUsage, usageStats } from "./usage";
 import { v1 } from "./v1";
 import { verdict } from "./verdictRoute";
 import type { AppEnv } from "./session";
@@ -17,6 +18,13 @@ api.use("*", secureHeaders());
 api.use("*", async (c, next) => {
   await next();
   if (!c.res.headers.has("Cache-Control")) c.header("Cache-Control", "no-store");
+});
+
+api.use("*", countUsage);
+
+api.get("/stats", async (c) => {
+  c.header("Cache-Control", "public, max-age=300");
+  return c.json(await usageStats(c.env.DB));
 });
 
 api.get("/health", async (c) => {
