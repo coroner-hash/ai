@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Sentinel · Coroner</title>
+    <meta name="description" content="Get an email when a Robinhood Chain token's contract changes: new owner, mint, upgrade, supply. Beta, contract changes only." />
+    <meta name="theme-color" content="#f8fafc" />
+    <meta name="color-scheme" content="light" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://coronerai.pro/sentinel" />
+    <meta property="og:image" content="https://coronerai.pro/og.png" />
+    <script type="module" src="/src/sentinel/sentinel.js"></script>
+  </head>
+  <body class="check-page">
+    <header class="nav nav-solid">
+      <a class="brand" href="/" aria-label="Coroner home">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 9h18M3 15h18" stroke="currentColor" stroke-width="1.8"/><circle cx="16.5" cy="12" r="1.5" fill="#e5322d"/></svg>
+        <span>Coroner</span>
+      </a>
+      <nav class="nav-links" aria-label="Tools"><a href="/check">Check a token</a><a href="/premortem">Pre-mortem</a><a href="/autopsy">Autopsy</a><a href="/sentinel">Sentinel</a></nav>
+      <span class="beta">Beta · contract only</span>
+    </header>
+
+    <main class="check">
+      <p class="kicker">Sentinel</p>
+      <h1>Watch a contract.</h1>
+      <p class="lead-sm">Paste a token address and your email. If the contract changes, we email you: a new owner, ownership renounced, a mint, blacklist or pause function appearing, a proxy upgrade, or the supply changing. You confirm by email first.</p>
+
+      <form class="c-form s-form" id="s-form" novalidate>
+        <input id="s-address" name="address" type="text" placeholder="0x… token address" autocomplete="off" spellcheck="false" maxlength="42" required />
+        <input id="s-email" name="email" type="email" placeholder="you@domain.com" autocomplete="email" maxlength="254" required />
+        <input id="s-trap" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
+        <div id="s-captcha"></div>
+        <button type="submit" id="s-go">Watch this token</button>
+      </form>
+      <p id="s-msg" class="c-msg" role="status" aria-live="polite" hidden></p>
+
+      <p class="c-foot">
+        Sentinel watches the contract only, every 30 minutes at most: owner, ownership, mint, blacklist and pause functions, proxy upgrades, supply. It does not watch price or liquidity yet. Up to three tokens per email, one confirmation email, and every alert has a one-click unsubscribe. We use your email for this and nothing else. A change is an observation of public on-chain data, not an accusation and not financial advice.
+      </p>
+    </main>
+  </body>
+</html>

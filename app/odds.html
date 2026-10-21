@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Actuarial Table · Coroner</title>
+    <meta name="description" content="Life odds for Robinhood Chain tokens. Out of 100 tokens born like this one, how many were still trading 24 hours later? Measured on thousands of real launches, updated every hour." />
+    <meta name="theme-color" content="#f8fafc" />
+    <meta name="color-scheme" content="light" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://coronerai.pro/odds" />
+    <meta property="og:image" content="https://coronerai.pro/og.png" />
+    <script type="module" src="/src/odds/odds.js"></script>
+  </head>
+  <body class="check-page">
+    <header class="nav nav-solid">
+      <a class="brand" href="/" aria-label="Coroner home">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 9h18M3 15h18" stroke="currentColor" stroke-width="1.8"/><circle cx="16.5" cy="12" r="1.5" fill="#e5322d"/></svg>
+        <span>Coroner</span>
+      </a>
+      <nav class="nav-links" aria-label="Tools"><a href="/check">Check a token</a><a href="/odds">Odds</a><a href="/radar">Clone Radar</a><a href="/premortem">Pre-mortem</a><a href="/autopsy">Autopsy</a><a href="/sentinel">Sentinel</a></nav>
+      <span class="beta">Live · hourly</span>
+    </header>
+
+    <main class="odds">
+      <p class="kicker">Actuarial table</p>
+      <h1>The name doesn't decide.<br /><em>The first hour does.</em></h1>
+      <p class="lead-sm">Insurers price a life from a few facts at birth. We did the same for tokens. For every Robinhood Chain token we measured in its first hour and checked again a day later, this page shows how many were still trading. Paste any token, even one born ten minutes ago, and see the odds of tokens born like it.</p>
+
+      <section class="od-duel" id="od-duel" aria-label="Name versus first hour">
+        <div class="od-duel-col">
+          <p class="od-k">What it is called</p>
+          <div class="od-pair"><div><b id="d-orig">…</b><span>original ticker</span></div><div><b id="d-copy">…</b><span>copied ticker</span></div></div>
+          <p class="od-verdict" id="d-name-v">…</p>
+        </div>
+        <div class="od-duel-col hot">
+          <p class="od-k">What it does in its first hour</p>
+          <div class="od-pair"><div><b id="d-low">…</b><span>under 5 swaps</span></div><div><b id="d-high">…</b><span>500+ swaps</span></div></div>
+          <p class="od-verdict" id="d-hour-v">…</p>
+        </div>
+      </section>
+      <p class="od-cap" id="od-cap">Share of tokens still trading 24 hours after birth.</p>
+
+      <section class="od-calc" aria-labelledby="od-calc-h">
+        <h2 id="od-calc-h">Price a token's life</h2>
+        <form id="od-form" class="c-form" novalidate>
+          <label class="w-sr" for="od-address">Token address</label>
+          <input id="od-address" placeholder="0x…  any Robinhood Chain token" autocomplete="off" spellcheck="false" maxlength="42" />
+          <button type="submit" id="od-go">Get the odds</button>
+        </form>
+        <p id="od-msg" class="c-msg" role="status" aria-live="polite" hidden></p>
+
+        <div class="od-board">
+          <div class="od-result" aria-live="polite">
+            <p class="od-who" id="od-who">Or build a token below.</p>
+            <p class="od-big"><b id="od-n">…</b><span>out of 100 tokens born like this<br />were still trading 24 hours later</span></p>
+            <div class="od-grid" id="od-grid" role="img" aria-label="100 tokens"></div>
+            <ul class="od-legend" id="od-legend"></ul>
+            <p class="od-basis" id="od-basis"></p>
+            <p class="od-fate" id="od-fate" hidden></p>
+          </div>
+          <div class="od-what">
+            <p class="od-k">At birth</p>
+            <fieldset><legend>Born on</legend><div class="od-seg" data-f="dex"></div></fieldset>
+            <fieldset><legend>Liquidity in its first hour</legend><div class="od-seg" data-f="liq"></div></fieldset>
+            <fieldset><legend>Swaps in its first hour</legend><div class="od-seg" data-f="swaps"></div></fieldset>
+          </div>
+        </div>
+      </section>
+
+      <section class="od-ward" aria-labelledby="od-ward-h">
+        <div class="od-ward-top">
+          <div>
+            <h2 id="od-ward-h">The nursery</h2>
+            <p class="od-sub">Tokens born on Robinhood Chain in the last hour, priced live from your browser.</p>
+          </div>
+          <button type="button" class="od-btn" id="od-refresh">Refresh</button>
+        </div>
+        <ol class="od-nursery" id="od-nursery"></ol>
+        <p id="od-ward-msg" class="c-msg" hidden></p>
+      </section>
+
+      <section class="od-table" aria-labelledby="od-table-h">
+        <h2 id="od-table-h">The full table</h2>
+        <p class="od-sub" id="od-table-sub"></p>
+        <div class="od-factors" id="od-factors"></div>
+      </section>
+
+      <p class="c-foot" id="od-foot">
+        From Coroner's open collector (data/odds.json on GitHub), rebuilt every hour. A token is measured when our collector first sees its pool (a median 21 minutes after birth) and again 24 to 30 hours later. Still trading means at least $50 of volume or 3 swaps in the 24 hours before that re-check. Causes of death are patterns consistent with the numbers, never accusations. This is a record of what happened to past tokens, not a prediction for any one token and not financial advice.
+      </p>
+    </main>
+  </body>
+</html>

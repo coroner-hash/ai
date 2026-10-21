@@ -8,7 +8,7 @@ import "../landing/menu.js";
 // Clone Radar: waves of reused tickers, computed in the browser from the open collector's ticker index.
 // Each index entry: [token, firstSeenISO, dex, firstLiqUsd, firstVol24Usd], oldest first, keyed by normalised ticker.
 const SRC = "https://raw.githubusercontent.com/coroner-hash/ai/main/data/symbols.json";
-const DEX = { "pons-v2": "Pons", "pons-v2-dex": "Pons (graduated)", "uniswap-v4-robinhood": "Uniswap v4", "uniswap-v3-robinhood": "Uniswap v3", "uniswap-v2-robinhood": "Uniswap v2", "bankr-robinhood": "Bankr", "clanker-robinhood": "Clanker", "virtuals-robinhood": "Virtuals" };
+const DEX = { "pons-v2": "Pons", "pons-v2-dex": "Pons (graduated)", "uniswap-v4-robinhood": "Uniswap v4", "uniswap-v3-robinhood": "Uniswap v3", "uniswap-v2-robinhood": "Uniswap v2", "bankr-robinhood": "Bankr", "clanker-robinhood": "Clanker", "virtuals-robinhood": "Virtuals", "uniswap-pools-trade": "Uniswap" };
 const HOUR = 3_600_000;
 const $ = (id) => document.getElementById(id);
 const el = (tag, cls, text) => {

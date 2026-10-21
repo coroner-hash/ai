@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>API and MCP · Coroner</title>
+    <meta name="description" content="Use Coroner from code or from an AI agent: a public API for token verdicts, launch pre-mortems and autopsies on Robinhood Chain, and an MCP server. Rule-based beta." />
+    <meta name="theme-color" content="#f8fafc" />
+    <meta name="color-scheme" content="light" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://coronerai.pro/docs" />
+    <meta property="og:image" content="https://coronerai.pro/og.png" />
+    <script type="module" src="/src/docs/docs.js"></script>
+  </head>
+  <body class="check-page">
+    <header class="nav nav-solid">
+      <a class="brand" href="/" aria-label="Coroner home">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 9h18M3 15h18" stroke="currentColor" stroke-width="1.8"/><circle cx="16.5" cy="12" r="1.5" fill="#e5322d"/></svg>
+        <span>Coroner</span>
+      </a>
+      <nav class="nav-links" aria-label="Tools"><a href="/check">Check a token</a><a href="/premortem">Pre-mortem</a><a href="/autopsy">Autopsy</a><a href="/docs">API and MCP</a></nav>
+      <span class="beta">Beta · rule-based</span>
+    </header>
+
+    <main class="docs">
+      <p class="kicker">API and MCP</p>
+      <h1>Use Coroner from code or from an agent.</h1>
+      <p>Answers come from the open rule engine today. Every response says <code>"engine": "rules"</code> and <code>"model": null</code>. When the Coroner model is hosted, that field will say so. Risk classification from public on-chain data, not financial advice. Labels describe patterns consistent with the numbers, never accusations.</p>
+
+      <h2>API v1</h2>
+      <p>Base URL <code>https://coronerai.pro/api/v1</code>. No key, no account, CORS open, rate-limited per IP (HTTP 429 with <code>Retry-After</code>). Machine-readable: <a href="/api/v1/openapi.json">openapi.json</a>.</p>
+      <table>
+        <tr><th>Endpoint</th><th>What it does</th></tr>
+        <tr><td><code>GET /verdict/{address}</code></td><td>Verdict from contract facts the server can read: owner, mint, blacklist, pause, proxy.</td></tr>
+        <tr><td><code>POST /verdict</code></td><td>Same, plus market and holder facts you supply in <code>ext</code> (the server cannot read those sources).</td></tr>
+        <tr><td><code>POST /premortem</code></td><td>Pre-mortem of a launch draft: risks, death patterns, fixes.</td></tr>
+        <tr><td><code>GET /api/stats</code></td><td>Public daily usage counts (verdicts, pre-mortems, autopsies, Sentinel, waitlist) by source: web, API, MCP. Counts only.</td></tr>
+        <tr><td><code>POST /autopsy</code></td><td>What happened to a token the open collector watched for 24 hours.</td></tr>
+      </table>
+      <h3>Example</h3>
+<pre><code>curl https://coronerai.pro/api/v1/verdict/0x84bbcc13a9d92ee0a069b822929e7edcce300bfc
+
+curl -X POST https://coronerai.pro/api/v1/premortem \
+  -H "content-type: application/json" \
+  -d '{"name":"Tacocat","symbol":"TACO","buyTaxPct":5,"sellTaxPct":10,"liquidityLock":"none","hasMint":true}'</code></pre>
+      <p>Each answer has <code>verdict</code> (risk class, flags with <code>evidence_ids</code>, confidence), <code>facts</code>, <code>notes</code> and <code>narrative</code>, a plain-language reading written from the verdict that adds no new facts.</p>
+
+      <h2>MCP server</h2>
+      <p>Three tools for AI agents: <code>check_token</code>, <code>premortem</code>, <code>autopsy_token</code>. It reads market and holder data on your machine, then calls the API. Source and install steps: <a href="https://github.com/coroner-hash/ai/tree/main/mcp">github.com/coroner-hash/ai/tree/main/mcp</a>.</p>
+<pre><code>git clone https://github.com/coroner-hash/ai.git
+cd ai/mcp &amp;&amp; npm install
+claude mcp add coroner -- node /absolute/path/to/ai/mcp/server.mjs</code></pre>
+
+      <h2>Models</h2>
+      <p><a href="https://huggingface.co/coronerai/coroner-31b">coroner-31b</a> (16-bit, Gemma 4 31B), <a href="https://huggingface.co/coronerai/coroner-31b-GGUF">coroner-31b-GGUF</a> (4-bit, 18.7 GB, for llama.cpp; accuracy of this build not measured yet) and <a href="https://huggingface.co/coronerai/coroner-coder-7b">coroner-coder-7b</a> (fixes scanner flags in ERC-20 source; narrow synthetic training data, always compile). All Apache-2.0.</p>
+
+      <h2>Sentinel</h2>
+      <p>Email alerts when a token's contract changes: owner, ownership renounced, mint, blacklist or pause appearing, proxy upgrade, supply. Double opt-in, three tokens per email, one-click unsubscribe. Contract changes only: market and liquidity alerts are not in this version. Sign up at <a href="/sentinel">/sentinel</a>.</p>
+
+      <h2>Narrator</h2>
+      <p>Under every report on this site, and in the <code>narrative</code> field of the API, is a short reading in plain words. It is deterministic text built from the verdict's own flags and evidence, so it cannot introduce a number the verdict does not contain.</p>
+
+      <p class="c-foot">Coroner is independent and not affiliated with Robinhood. Preliminary and in development: fields may change before v1 is frozen.</p>
+    </main>
+  </body>
+</html>

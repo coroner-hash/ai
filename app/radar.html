@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Clone Radar · Coroner</title>
+    <meta name="description" content="Live waves of copy-cat tickers on Robinhood Chain: how many new tokens reuse the same name, which one came first, and which one was busiest. From Coroner's open collector, updated hourly." />
+    <meta name="theme-color" content="#f8fafc" />
+    <meta name="color-scheme" content="light" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://coronerai.pro/radar" />
+    <meta property="og:image" content="https://coronerai.pro/og.png" />
+    <script type="module" src="/src/radar/radar.js"></script>
+  </head>
+  <body class="check-page">
+    <header class="nav nav-solid">
+      <a class="brand" href="/" aria-label="Coroner home">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 9h18M3 15h18" stroke="currentColor" stroke-width="1.8"/><circle cx="16.5" cy="12" r="1.5" fill="#e5322d"/></svg>
+        <span>Coroner</span>
+      </a>
+      <nav class="nav-links" aria-label="Tools"><a href="/check">Check a token</a><a href="/odds">Odds</a><a href="/radar">Clone Radar</a><a href="/premortem">Pre-mortem</a><a href="/autopsy">Autopsy</a><a href="/sentinel">Sentinel</a></nav>
+      <span class="beta">Live · hourly</span>
+    </header>
+
+    <main class="radar">
+      <p class="kicker">Clone Radar</p>
+      <h1>Same ticker.<br /><em>Different token.</em></h1>
+      <p class="lead-sm">Half of the new tokens on Robinhood Chain reuse a name that already exists. This page shows the waves as they happen: which tickers are being launched again and again, which contract came first, and which one was busiest.</p>
+
+      <section class="rd-stats" id="rd-stats" aria-live="polite">
+        <div class="rd-stat"><b id="s-new">…</b><span>new tokens, last 24 h</span></div>
+        <div class="rd-stat"><b id="s-reuse">…</b><span>reused an existing ticker</span></div>
+        <div class="rd-stat"><b id="s-wave">…</b><span>biggest wave right now</span></div>
+      </section>
+
+      <div class="rd-tools">
+        <div class="rd-tabs" role="tablist" aria-label="Window">
+          <button type="button" role="tab" data-w="6" aria-selected="false">6 h</button>
+          <button type="button" role="tab" data-w="24" aria-selected="true">24 h</button>
+          <button type="button" role="tab" data-w="72" aria-selected="false">3 days</button>
+        </div>
+        <label class="rd-find"><span class="w-sr">Find a ticker</span><input id="rd-q" type="search" placeholder="Find a ticker, e.g. KIMCHI" autocomplete="off" spellcheck="false" maxlength="24" /></label>
+      </div>
+
+      <p id="rd-msg" class="c-msg" role="status" hidden></p>
+      <ol class="rd-list" id="rd-list" aria-label="Ticker waves"></ol>
+
+      <p class="c-foot">
+        From Coroner's open collector (data/symbols.json on GitHub), updated every hour. It covers pools our collector recorded since 14 Oct 2026, so real counts can be higher. "First seen" is a token's first pool in our data; "busiest" compares 24-hour volume at that first sighting. A shared ticker is a fact about names, not an accusation against any token. Not financial advice.
+      </p>
+    </main>
+  </body>
+</html>
