@@ -9,6 +9,29 @@ const TOOLS = [
   ["/sentinel", "Sentinel"],
   ["/docs", "API and MCP"],
 ];
+// Tools that launched recently get a highlight and a NEW badge in the header and the drawer.
+const NEW_TOOLS = ["/odds", "/radar"];
+const badge = () => { const b = document.createElement("span"); b.className = "new-tag"; b.textContent = "New"; return b; };
+
+function tagNavLinks() {
+  const links = document.querySelector(".nav-links");
+  if (!links) return;
+  const have = (href) => links.querySelector(`a[href="${href}"]`);
+  // pages with a short static menu: add the new tools right after "Check a token"
+  const anchor = have("/check");
+  for (const [href, label] of TOOLS.filter(([h]) => NEW_TOOLS.includes(h)).reverse()) {
+    if (have(href) || !anchor) continue;
+    const a = document.createElement("a");
+    a.href = href;
+    a.textContent = label;
+    anchor.after(a);
+  }
+  for (const href of NEW_TOOLS) {
+    const a = have(href);
+    if (a && !a.classList.contains("is-new")) { a.classList.add("is-new"); a.append(badge()); }
+  }
+}
+
 const HOME = [
   ["/#model", "Model"],
   ["/#how", "How it works"],
@@ -21,6 +44,7 @@ const LINKS = [
 ];
 
 export function wireMenu() {
+  tagNavLinks();
   const nav = document.querySelector(".nav");
   if (!nav || document.getElementById("m-drawer")) return;
 
@@ -69,6 +93,7 @@ export function wireMenu() {
       a.textContent = label;
       if (ext) { a.target = "_blank"; a.rel = "noreferrer"; a.className = "m-ext"; }
       if (href === here) a.setAttribute("aria-current", "page");
+      if (NEW_TOOLS.includes(href)) { a.classList.add("is-new"); a.append(badge()); }
       g.append(a);
     }
     return g;
