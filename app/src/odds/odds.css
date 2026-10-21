@@ -55,11 +55,12 @@ i.lp { background: #e5322d; }
 .od-btn { border: 1px solid var(--line-strong); background: #fff; border-radius: 99px; padding: 9px 16px; font: 500 12px var(--mono); color: var(--ink); cursor: pointer; }
 .od-btn:disabled { opacity: 0.5; cursor: progress; }
 .od-nursery { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-.od-baby button { width: 100%; display: grid; grid-template-columns: minmax(0, 1fr) auto 70px 56px; align-items: center; gap: 14px; text-align: left; border: 1px solid var(--line); border-radius: 6px; background: linear-gradient(180deg, #fff, #f7fafc); padding: 12px 14px; cursor: pointer; color: var(--ink); font: inherit; }
+.od-baby button { width: 100%; display: grid; grid-template-columns: minmax(0, 1fr) 132px 60px 56px; align-items: center; gap: 14px; text-align: left; border: 1px solid var(--line); border-radius: 6px; background: linear-gradient(180deg, #fff, #f7fafc); padding: 12px 14px; cursor: pointer; color: var(--ink); font: inherit; }
 .od-baby button:hover { border-color: rgba(10, 143, 179, 0.5); }
 .od-bn { min-width: 0; display: flex; flex-direction: column; }
 .od-bn b { font: 500 16px var(--display); letter-spacing: -0.03em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.od-bn small, .od-bf { font: 11px var(--mono); color: var(--muted); white-space: nowrap; }
+.od-bn small, .od-bf { font: 11px var(--mono); color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.od-bf { text-align: right; }
 .od-bm { height: 6px; border-radius: 3px; background: rgba(12, 52, 78, 0.08); overflow: hidden; }
 .od-bm i, .od-bar i { display: block; height: 100%; background: #8fb9c9; border-radius: inherit; }
 .od-bm i.up, .od-bar i.up { background: linear-gradient(90deg, #0a8fb3, #19c3ee); }
