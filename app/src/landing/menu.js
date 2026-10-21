@@ -2,6 +2,7 @@
 // The drawer is appended to <body> (not the header) because the header's blur would otherwise trap fixed positioning.
 const TOOLS = [
   ["/check", "Check a token"],
+  ["/radar", "Clone Radar"],
   ["/premortem", "Pre-mortem"],
   ["/autopsy", "Autopsy"],
   ["/sentinel", "Sentinel"],
