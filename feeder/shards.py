@@ -43,7 +43,7 @@ def _norm(s):
 
 def write_symbol_index(state):
     """data/symbols.json: normalised ticker -> tokens using it, oldest first.
-    Each entry: [token, first_seen, dex, first_liq_usd, first_vol_h24]. Lets the Telegram bot spot copy-cat tickers
+    Each entry: [token, first_seen, dex, first_liq_usd, first_vol_h24, first_swaps]. Lets the Telegram bot spot copy-cat tickers
     and show a token's first sighting without fetching the whole state."""
     by_token = {}
     for pool, rec in state.items():
@@ -53,13 +53,14 @@ def write_symbol_index(state):
         f = rec.get("first") or {}
         cur = by_token.get(tok)
         if cur is None or rec["created"] < cur[1]:
-            by_token[tok] = [tok, rec["created"], rec.get("dex"), f.get("liq_usd"), f.get("vol_h24"), rec.get("symbol") or ""]
+            by_token[tok] = [tok, rec["created"], rec.get("dex"), f.get("liq_usd"), f.get("vol_h24"), rec.get("symbol") or "",
+                            (f.get("buys_h24") or 0) + (f.get("sells_h24") or 0)]
     index = {}
     for tok, e in by_token.items():
         k = _norm(e[5])
         if len(k) < 2:
             continue
-        index.setdefault(k, []).append(e[:5])
+        index.setdefault(k, []).append(e[:5] + [e[6]])
     for k in index:
         index[k].sort(key=lambda e: e[1])
     text = json.dumps(index, separators=(",", ":"), sort_keys=True)
