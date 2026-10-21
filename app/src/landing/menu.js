@@ -101,7 +101,7 @@ export function wireMenu() {
   drawer.append(group("Tools", TOOLS), group("Learn", HOME), group("Links", LINKS));
   const note = document.createElement("p");
   note.className = "m-note";
-  note.textContent = "Beta · rule-based. Not financial advice.";
+  note.textContent = "Rule-based today. Not financial advice.";
   drawer.append(note);
   document.body.append(backdrop, drawer);
 

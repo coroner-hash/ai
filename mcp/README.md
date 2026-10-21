@@ -8,7 +8,7 @@ Gives an AI agent three tools for tokens on Robinhood Chain (chain id 4663):
 | `premortem` | Before you launch: describe a draft, get the risks the market will see and what to change. |
 | `autopsy_token` | What happened to a token the open collector watched for 24 hours (tokens recorded since 14 Oct 2026). |
 
-**Status: beta, rule-based.** Answers come from the open rule engine; each reply says `engine: "rules"` and `model: null`. When the Coroner model is hosted this will change, and the reply will say so. Risk classification from public on-chain data, not financial advice. Labels describe patterns consistent with the numbers, never accusations.
+**Status: live, rule-based.** Answers come from the open rule engine; each reply says `engine: "rules"` and `model: null`. When the Coroner model is hosted this will change, and the reply will say so. Risk classification from public on-chain data, not financial advice. Labels describe patterns consistent with the numbers, never accusations.
 
 ## How it works
 Blockscout and GeckoTerminal block cloud servers, so the market and holder data are read **on your machine**, then sent with the address to the Coroner API (`https://coronerai.pro/api/v1`), which reads the contract and applies the rules. No key, no account. The API is rate-limited per IP.
