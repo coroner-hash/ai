@@ -291,7 +291,7 @@ async function nursery() {
       btn.type = "button";
       btn.title = `Price $${r.sym}`;
       const name = el("span", "od-bn");
-      name.append(el("b", "", `$${r.sym}`), el("small", "", `${Math.max(1, Math.round(r.ageMin))} min old · ${DEX_LABEL[r.dex]}`));
+      name.append(el("b", "", `$${r.sym}`), el("small", "", `${Math.max(1, Math.round(r.ageMin))} min · ${DEX_LABEL[r.dex].replace("Uniswap", "Uni")}`));
       const facts = el("span", "od-bf", `${r.liq >= 1 ? usd(r.liq) : "liq n/a"} · ${r.swaps} swap${r.swaps === 1 ? "" : "s"}`);
       const meter = el("span", "od-bm");
       const bar = el("i");
